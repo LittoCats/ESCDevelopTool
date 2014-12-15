@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/itdeptcm/2010R50102/!svn/ver/17204/trunk/003%20SourceCode/iOS_Team/MIS/ESignature_HD/ESignature_HD/classes/common/components/monitor/minizip
+END
+ioapi.c
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/itdeptcm/2010R50102/!svn/ver/17204/trunk/003%20SourceCode/iOS_Team/MIS/ESignature_HD/ESignature_HD/classes/common/components/monitor/minizip/ioapi.c
+END
+zip.c
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/itdeptcm/2010R50102/!svn/ver/17204/trunk/003%20SourceCode/iOS_Team/MIS/ESignature_HD/ESignature_HD/classes/common/components/monitor/minizip/zip.c
+END
+unzip.c
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/itdeptcm/2010R50102/!svn/ver/17204/trunk/003%20SourceCode/iOS_Team/MIS/ESignature_HD/ESignature_HD/classes/common/components/monitor/minizip/unzip.c
+END
+crypt.h
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/itdeptcm/2010R50102/!svn/ver/17204/trunk/003%20SourceCode/iOS_Team/MIS/ESignature_HD/ESignature_HD/classes/common/components/monitor/minizip/crypt.h
+END
+ioapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/itdeptcm/2010R50102/!svn/ver/17204/trunk/003%20SourceCode/iOS_Team/MIS/ESignature_HD/ESignature_HD/classes/common/components/monitor/minizip/ioapi.h
+END
+mztools.c
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/itdeptcm/2010R50102/!svn/ver/17204/trunk/003%20SourceCode/iOS_Team/MIS/ESignature_HD/ESignature_HD/classes/common/components/monitor/minizip/mztools.c
+END
+zip.h
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/itdeptcm/2010R50102/!svn/ver/17204/trunk/003%20SourceCode/iOS_Team/MIS/ESignature_HD/ESignature_HD/classes/common/components/monitor/minizip/zip.h
+END
+unzip.h
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/itdeptcm/2010R50102/!svn/ver/17204/trunk/003%20SourceCode/iOS_Team/MIS/ESignature_HD/ESignature_HD/classes/common/components/monitor/minizip/unzip.h
+END
+ChangeLogUnzip
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/itdeptcm/2010R50102/!svn/ver/17204/trunk/003%20SourceCode/iOS_Team/MIS/ESignature_HD/ESignature_HD/classes/common/components/monitor/minizip/ChangeLogUnzip
+END
+mztools.h
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/itdeptcm/2010R50102/!svn/ver/17204/trunk/003%20SourceCode/iOS_Team/MIS/ESignature_HD/ESignature_HD/classes/common/components/monitor/minizip/mztools.h
+END

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:ESCDevelopTool/ESCDevelopTool.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ESCDemoIOS/ESCDemoIOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ESCDevelopToolOSX/ESCDevelopToolOSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ESCDevelopToolIOS/ESCDevelopToolIOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ESCDemoOSX/ESCDemoOSX.xcodeproj">
+   </FileRef>
+</Workspace>
