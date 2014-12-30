@@ -103,6 +103,8 @@ typedef struct {
 + (void)enableGradientBackgroundColor:(BOOL)enable;
 + (BOOL)isGradientBackgroundColorEnable;
 
+
+- (UIImage *)snap;
 @end
 
 #endif

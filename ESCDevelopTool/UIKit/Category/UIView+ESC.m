@@ -115,6 +115,18 @@ static bool kESCGradientBackgroundColorEnable;
 {
     return kESCGradientBackgroundColorEnable;
 }
+
+#pragma mark- snap
+- (UIImage *)snap
+{
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [self.layer renderInContext:ctx];
+    UIImage *ret = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return ret;
+}
 @end
 
 

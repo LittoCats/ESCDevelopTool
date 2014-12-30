@@ -12,6 +12,8 @@
 #import "ESCCrypt.h"
 #import "ESCJSContext.h"
 
+#import "ESCWebView.h"
+
 @interface IOSTests : XCTestCase
 
 @end
@@ -30,9 +32,10 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
-    NSString *str = [ESCCrypt BASE64Encrypt:[@"YuXue" dataUsingEncoding:NSUTF8StringEncoding]];
-    NSLog(@"......... : %@",str);
-    NSLog(@"--------- : %@",[[NSString alloc] initWithData:[ESCCrypt BASE64Decrypt:str] encoding:NSUTF8StringEncoding]);
+    char *asi = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    for (int i = 0; i < strlen(asi); i ++) {
+        printf("[keyMap setObject:@(kVK_ANSI_%c) forKey:@\"%c\"];\n",asi[i],asi[i]);
+    }
 }
 
 - (void)testPerformanceExample {

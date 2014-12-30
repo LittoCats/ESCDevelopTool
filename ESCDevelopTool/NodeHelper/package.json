@@ -1,0 +1,15 @@
+{
+  "name": "NodeHelper",
+  "version": "0.0.1",
+  "description": "筱怪怪猫ios开发辅助工具之n辅助工具",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "~4.9.0",
+    "body-parser": "~1.8.1"
+  },
+  "author": "程巍巍",
+  "license": "ISC"
+}

@@ -192,12 +192,13 @@ static const char deBase64_table[] =   {
     }
     
     if (base64string.length == 0) return [NSData new];
-    const char *srcBytes = [base64string UTF8String];
+    
     NSInteger destLenght = base64string.length/4*3;
     unsigned char *destBytes = malloc(sizeof(char)*destLenght);
     unsigned char *buffer = destBytes;
     int32_t temp = 0;
-    NSUInteger index = destLenght-1;
+    NSUInteger index = base64string.length/4-1;
+    const char *srcBytes = [base64string UTF8String];
     while (index --) {
         temp |= deBase64_table[srcBytes[0]];
         temp <<= 6;
@@ -242,7 +243,9 @@ static const char deBase64_table[] =   {
         buffer[2] = (temp & 0x0000FF);
     }
     
-    return [[NSData alloc] initWithBytesNoCopy:destBytes length:destLenght freeWhenDone:YES];
+    
+    
+    return [[NSData alloc] initWithBytesNoCopy:destBytes length:destLenght];
 }
 
 #pragma mark- AES

@@ -8,98 +8,106 @@
 
 #import "ViewController.h"
 
-#import "UIView+ESC.h"
-#import "ESCPDFDocument.h"
-
-#import "UIColor+ESC.h"
-#import "UIImage+ESC.h"
+#import "ESCArchiver.h"
 
 #import "UIControl+ESC.h"
 
-#import "ESCPopover.h"
+@interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
-#import "ESCCoreData.h"
-#import "Entity.h"
-#import "ESCJSContext.h"
+@property (nonatomic, strong) UITableView *view;
 
-#import "ESCImageGallery.h"
+@property (nonatomic, strong) NSDictionary *options;
 
-#import "ESCCodeSymbol.h"
-
-#import <math.h>
-
-@interface ViewController ()
-
-@property (nonatomic, strong) ESCPDFDocument *document;
-
-@property (nonatomic, strong) UIPopoverController *pc;
-
-@property (nonatomic, strong) UIView *locateView;
+@property (nonatomic, strong) NSArray *moduleList;
 
 @end
 
 @implementation ViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        NSString *optionsPath = [[NSBundle mainBundle] pathForResource:NSStringFromClass(self.class) ofType:@"json"];
+        NSData *optionsData = [[NSData alloc] initWithContentsOfFile:optionsPath];
+        self.options = optionsData && optionsData.length >= 2 ? [NSJSONSerialization JSONObjectWithData:optionsData options:0 error:nil] : @{};
+        self.moduleList = [self.options objectForKey:@"moduleList"];
+    }
+    return self;
+}
+
+- (void)loadView
+{
+    self.view = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    self.view.delegate = self;
+    self.view.dataSource = self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(makeToast)]];
-    
-    [UIView enableGradientBackgroundColor:YES];
-    
-    self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithTitle:@"Show" style:UIBarButtonItemStylePlain target:self action:@selector(show:)],
-                                                [[UIBarButtonItem alloc] initWithTitle:@"Hide" style:UIBarButtonItemStylePlain target:self action:@selector(hide:)]];
-    
-
-//    ESCPDFDocument *pdfDocument  = [[ESCPDFDocument alloc] init];
-//    [pdfDocument loadPDF:[[NSBundle mainBundle] URLForResource:@"adobe_supplement_iso32000" withExtension:@"pdf"]];
-//    [pdfDocument unLockDocumentWithPassword:nil];
-//    [pdfDocument catalogs];
-    
-    ESCImageGallery *gallery = [[ESCImageGallery alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
-    gallery.backgroundColor = [UIColor lightGrayColor];
-    [gallery setImages:@[[UIImage imageNamed:@"128sheying1.jpg"],[NSURL URLWithString:@"http://img0.bdstatic.com/img/image/shouye/lyj/xc.jpg"],[UIImage imageNamed:@"9556390576gjdl.jpg"],[UIImage imageNamed:@"mcmg1210.jpg"],[UIImage imageNamed:@"128sheying1.jpg"],[UIImage imageNamed:@"9556390576gjdl.jpg"],[UIImage imageNamed:@"mcmg1210.jpg"],[UIImage imageNamed:@"128sheying1.jpg"],[UIImage imageNamed:@"9556390576gjdl.jpg"],[UIImage imageNamed:@"mcmg1210.jpg"]]];
-//    [gallery setImages:@[[NSURL URLWithString:@"http://img.bdstatic.com/img/image/shouye/lyj/xc.jpg"]]];
-    [self.view addSubview:gallery];
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost:7461"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
+//    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+//        NSString *tempPath = [NSTemporaryDirectory() stringByAppendingPathComponent:response.suggestedFilename];
+//        [data writeToFile:tempPath atomically:YES];
+//        
+//        NSString *projectPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Library"] stringByAppendingPathComponent:@"Project"];
+//        NSFileManager *fileManager = [NSFileManager defaultManager];
+//        [fileManager removeItemAtPath:projectPath error:nil];
+//        [fileManager createDirectoryAtPath:projectPath withIntermediateDirectories:YES attributes:nil error:nil];
+//        
+//        NSError *error;
+//        [ESCArchiver unArchive:tempPath to:projectPath withType:ESCArchiveTypeZip password:nil overWrite:YES error:&error];
+//    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
-
-}
-
-- (void)show:(id)item
-{
-    
-
-    return;
-}
-
-- (void)hide:(id)item
-{
-    [self.view hideIndicator:NO];
-}
-
-- (void)makeToast
-{
     
 }
 
-- (id)block:(id)arg,...
-{
-    return nil;
-}
-
-- (void)timerAction:(NSTimer *)timer
-{
-    NSLog(@"%@",[NSDate date]);
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark- UITableViewDataSource, UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.moduleList.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 64.0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@""];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@""];
+    }
+    NSDictionary *options = [self.moduleList objectAtIndex:indexPath.row];
+    cell.textLabel.text = [options objectForKey:@"title"];
+    cell.detailTextLabel.text = [options objectForKey:@"description"];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *options = [self.moduleList objectAtIndex:indexPath.row];
+    NSURL *url = [NSURL URLWithString:[options objectForKey:@"action"]];
+    
+    if ([[url.scheme lowercaseString] isEqualToString:@"escm"]) {
+        Class vcClass = NSClassFromString(url.host);
+        if (!vcClass) {
+            NSLog(@"vcClass is not exist : %@",url);
+            return;
+        }
+        UIViewController *vc = [[vcClass alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
 @end

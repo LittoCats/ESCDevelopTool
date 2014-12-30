@@ -11,11 +11,15 @@
 
 #import <Foundation/Foundation.h>
 
+#import <CoreText/CoreText.h>
+
 @interface NSString (ESC)
 
 - (BOOL)isEmpty;
 
 - (id)toJSON;
+
+- (CGSize) sizeWithCTFont:(CTFontRef)fontRef constrainedToSize:(CGSize)constraint;
 
 @end
 

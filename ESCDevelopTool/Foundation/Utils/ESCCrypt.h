@@ -10,27 +10,27 @@
 
 @interface ESCCrypt : NSObject
 
-+ (NSString *)MD5Encrypt:(NSData *)data;
-+ (NSString *)MD5EncryptWithFilePath:(NSString *)path;
-+ (NSString *)MD5Encrypt:(NSData *)data withPaddingData:(NSData *)paddingData length:(NSInteger)length;
++ (NSString *)MD5Encrypt:(const NSData *)data;
++ (NSString *)MD5EncryptWithFilePath:(const NSString *)path;
++ (NSString *)MD5Encrypt:(const NSData *)data withPaddingData:(const NSData *)paddingData length:(const NSInteger)length;
 
-+ (NSString *)BASE64Encrypt:(NSData *)data;
-+ (NSData *)BASE64Decrypt:(NSString *)data;
++ (NSString *)BASE64Encrypt:(const NSData *)data;
++ (NSData *)BASE64Decrypt:(const NSString *)data;
 
-+ (NSString *)BASE16Encrypt:(NSData *)data;
-+ (NSData *)BASE16Decrypt:(NSString *)data;
++ (NSString *)BASE16Encrypt:(const NSData *)data;
++ (NSData *)BASE16Decrypt:(const NSString *)data;
 
-+ (NSData *)AES128Encrypt:(NSData *)data withPassword:(NSString *)password;
-+ (NSData *)AES128Decrypt:(NSData *)encryptedData withPassword:(NSString *)password;
++ (NSData *)AES128Encrypt:(const NSData *)data withPassword:(const NSString *)password;
++ (NSData *)AES128Decrypt:(const NSData *)encryptedData withPassword:(const NSString *)password;
 
-+ (NSData *)AES192Encrypt:(NSData *)data withPassword:(NSString *)password;
-+ (NSData *)AES192Decrypt:(NSData *)encryptedData withPassword:(NSString *)password;
++ (NSData *)AES192Encrypt:(const NSData *)data withPassword:(const NSString *)password;
++ (NSData *)AES192Decrypt:(const NSData *)encryptedData withPassword:(const NSString *)password;
 
-+ (NSData *)AES256Encrypt:(NSData *)data withPassword:(NSString *)password;
-+ (NSData *)AES256Decrypt:(NSData *)encryptedData withPassword:(NSString *)password;
++ (NSData *)AES256Encrypt:(const NSData *)data withPassword:(const NSString *)password;
++ (NSData *)AES256Decrypt:(const NSData *)encryptedData withPassword:(const NSString *)password;
 
-+ (NSData *)DESEncrypt:(NSData *)data withPassword:(NSString *)password;
-+ (NSData *)DESDecrypt:(NSData *)encryptedData withPassword:(NSString *)password;
++ (NSData *)DESEncrypt:(const NSData *)data withPassword:(const NSString *)password;
++ (NSData *)DESDecrypt:(const NSData *)encryptedData withPassword:(const NSString *)password;
 
 + (NSData *)DES3Encrypt:(NSData *)data withPassword:(NSString *)password;
 + (NSData *)DES3Decrypt:(NSData *)encryptedData withPassword:(NSString *)password;

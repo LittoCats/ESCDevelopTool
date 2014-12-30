@@ -1,0 +1,8 @@
+{
+  "shortcutKey": [
+    {
+      "key": "option+d",
+      "action":"code_comments"
+    }
+  ]
+}

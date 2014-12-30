@@ -17,7 +17,7 @@
 
 #import <objc/runtime.h>
 
-#define checkError   if (*error) return nil
+#define checkError   if (error){ *retError = error;  return nil;}
 #define Error(errorCode) [ESCArchiver _errorWithCode:errorCode]
 
 #define Extension(type)    [ESCArchiver _extensionWithType:type]
@@ -42,14 +42,15 @@
        withType:(ESCArchiveType)type
        password:(NSString *)password
       overWrite:(BOOL)overWrite
-          error:(NSError *__autoreleasing *)error
+          error:(NSError *__autoreleasing *)retError
 {
+    NSError *error;
     NSString *sourcePath = [path stringByResolvingSymlinksInPath];
     //检查源文件夹/文件是否存在
     NSFileManager *fileManager = [NSFileManager defaultManager];
     BOOL isDirectory;
     if (![fileManager fileExistsAtPath:sourcePath isDirectory:&isDirectory]) {
-        *error = Error(ESCArchiveErrorFileNotExist);
+        error = Error(ESCArchiveErrorFileNotExist);
         checkError;
     }
     
@@ -60,11 +61,11 @@
     destinationDirectionary = [destinationDirectionary stringByResolvingSymlinksInPath];
     if ([fileManager fileExistsAtPath:destinationDirectionary isDirectory:&directory]) {
         if (!directory) {
-            *error = Error(ESCArchiveErrorDestinationDirInvalid);
+            error = Error(ESCArchiveErrorDestinationDirInvalid);
             checkError;
         }
     }else{
-        [fileManager createDirectoryAtPath:destinationDirectionary withIntermediateDirectories:YES attributes:nil error:error];
+        [fileManager createDirectoryAtPath:destinationDirectionary withIntermediateDirectories:YES attributes:nil error:&error];
         checkError;
     }
     //目标文件名
@@ -72,16 +73,16 @@
     
     if ([fileManager fileExistsAtPath:destinationFile isDirectory:&directory] || directory) {
         if (overWrite) {
-            [fileManager removeItemAtPath:destinationFile error:error];
+            [fileManager removeItemAtPath:destinationFile error:&error];
             checkError;
         }else{
-            *error = Error(ESCArchiveErrorFileAlreadyExist);
+            error = Error(ESCArchiveErrorFileAlreadyExist);
             checkError;
         }
     }
     
     //创建实例，如果 destinationName 任务已存在，则生成实例失败
-    ESCArchiver *archiver = [self archiverWithDestinationFile:destinationFile error:error];
+    ESCArchiver *archiver = [self archiverWithDestinationFile:destinationFile error:&error];
     checkError;
     archiver.sourcePath = sourcePath;
     archiver.destinationPath = destinationFile;
@@ -93,7 +94,7 @@
     //打包
     switch (archiver.type) {
         case ESCArchiveTypeZip:
-            [archiver _zip:error];
+            [archiver _zip:&error];
             break;
             
         default:
@@ -108,13 +109,14 @@
                withType:(ESCArchiveType)type
                password:(NSString *)password
               overWrite:(BOOL)overWrite
-                  error:(NSError *__autoreleasing *)error
+                  error:(NSError *__autoreleasing *)retError
 {
+    NSError *error;
     BOOL isDirectory;
     NSFileManager *fileManager = [NSFileManager defaultManager];
     //检查文件是否存在
     if (![fileManager fileExistsAtPath:packagePath isDirectory:&isDirectory] || isDirectory) {
-        *error = Error(ESCArchiveErrorZipException);
+        error = Error(ESCArchiveErrorZipException);
         checkError;
     }
     //未指定目标路径，则使用源所在路径
@@ -124,16 +126,16 @@
     destinationDirectionary = [destinationDirectionary stringByResolvingSymlinksInPath];
     if ([fileManager fileExistsAtPath:destinationDirectionary isDirectory:&directory]) {
         if (!directory) {
-            *error = Error(ESCArchiveErrorDestinationDirInvalid);
+            error = Error(ESCArchiveErrorDestinationDirInvalid);
             checkError;
         }
     }else{
-        [fileManager createDirectoryAtPath:destinationDirectionary withIntermediateDirectories:YES attributes:nil error:error];
+        [fileManager createDirectoryAtPath:destinationDirectionary withIntermediateDirectories:YES attributes:nil error:&error];
         checkError;
     }
     
     //创建实例，如果 packagePath 任务已存在，则生成实例失败
-    ESCArchiver *archiver = [self archiverWithDestinationFile:packagePath error:error];
+    ESCArchiver *archiver = [self archiverWithDestinationFile:packagePath error:&error];
     checkError;
     archiver.sourcePath = packagePath;
     archiver.destinationPath = destinationDirectionary;

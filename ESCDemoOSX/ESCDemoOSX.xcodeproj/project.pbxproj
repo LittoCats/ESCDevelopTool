@@ -398,6 +398,7 @@
 				A1D419BA1A25FD3F00280D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1D419BB1A25FD3F00280D0A /* Build configuration list for PBXNativeTarget "ESCDemoOSXTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +407,7 @@
 				A1D419BD1A25FD3F00280D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

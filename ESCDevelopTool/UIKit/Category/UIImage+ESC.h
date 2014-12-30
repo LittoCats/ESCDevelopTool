@@ -22,6 +22,14 @@
  */
 + (UIImage *)imageWithSize:(CGSize)size colors:(NSArray *)colors gradientDirection:(CGFloat)direction;
 
+- (UIImage *)resizedImageWithNewSize:(CGSize)newSize
+                interpolationQuality:(CGInterpolationQuality)quality;
+
+- (UIImage *)resizedImageWithContentMode:(UIViewContentMode)contentMode
+                                  bounds:(CGSize)bounds
+                    interpolationQuality:(CGInterpolationQuality)quality;
+
+
 @end
 
 #endif

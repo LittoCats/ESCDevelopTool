@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1D694421A262701008D027D"
+               BlueprintIdentifier = "A1D4FEFA1A2770BE001EF98C"
                BuildableName = "IOS.app"
                BlueprintName = "IOS"
                ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1D694551A262702008D027D"
+               BlueprintIdentifier = "A1D4FF121A2770BE001EF98C"
                BuildableName = "IOSTests.xctest"
                BlueprintName = "IOSTests"
                ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1D694551A262702008D027D"
+               BlueprintIdentifier = "A1D4FF121A2770BE001EF98C"
                BuildableName = "IOSTests.xctest"
                BlueprintName = "IOSTests"
                ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1D694421A262701008D027D"
+            BlueprintIdentifier = "A1D4FEFA1A2770BE001EF98C"
             BuildableName = "IOS.app"
             BlueprintName = "IOS"
             ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1D694421A262701008D027D"
+            BlueprintIdentifier = "A1D4FEFA1A2770BE001EF98C"
             BuildableName = "IOS.app"
             BlueprintName = "IOS"
             ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1D694421A262701008D027D"
+            BlueprintIdentifier = "A1D4FEFA1A2770BE001EF98C"
             BuildableName = "IOS.app"
             BlueprintName = "IOS"
             ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
