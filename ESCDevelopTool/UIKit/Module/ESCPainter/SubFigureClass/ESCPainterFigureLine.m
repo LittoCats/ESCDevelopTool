@@ -21,17 +21,37 @@
 
 - (void)beganWithTouches:(NSSet *)touches inCanvas:(ESCPainterCanvas *)canvas
 {
-    
+    UITouch *touch = [touches anyObject];
+    self.startPoint = NSStringFromCGPoint([touch locationInView:canvas]);
 }
 
 - (void)recieveTouches:(NSSet *)touches inCanvas:(ESCPainterCanvas *)canvas
 {
-    
+    UITouch *touch = [touches anyObject];
+    self.endPoint = NSStringFromCGPoint([touch locationInView:canvas]);
+}
+
+- (BOOL)isValid
+{
+    return _startPoint && _endPoint;
 }
 
 - (void)drawInContext:(CGContextRef)context
 {
+    CGContextBeginPath(context);
+    //线条开始样式，设置为平滑
+    CGContextSetLineCap(context, kCGLineCapRound);
     
+    CGContextBeginPath(context);
+    CGPoint startPoint = CGPointFromString(_startPoint);
+    CGContextMoveToPoint(context, startPoint.x, startPoint.y);
+    CGPoint endPoint = CGPointFromString(_endPoint);
+    CGContextAddLineToPoint(context, endPoint.x, endPoint.y);
+    
+    CGContextSetStrokeColorWithColor(context, [_color CGColor]);
+    CGContextSetLineWidth(context, _width);
+    CGContextStrokePath(context);
 }
+
 
 @end

@@ -20,4 +20,6 @@ UIKIT_EXTERN const NSString *ESCPopoverTintcolorKey;
 - (void)presentFromRect:(CGRect)rect
                  inView:(UIView *)view
                 options:(NSDictionary *)options;
+
+- (void)dismiss:(BOOL)animated;
 @end

@@ -4,6 +4,14 @@
       "title": "ESCWebView",
       "description": "一个简单的 UIWebView <-> Nativie 交互实现。",
       "action": "ESCM://WebViewController"
+    },{
+    	"title":"ESCPopoverControl",
+    	"description":"比较小巧的弹出视图，只是一个容器类，内容需自定义",
+    	"action":"ESCM://PopoverViewController"
+    },{
+    	"title":"PainterViewController",
+    	"description":"",
+    	"action":"ESCM://PainterViewController"
     }
   ]
 }

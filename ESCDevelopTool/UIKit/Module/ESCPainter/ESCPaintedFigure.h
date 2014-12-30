@@ -11,9 +11,9 @@
 
 @interface ESCPaintedFigure : NSObject
 
-@property (nonatomic, strong) ESCPaintedFigure *previous;
+@property (nonatomic, weak) ESCPaintedFigure *previous;
 
-@property (nonatomic, weak) ESCPaintedFigure *next;
+@property (nonatomic, strong) ESCPaintedFigure *next;
 
 /**
  *
@@ -32,6 +32,11 @@
 
 - (void)beganWithTouches:(NSSet *)touches inCanvas:(ESCPainterCanvas *)canvas;
 - (void)recieveTouches:(NSSet *)touches inCanvas:(ESCPainterCanvas *)canvas;
+
+/**
+ *  默认返回 YES;
+ */
+- (BOOL)isValid;
 
 @end
 

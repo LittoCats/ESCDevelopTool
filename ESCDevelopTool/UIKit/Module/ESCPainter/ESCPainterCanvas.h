@@ -23,6 +23,6 @@
 
 - (void)canvas:(ESCPainterCanvas *)canvas DidCreateFigure:(ESCPaintedFigure *)figure;
 
-- (Class/* ESCPaintedFigure or ESCPaintedFigure's subClass */)figureClassForCanvas:(ESCPainterCanvas *)canvas;
+- (ESCPaintedFigure *)figureClassForCanvas:(ESCPainterCanvas *)canvas;
 
 @end

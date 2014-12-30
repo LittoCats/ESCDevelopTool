@@ -39,4 +39,10 @@
 {
     
 }
+
+- (BOOL)isValid
+{
+    return YES;
+}
+
 @end

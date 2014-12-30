@@ -18,6 +18,8 @@
 @property (nonatomic, strong) ESCPaintedFigure *firstFigure;
 @property (nonatomic, strong) ESCPaintedFigure *lastFigure;
 
+@property (nonatomic, weak) ESCPaintedFigure *tempFigure;
+
 @property (nonatomic, strong) ESCPainterCanvas *canvas;
 
 @end

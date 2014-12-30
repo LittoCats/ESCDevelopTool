@@ -13,7 +13,7 @@
 @property (nonatomic, strong) UIColor *color;
 @property (nonatomic) CGFloat width;
 
-@property (nonatomic) CGPoint startPoint;
+@property (nonatomic) NSString *startPoint;
 
-@property (nonatomic) CGPoint endPoint;
+@property (nonatomic) NSString *endPoint;
 @end

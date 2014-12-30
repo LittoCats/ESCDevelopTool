@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Route",
+    "class": "ESCPainterFigureRoute"
+  },{
+    "title": "Line",
+    "class": "ESCPainterFigureLine"
+  }
+]

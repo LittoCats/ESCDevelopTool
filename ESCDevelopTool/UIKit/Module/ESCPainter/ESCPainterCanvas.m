@@ -26,8 +26,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    Class class = [self.delegate figureClassForCanvas:self];
-    self.figure = [[class alloc] init];
+    self.figure = [self.delegate figureClassForCanvas:self];
     [_figure beganWithTouches:touches inCanvas:self];
 }
 
@@ -40,11 +39,15 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.delegate canvas:self DidCreateFigure:_figure];
+    
+    self.figure = nil;
+    [self setNeedsDisplay];
 }
 
 #pragma mark- drawRect
 - (void)drawRect:(CGRect)rect
 {
+    if (!self.figure) return;
     //获取当前上下文，
     CGContextRef context=UIGraphicsGetCurrentContext();
     CGContextBeginPath(context);

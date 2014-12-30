@@ -108,13 +108,17 @@ typedef enum {
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [UIView animateWithDuration:0.3 animations:^{
+    [self dismiss:YES];
+}
+
+- (void)dismiss:(BOOL)animated;
+{
+    animated ? [UIView animateWithDuration:0.3 animations:^{
         _popoverView.frame = (CGRect){[self convertPoint:_popoverView.points[0] fromView:_popoverView],CGSizeZero};
         _scrollView.frame = CGRectZero;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
-    }];
-    
+    }] : [self removeFromSuperview];
 }
 #ifndef ESCDevelopTool_UIView_ESC
 - (void)superviewFrameDidChanged

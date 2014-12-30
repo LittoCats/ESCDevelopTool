@@ -15,6 +15,11 @@
 		A131DEA81A2B48C30060E74E /* ESCPDFDocument+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DEA71A2B48C30060E74E /* ESCPDFDocument+Private.m */; };
 		A131DEB21A2C1FBC0060E74E /* UIControl+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DEB11A2C1FBC0060E74E /* UIControl+ESC.m */; };
 		A14388C41A308E3800782998 /* UIColor+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A14388C31A308E3800782998 /* UIColor+ESC.m */; };
+		A14398BE1A52CC69001B4255 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14398BC1A52CC69001B4255 /* PopoverViewController.m */; };
+		A14398BF1A52CC69001B4255 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14398BD1A52CC69001B4255 /* PopoverViewController.xib */; };
+		A14398D11A52DE70001B4255 /* PainterFigureList.m in Sources */ = {isa = PBXBuildFile; fileRef = A14398CE1A52DE70001B4255 /* PainterFigureList.m */; };
+		A14398D21A52DE70001B4255 /* PainterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14398D01A52DE70001B4255 /* PainterViewController.m */; };
+		A14398D41A52DE9E001B4255 /* PainterFigureList.json in Resources */ = {isa = PBXBuildFile; fileRef = A14398D31A52DE9E001B4255 /* PainterFigureList.json */; };
 		A1450C841A485273003B8988 /* ESCWebView+URLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = A1450C831A485273003B8988 /* ESCWebView+URLProtocol.m */; };
 		A1450C871A4857F4003B8988 /* ESCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1450C861A4857F4003B8988 /* ESCWebView.m */; };
 		A1450C8A1A485A91003B8988 /* ESCWebView+CMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A1450C891A485A91003B8988 /* ESCWebView+CMethod.m */; };
@@ -174,6 +179,14 @@
 		A131DEB11A2C1FBC0060E74E /* UIControl+ESC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ESC.m"; sourceTree = "<group>"; };
 		A14388C21A308E3800782998 /* UIColor+ESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ESC.h"; sourceTree = "<group>"; };
 		A14388C31A308E3800782998 /* UIColor+ESC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ESC.m"; sourceTree = "<group>"; };
+		A14398BB1A52CC69001B4255 /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
+		A14398BC1A52CC69001B4255 /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
+		A14398BD1A52CC69001B4255 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		A14398CD1A52DE70001B4255 /* PainterFigureList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PainterFigureList.h; sourceTree = "<group>"; };
+		A14398CE1A52DE70001B4255 /* PainterFigureList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PainterFigureList.m; sourceTree = "<group>"; };
+		A14398CF1A52DE70001B4255 /* PainterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PainterViewController.h; sourceTree = "<group>"; };
+		A14398D01A52DE70001B4255 /* PainterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PainterViewController.m; sourceTree = "<group>"; };
+		A14398D31A52DE9E001B4255 /* PainterFigureList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PainterFigureList.json; sourceTree = "<group>"; };
 		A1450C811A4851AD003B8988 /* ESCWebView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCWebView+Private.h"; sourceTree = "<group>"; };
 		A1450C831A485273003B8988 /* ESCWebView+URLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCWebView+URLProtocol.m"; sourceTree = "<group>"; };
 		A1450C851A4857F4003B8988 /* ESCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCWebView.h; sourceTree = "<group>"; };
@@ -422,6 +435,28 @@
 				A16875B91A3D7844004B873E /* ESCCoreData+Private.m */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A14398BA1A52CC20001B4255 /* ESCPopover */ = {
+			isa = PBXGroup;
+			children = (
+				A14398BB1A52CC69001B4255 /* PopoverViewController.h */,
+				A14398BC1A52CC69001B4255 /* PopoverViewController.m */,
+				A14398BD1A52CC69001B4255 /* PopoverViewController.xib */,
+			);
+			path = ESCPopover;
+			sourceTree = "<group>";
+		};
+		A14398CC1A52DE70001B4255 /* ESCPainter */ = {
+			isa = PBXGroup;
+			children = (
+				A14398CD1A52DE70001B4255 /* PainterFigureList.h */,
+				A14398CE1A52DE70001B4255 /* PainterFigureList.m */,
+				A14398CF1A52DE70001B4255 /* PainterViewController.h */,
+				A14398D01A52DE70001B4255 /* PainterViewController.m */,
+				A14398D31A52DE9E001B4255 /* PainterFigureList.json */,
+			);
+			path = ESCPainter;
 			sourceTree = "<group>";
 		};
 		A1450C7D1A485114003B8988 /* ESCWebView */ = {
@@ -743,6 +778,8 @@
 				A1D4FF041A2770BE001EF98C /* ViewController.h */,
 				A1D4FF051A2770BE001EF98C /* ViewController.m */,
 				A187EA0A1A52892900B4564E /* ViewController.json */,
+				A14398CC1A52DE70001B4255 /* ESCPainter */,
+				A14398BA1A52CC20001B4255 /* ESCPopover */,
 				A187EA111A528D8300B4564E /* ESCWebView */,
 				A1D4FF071A2770BE001EF98C /* Main.storyboard */,
 				A1D4FF0A1A2770BE001EF98C /* Images.xcassets */,
@@ -1117,12 +1154,14 @@
 			files = (
 				A1D4FF091A2770BE001EF98C /* Main.storyboard in Resources */,
 				A187EA0B1A52892900B4564E /* ViewController.json in Resources */,
+				A14398BF1A52CC69001B4255 /* PopoverViewController.xib in Resources */,
 				A1D4FF0E1A2770BE001EF98C /* LaunchScreen.xib in Resources */,
 				A18716311A354FF900514C57 /* ChangeLogUnzip in Resources */,
 				A187EA141A528D8300B4564E /* __esc_webview_bridge.coffee in Resources */,
 				A187EA1A1A5293C100B4564E /* webview.html in Resources */,
 				A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */,
 				A1D4FF0B1A2770BE001EF98C /* Images.xcassets in Resources */,
+				A14398D41A52DE9E001B4255 /* PainterFigureList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1189,6 +1228,7 @@
 				A1B3A4E71A399115009F8E9E /* error.c in Sources */,
 				A1450C8A1A485A91003B8988 /* ESCWebView+CMethod.m in Sources */,
 				A1B3A4F91A399115009F8E9E /* util.c in Sources */,
+				A14398D21A52DE70001B4255 /* PainterViewController.m in Sources */,
 				A18716341A354FF900514C57 /* unzip.c in Sources */,
 				A1B3A4F11A399115009F8E9E /* isaac.c in Sources */,
 				A187E9ED1A522FD800B4564E /* ESCPainterFigureRoute.m in Sources */,
@@ -1219,6 +1259,7 @@
 				A1D4FF821A2771DF001EF98C /* __ESCToastView.m in Sources */,
 				A18716301A354FF900514C57 /* ESCArchiver.m in Sources */,
 				A187E9F01A52592700B4564E /* ESCPainterFigureLine.m in Sources */,
+				A14398D11A52DE70001B4255 /* PainterFigureList.m in Sources */,
 				A1B3A4F51A399115009F8E9E /* qrdectxt.c in Sources */,
 				A1B3A4EF1A399115009F8E9E /* binarize.c in Sources */,
 				A1D4FF001A2770BE001EF98C /* main.m in Sources */,
@@ -1231,6 +1272,7 @@
 				A1D4FF681A2771C6001EF98C /* ESCCrypt.m in Sources */,
 				A1B3A50D1A3ADA5C009F8E9E /* ESCImageGallery.m in Sources */,
 				A187160C1A352E7D00514C57 /* UIImage+ESC.m in Sources */,
+				A14398BE1A52CC69001B4255 /* PopoverViewController.m in Sources */,
 				A1B3A43B1A3981FB009F8E9E /* ESCCodeSymbol+Scanner.m in Sources */,
 				A1B3A4ED1A399115009F8E9E /* bch15_5.c in Sources */,
 				A1B3A4D31A399115009F8E9E /* config.c in Sources */,

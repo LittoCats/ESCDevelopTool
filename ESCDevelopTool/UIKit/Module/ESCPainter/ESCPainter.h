@@ -42,4 +42,8 @@
 
 - (void)loadSerializedFigrueData;
 
+//
+
+@property (nonatomic, copy) NSString *figureClass;
+
 @end

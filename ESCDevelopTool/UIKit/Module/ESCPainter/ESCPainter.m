@@ -55,14 +55,15 @@
 #pragma mark- canvas delegate
 - (void)canvas:(ESCPainterCanvas *)canvas DidCreateFigure:(ESCPaintedFigure *)figure
 {
+    if (![figure isValid]) return;
     _lastFigure.next = figure;
     figure.previous = _lastFigure;
     self.lastFigure = figure;
 }
 
-- (Class)figureClassForCanvas:(ESCPainterCanvas *)canvas
+- (ESCPaintedFigure *)figureClassForCanvas:(ESCPainterCanvas *)canvas
 {
-    return ESCPainterFigureRoute.class;
+    return [[NSClassFromString(self.figureClass) alloc] init];
 }
 
 #pragma mark-
@@ -88,7 +89,7 @@
 - (void)drawRect:(CGRect)rect
 {
     ESCPaintedFigure *figure = _firstFigure.next;
-    if (!figure) return;
+    if (!figure || _lastFigure == _firstFigure) return;
     
     //获取当前上下文，
     CGContextRef context=UIGraphicsGetCurrentContext();
