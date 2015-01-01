@@ -1,0 +1,19 @@
+{
+  "readme": [
+    "image-resizer [imagePath] [options] options",
+    "example: image-resizer appicon.png -u icon -o ~/Desktop/appicon",
+    "options",
+    "\t-h\tshow this message",
+    "\t-o\toutput dictionary, use current directory by default",
+    "\t-s\tsize of the resized image. You can set more than size option divided by space .",
+    "\t-cfg\tcustom config file path. A json file and must contain key named 'images' with value typed array with object that contain key named size with value like 128*128 or 128 .",
+    "\t-u\tuse of the resized images . This option can be 'icon' or 'lanuchimage (ingore case). If set this option, option -s and -cfg will be ingored .",
+    "Discussion : \n\tThe output image file has same name with the source image but append it's size pixel and type named png ."
+  ],
+  "options": {
+    "-o": "output",
+    "-s": "size",
+    "-cfg": "config_file",
+    "-u": "use_type"
+  }
+}

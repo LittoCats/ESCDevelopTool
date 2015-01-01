@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:LittocatXcodePlugin/LittocatXcodePlugin/plugin_script/LittoCatsPlugin.coffee">
-   </FileRef>
-   <FileRef
       location = "group:LittocatXcodePlugin/LittocatXcodePlugin.xcodeproj">
    </FileRef>
    <FileRef
@@ -21,5 +18,8 @@
    </FileRef>
    <FileRef
       location = "group:ESCDemoOSX/ESCDemoOSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:image resizer/image resizer.xcodeproj">
    </FileRef>
 </Workspace>

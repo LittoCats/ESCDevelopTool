@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LittocatXcodePlugin.xcscheme_^#shared#^_</key>
+		<key>image resizer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>9</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>A111A9A21A4D383A00D9B1CC</key>
+		<key>A1F53CF91A53B0020029A2A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

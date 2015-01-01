@@ -30,7 +30,6 @@
 		A187160C1A352E7D00514C57 /* UIImage+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A187160B1A352E7D00514C57 /* UIImage+ESC.m */; };
 		A18716211A354F5900514C57 /* libiconv.2.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A18716201A354F5900514C57 /* libiconv.2.4.0.dylib */; };
 		A18716301A354FF900514C57 /* ESCArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A18716241A354FF900514C57 /* ESCArchiver.m */; };
-		A18716311A354FF900514C57 /* ChangeLogUnzip in Resources */ = {isa = PBXBuildFile; fileRef = A18716261A354FF900514C57 /* ChangeLogUnzip */; };
 		A18716321A354FF900514C57 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = A18716281A354FF900514C57 /* ioapi.c */; };
 		A18716331A354FF900514C57 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = A187162A1A354FF900514C57 /* mztools.c */; };
 		A18716341A354FF900514C57 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = A187162C1A354FF900514C57 /* unzip.c */; };
@@ -44,7 +43,6 @@
 		A187EA061A527E0B00B4564E /* ESCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A187EA041A527E0B00B4564E /* ESCTableView.m */; };
 		A187EA091A527E3800B4564E /* UIView+ESC_Script.m in Sources */ = {isa = PBXBuildFile; fileRef = A187EA081A527E3800B4564E /* UIView+ESC_Script.m */; };
 		A187EA0B1A52892900B4564E /* ViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A187EA0A1A52892900B4564E /* ViewController.json */; };
-		A187EA141A528D8300B4564E /* __esc_webview_bridge.coffee in Resources */ = {isa = PBXBuildFile; fileRef = A187EA121A528D8300B4564E /* __esc_webview_bridge.coffee */; };
 		A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = A187EA131A528D8300B4564E /* __esc_webview_bridge.js */; };
 		A187EA181A528DED00B4564E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A187EA171A528DED00B4564E /* WebViewController.m */; };
 		A187EA1A1A5293C100B4564E /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = A187EA191A5293C100B4564E /* webview.html */; };
@@ -111,9 +109,7 @@
 		A1D4FF001A2770BE001EF98C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FEFF1A2770BE001EF98C /* main.m */; };
 		A1D4FF031A2770BE001EF98C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF021A2770BE001EF98C /* AppDelegate.m */; };
 		A1D4FF061A2770BE001EF98C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF051A2770BE001EF98C /* ViewController.m */; };
-		A1D4FF091A2770BE001EF98C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D4FF071A2770BE001EF98C /* Main.storyboard */; };
 		A1D4FF0B1A2770BE001EF98C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D4FF0A1A2770BE001EF98C /* Images.xcassets */; };
-		A1D4FF0E1A2770BE001EF98C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1D4FF0C1A2770BE001EF98C /* LaunchScreen.xib */; };
 		A1D4FF5A1A2771C6001EF98C /* NSArray+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF241A2771C6001EF98C /* NSArray+ESC.m */; };
 		A1D4FF5B1A2771C6001EF98C /* NSData+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF261A2771C6001EF98C /* NSData+ESC.m */; };
 		A1D4FF5C1A2771C6001EF98C /* NSDate+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF281A2771C6001EF98C /* NSDate+ESC.m */; };
@@ -133,9 +129,11 @@
 		A1D4FF901A27768D001EF98C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4FF8E1A277671001EF98C /* Foundation.framework */; };
 		A1D4FF911A277695001EF98C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4FF8C1A277664001EF98C /* UIKit.framework */; };
 		A1D4FF941A27FE59001EF98C /* __ESCIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF931A27FE59001EF98C /* __ESCIndicatorView.m */; };
+		A1D636FA1A557253006B8205 /* ESCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D636F91A557253006B8205 /* ESCBaseViewController.m */; };
+		A1D637001A55740C006B8205 /* ESCInternationalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D636FF1A55740C006B8205 /* ESCInternationalManager.m */; };
+		A1D637031A557477006B8205 /* ESCInternationalManager+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D637021A557477006B8205 /* ESCInternationalManager+UIKit.m */; };
 		A1D6946D1A26272A008D027D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6946C1A26272A008D027D /* main.m */; };
 		A1D694701A26272A008D027D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6946F1A26272A008D027D /* AppDelegate.m */; };
-		A1D694721A26272A008D027D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D694711A26272A008D027D /* Images.xcassets */; };
 		A1D694751A26272A008D027D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1D694731A26272A008D027D /* MainMenu.xib */; };
 		A1D694811A26272A008D027D /* OSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D694801A26272A008D027D /* OSXTests.m */; };
 		A1EDAEED1A4D1E36000E2CE3 /* NSTextView+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EDAEEC1A4D1E36000E2CE3 /* NSTextView+ESC.m */; };
@@ -347,6 +345,12 @@
 		A1D4FF8E1A277671001EF98C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A1D4FF921A27FE59001EF98C /* __ESCIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __ESCIndicatorView.h; sourceTree = "<group>"; };
 		A1D4FF931A27FE59001EF98C /* __ESCIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __ESCIndicatorView.m; sourceTree = "<group>"; };
+		A1D636F81A557253006B8205 /* ESCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCBaseViewController.h; sourceTree = "<group>"; };
+		A1D636F91A557253006B8205 /* ESCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCBaseViewController.m; sourceTree = "<group>"; };
+		A1D636FE1A55740C006B8205 /* ESCInternationalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCInternationalManager.h; sourceTree = "<group>"; };
+		A1D636FF1A55740C006B8205 /* ESCInternationalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCInternationalManager.m; sourceTree = "<group>"; };
+		A1D637011A557477006B8205 /* ESCInternationalManager+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCInternationalManager+UIKit.h"; sourceTree = "<group>"; };
+		A1D637021A557477006B8205 /* ESCInternationalManager+UIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCInternationalManager+UIKit.m"; sourceTree = "<group>"; };
 		A1D6945B1A262702008D027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1D6945C1A262702008D027D /* IOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOSTests.m; sourceTree = "<group>"; };
 		A1D694681A26272A008D027D /* OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,7 +358,6 @@
 		A1D6946C1A26272A008D027D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A1D6946E1A26272A008D027D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1D6946F1A26272A008D027D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A1D694711A26272A008D027D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A1D694741A26272A008D027D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A1D6947A1A26272A008D027D /* OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D6947F1A26272A008D027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -535,6 +538,7 @@
 		A187E9F91A527D6A00B4564E /* ScriptView */ = {
 			isa = PBXGroup;
 			children = (
+				A1D636F71A55722F006B8205 /* ViewController */,
 				A187E9FE1A527E0B00B4564E /* Button */,
 				A187E9FF1A527E0B00B4564E /* CollectionView */,
 				A187EA001A527E0B00B4564E /* ImageView */,
@@ -846,6 +850,8 @@
 		A1D4FF351A2771C6001EF98C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A1D636FE1A55740C006B8205 /* ESCInternationalManager.h */,
+				A1D636FF1A55740C006B8205 /* ESCInternationalManager.m */,
 				A18716361A3748CA00514C57 /* ESCBarCoder */,
 				A131DE941A28C6870060E74E /* CoreData */,
 				A18716221A354FF900514C57 /* ESCArchiver */,
@@ -907,6 +913,8 @@
 				A16875C61A3DD74F004B873E /* ESCAlertControl.h */,
 				A16875C71A3DD74F004B873E /* ESCAlertControl.m */,
 				A16AA6B21A47A22A00AC00DB /* ESCAnimation */,
+				A1D637011A557477006B8205 /* ESCInternationalManager+UIKit.h */,
+				A1D637021A557477006B8205 /* ESCInternationalManager+UIKit.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -946,6 +954,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A1D636F71A55722F006B8205 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A1D636F81A557253006B8205 /* ESCBaseViewController.h */,
+				A1D636F91A557253006B8205 /* ESCBaseViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		A1D694441A262701008D027D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -979,7 +996,6 @@
 			children = (
 				A1D6946E1A26272A008D027D /* AppDelegate.h */,
 				A1D6946F1A26272A008D027D /* AppDelegate.m */,
-				A1D694711A26272A008D027D /* Images.xcassets */,
 				A1D694731A26272A008D027D /* MainMenu.xib */,
 				A1D6946A1A26272A008D027D /* Supporting Files */,
 			);
@@ -1108,7 +1124,7 @@
 		A19879FA1A2602DD00C4FCE8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0610;
 				TargetAttributes = {
 					A1D4FEFA1A2770BE001EF98C = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -1152,12 +1168,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1D4FF091A2770BE001EF98C /* Main.storyboard in Resources */,
 				A187EA0B1A52892900B4564E /* ViewController.json in Resources */,
 				A14398BF1A52CC69001B4255 /* PopoverViewController.xib in Resources */,
-				A1D4FF0E1A2770BE001EF98C /* LaunchScreen.xib in Resources */,
-				A18716311A354FF900514C57 /* ChangeLogUnzip in Resources */,
-				A187EA141A528D8300B4564E /* __esc_webview_bridge.coffee in Resources */,
 				A187EA1A1A5293C100B4564E /* webview.html in Resources */,
 				A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */,
 				A1D4FF0B1A2770BE001EF98C /* Images.xcassets in Resources */,
@@ -1176,7 +1188,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1D694721A26272A008D027D /* Images.xcassets in Resources */,
 				A1D694751A26272A008D027D /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1198,11 +1209,13 @@
 				A1D4FF061A2770BE001EF98C /* ViewController.m in Sources */,
 				A1B3A4FB1A399115009F8E9E /* refcnt.c in Sources */,
 				A1B3A4DD1A399115009F8E9E /* databar.c in Sources */,
+				A1D636FA1A557253006B8205 /* ESCBaseViewController.m in Sources */,
 				A1B3A5031A39F197009F8E9E /* ESCPDFPage+Private.m in Sources */,
 				A1B3A4D71A399115009F8E9E /* code128.c in Sources */,
 				A1B3A4D91A399115009F8E9E /* code39.c in Sources */,
 				A1D4FF6B1A2771C6001EF98C /* ESCRuntime.m in Sources */,
 				A1D4FF5B1A2771C6001EF98C /* NSData+ESC.m in Sources */,
+				A1D637001A55740C006B8205 /* ESCInternationalManager.m in Sources */,
 				A1B3A5101A3ADA79009F8E9E /* ESCImageGallery+Private.m in Sources */,
 				A131DE8F1A28AF580060E74E /* ESCPDFDocument+Annotations.m in Sources */,
 				A1D4FF5D1A2771C6001EF98C /* NSDictionary+ESC.m in Sources */,
@@ -1226,6 +1239,7 @@
 				A131DE971A28C6870060E74E /* ESCCoreData.m in Sources */,
 				A1B3A4E51A399115009F8E9E /* decoder.c in Sources */,
 				A1B3A4E71A399115009F8E9E /* error.c in Sources */,
+				A1D637031A557477006B8205 /* ESCInternationalManager+UIKit.m in Sources */,
 				A1450C8A1A485A91003B8988 /* ESCWebView+CMethod.m in Sources */,
 				A1B3A4F91A399115009F8E9E /* util.c in Sources */,
 				A14398D21A52DE70001B4255 /* PainterViewController.m in Sources */,
@@ -1385,6 +1399,7 @@
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};

@@ -19,6 +19,9 @@
 #include "error.h"
 #include "svg.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wall"
+
 typedef int qr_line[3];
 
 typedef struct qr_finder_cluster qr_finder_cluster;
@@ -3218,6 +3221,8 @@ static int qr_code_data_parse(qr_code_data *_qrdata,int _version,
        on clean-up.*/
     entry->payload.data.buf=NULL;
     switch(mode){
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunreachable-code"
       /*The number of bits used to encode the character count for each version
          range and each data mode.*/
       static const unsigned char LEN_BITS[3][4]={
@@ -3225,6 +3230,7 @@ static int qr_code_data_parse(qr_code_data *_qrdata,int _version,
         {12,11,16,10},
         {14,13,16,12}
       };
+#pragma clang diagnostic pop
       case QR_MODE_NUM:{
         unsigned char *buf;
         unsigned       bits;
@@ -4043,3 +4049,4 @@ int _zbar_qr_decode (qr_reader *reader,
         free(edge_pts);
     return(nqrdata);
 }
+#pragma clang diagnostic pop

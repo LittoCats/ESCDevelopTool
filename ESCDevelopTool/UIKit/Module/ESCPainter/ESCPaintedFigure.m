@@ -35,6 +35,11 @@
     return nil;
 }
 
+- (void)beganWithTouches:(NSSet *)touches inCanvas:(ESCPainterCanvas *)canvas
+{
+    
+}
+
 - (void)recieveTouches:(NSSet *)touch inCanvas:(ESCPainterCanvas *)canvas
 {
     
