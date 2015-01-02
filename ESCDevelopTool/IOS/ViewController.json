@@ -9,9 +9,13 @@
     	"description":"比较小巧的弹出视图，只是一个容器类，内容需自定义",
     	"action":"ESCM://PopoverViewController"
     },{
-    	"title":"PainterViewController",
-    	"description":"",
-    	"action":"ESCM://PainterViewController"
+      "title":"PainterViewController",
+      "description":"",
+      "action":"ESCM://PainterViewController"
+    },{
+      "title":"ImageGalleryViewController",
+      "description":"轻量机的缓冲和便捷的设置，使大量的图片预览资源占用量大幅降低。",
+      "action":"ESCM://ImageGalleryViewController"
     }
   ]
 }

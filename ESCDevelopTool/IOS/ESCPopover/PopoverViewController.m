@@ -10,13 +10,21 @@
 
 #import "ESCPopover.h"
 #import "UIView+ESC.h"
+#import "UIImage+ESC.h"
+#import "UIColor+ESC.h"
 
 @interface PopoverViewController ()
 - (IBAction)buttonAction:(UIButton *)sender;
 
+@property (nonatomic, strong) ESCPopover *popover;
 @end
 
 @implementation PopoverViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    return [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,24 +38,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)navigationItemSelected:(NSInteger)serializedID
+{
+    [self.popover dismiss:YES];
 }
-*/
 
 - (IBAction)buttonAction:(UIButton *)sender {
-    NSLog(@"button clicked : %@",sender);
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, arc4random()%480+44, arc4random()%1024+88)];
-    view.backgroundColor = [UIColor colorWithPatternImage:[self.view snap]];
+    view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithSize:view.frame.size colors:@[[UIColor randomColor], [UIColor randomColor], [UIColor randomColor]] gradientDirection:M_PI_2-0.3]];
     
-    ESCPopover *popover = [[ESCPopover alloc] init];
-    popover.contentView = view;
-    [popover presentFromRect:sender.frame inView:self.view options:nil];
+    self.popover = self.popover ? self.popover : [[ESCPopover alloc] init];
+    _popover.contentView = view;
+    [_popover presentFromRect:sender.frame inView:self.view options:nil];
 }
 @end

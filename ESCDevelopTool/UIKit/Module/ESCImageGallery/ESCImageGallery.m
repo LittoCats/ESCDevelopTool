@@ -54,7 +54,7 @@
 - (id)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        
+        self.backgroundColor = [UIColor blackColor];
         self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;
@@ -71,6 +71,16 @@
         _imageView1.tag = 1;
         self.imageView2 = [[__ESCImageView alloc] initWithFrame:CGRectZero];
         _imageView2.tag = 2;
+        
+        __weak typeof(self) wself = self;
+        _imageView0.zoomScaleDidChanged = ^(__ESCImageView *imageView){
+            __strong typeof(wself) sself = wself;
+            if (sself.imageView0 != imageView) sself.imageView0.zoomScale = imageView.zoomScale;
+            if (sself.imageView1 != imageView) sself.imageView1.zoomScale = imageView.zoomScale;
+            if (sself.imageView2 != imageView) sself.imageView2.zoomScale = imageView.zoomScale;
+        };
+        _imageView1.zoomScaleDidChanged = _imageView0.zoomScaleDidChanged;
+        _imageView2.zoomScaleDidChanged = _imageView1.zoomScaleDidChanged;
 
         [_scrollView addSubview:_imageView0];
         [_scrollView addSubview:_imageView1];

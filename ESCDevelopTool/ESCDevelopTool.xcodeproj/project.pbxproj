@@ -11,7 +11,6 @@
 		A131DE911A28AF580060E74E /* ESCPDFDocument+Catalog.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DE8B1A28AF580060E74E /* ESCPDFDocument+Catalog.m */; };
 		A131DE931A28AF580060E74E /* ESCPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DE8E1A28AF580060E74E /* ESCPDFDocument.m */; };
 		A131DE971A28C6870060E74E /* ESCCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DE961A28C6870060E74E /* ESCCoreData.m */; };
-		A131DE9F1A2B3FA30060E74E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A131DE9D1A2B3F900060E74E /* QuartzCore.framework */; };
 		A131DEA81A2B48C30060E74E /* ESCPDFDocument+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DEA71A2B48C30060E74E /* ESCPDFDocument+Private.m */; };
 		A131DEB21A2C1FBC0060E74E /* UIControl+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DEB11A2C1FBC0060E74E /* UIControl+ESC.m */; };
 		A14388C41A308E3800782998 /* UIColor+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A14388C31A308E3800782998 /* UIColor+ESC.m */; };
@@ -28,7 +27,6 @@
 		A16875C81A3DD74F004B873E /* ESCAlertControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A16875C71A3DD74F004B873E /* ESCAlertControl.m */; };
 		A16AA6B51A47A25E00AC00DB /* ESCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A16AA6B41A47A25E00AC00DB /* ESCAnimation.m */; };
 		A187160C1A352E7D00514C57 /* UIImage+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A187160B1A352E7D00514C57 /* UIImage+ESC.m */; };
-		A18716211A354F5900514C57 /* libiconv.2.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A18716201A354F5900514C57 /* libiconv.2.4.0.dylib */; };
 		A18716301A354FF900514C57 /* ESCArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A18716241A354FF900514C57 /* ESCArchiver.m */; };
 		A18716321A354FF900514C57 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = A18716281A354FF900514C57 /* ioapi.c */; };
 		A18716331A354FF900514C57 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = A187162A1A354FF900514C57 /* mztools.c */; };
@@ -106,6 +104,18 @@
 		A1B3A5151A3B2C76009F8E9E /* ESCImageGallery+ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A5141A3B2C76009F8E9E /* ESCImageGallery+ScrollView.m */; };
 		A1B94D021A510BF9004CFBD2 /* ESCPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B94D011A510BF9004CFBD2 /* ESCPainter.m */; };
 		A1B94D061A511CBF004CFBD2 /* ESCPainter+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B94D051A511CBF004CFBD2 /* ESCPainter+Private.m */; };
+		A1C2996A1A559EB300C8D74E /* PopoverViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C299691A559EB300C8D74E /* PopoverViewController.json */; };
+		A1C2996D1A56243C00C8D74E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C2996B1A5623C400C8D74E /* JavaScriptCore.framework */; };
+		A1C2996F1A56246500C8D74E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C2996E1A56246500C8D74E /* CoreData.framework */; };
+		A1C299711A56246F00C8D74E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C299701A56246F00C8D74E /* QuartzCore.framework */; };
+		A1C299731A56247700C8D74E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C299721A56247700C8D74E /* Foundation.framework */; };
+		A1C299751A56247F00C8D74E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C299741A56247F00C8D74E /* UIKit.framework */; };
+		A1C299771A56248500C8D74E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C299761A56248500C8D74E /* libz.1.2.5.dylib */; };
+		A1C299791A56249600C8D74E /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C299781A56249600C8D74E /* libc++.1.dylib */; };
+		A1C2997B1A5624A100C8D74E /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C2997A1A5624A100C8D74E /* libsqlite3.0.dylib */; };
+		A1C2997D1A5624AC00C8D74E /* libiconv.2.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C2997C1A5624AC00C8D74E /* libiconv.2.4.0.dylib */; };
+		A1C299811A56254100C8D74E /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C299801A56254100C8D74E /* ImageGalleryViewController.m */; };
+		A1C299831A5626B400C8D74E /* ImageGalleryViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C299821A5626B400C8D74E /* ImageGalleryViewController.json */; };
 		A1D4FF001A2770BE001EF98C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FEFF1A2770BE001EF98C /* main.m */; };
 		A1D4FF031A2770BE001EF98C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF021A2770BE001EF98C /* AppDelegate.m */; };
 		A1D4FF061A2770BE001EF98C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF051A2770BE001EF98C /* ViewController.m */; };
@@ -123,11 +133,6 @@
 		A1D4FF801A2771DF001EF98C /* UIView+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF761A2771DF001EF98C /* UIView+ESC.m */; };
 		A1D4FF811A2771DF001EF98C /* ESCPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF7A1A2771DF001EF98C /* ESCPopover.m */; };
 		A1D4FF821A2771DF001EF98C /* __ESCToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF7D1A2771DF001EF98C /* __ESCToastView.m */; };
-		A1D4FF841A277202001EF98C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4FF831A277202001EF98C /* libsqlite3.0.dylib */; };
-		A1D4FF861A277210001EF98C /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4FF851A277210001EF98C /* libc++.1.dylib */; };
-		A1D4FF8A1A277221001EF98C /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4FF891A277221001EF98C /* libz.1.2.5.dylib */; };
-		A1D4FF901A27768D001EF98C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4FF8E1A277671001EF98C /* Foundation.framework */; };
-		A1D4FF911A277695001EF98C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4FF8C1A277664001EF98C /* UIKit.framework */; };
 		A1D4FF941A27FE59001EF98C /* __ESCIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF931A27FE59001EF98C /* __ESCIndicatorView.m */; };
 		A1D636FA1A557253006B8205 /* ESCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D636F91A557253006B8205 /* ESCBaseViewController.m */; };
 		A1D637001A55740C006B8205 /* ESCInternationalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D636FF1A55740C006B8205 /* ESCInternationalManager.m */; };
@@ -140,8 +145,6 @@
 		A1EDAEFA1A4D2FA8000E2CE3 /* IOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6945C1A262702008D027D /* IOSTests.m */; };
 		A1F1D1B91A31F560007FD09E /* ESCJSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F1D1B81A31F560007FD09E /* ESCJSContext.m */; };
 		A1F1D1BA1A31F560007FD09E /* ESCJSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F1D1B81A31F560007FD09E /* ESCJSContext.m */; };
-		A1F1D1BF1A31F5F6007FD09E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F1D1BB1A31F5CC007FD09E /* CoreData.framework */; };
-		A1F1D1C01A31F5FC007FD09E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F1D1BD1A31F5D5007FD09E /* JavaScriptCore.framework */; };
 		A1F1D1C81A34347E007FD09E /* IOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1F1D1C61A34347E007FD09E /* IOS.xcdatamodeld */; };
 		A1F1D1CB1A3434C2007FD09E /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F1D1CA1A3434C2007FD09E /* Entity.m */; };
 /* End PBXBuildFile section */
@@ -170,7 +173,6 @@
 		A131DE8E1A28AF580060E74E /* ESCPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPDFDocument.m; sourceTree = "<group>"; };
 		A131DE951A28C6870060E74E /* ESCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCCoreData.h; sourceTree = "<group>"; };
 		A131DE961A28C6870060E74E /* ESCCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCCoreData.m; sourceTree = "<group>"; };
-		A131DE9D1A2B3F900060E74E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		A131DEA61A2B48C30060E74E /* ESCPDFDocument+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCPDFDocument+Private.h"; sourceTree = "<group>"; };
 		A131DEA71A2B48C30060E74E /* ESCPDFDocument+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPDFDocument+Private.m"; sourceTree = "<group>"; };
 		A131DEB01A2C1FBC0060E74E /* UIControl+ESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ESC.h"; sourceTree = "<group>"; };
@@ -199,7 +201,6 @@
 		A16AA6B61A47AF7100AC00DB /* ESCAnimation+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCAnimation+Private.h"; sourceTree = "<group>"; };
 		A187160A1A352E7D00514C57 /* UIImage+ESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ESC.h"; sourceTree = "<group>"; };
 		A187160B1A352E7D00514C57 /* UIImage+ESC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ESC.m"; sourceTree = "<group>"; };
-		A18716201A354F5900514C57 /* libiconv.2.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.4.0.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/usr/lib/libiconv.2.4.0.dylib; sourceTree = DEVELOPER_DIR; };
 		A18716231A354FF900514C57 /* ESCArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCArchiver.h; sourceTree = "<group>"; };
 		A18716241A354FF900514C57 /* ESCArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCArchiver.m; sourceTree = "<group>"; };
 		A18716261A354FF900514C57 /* ChangeLogUnzip */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLogUnzip; sourceTree = "<group>"; };
@@ -299,6 +300,19 @@
 		A1B94D031A511645004CFBD2 /* UIImage+ESC+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ESC+Private.h"; sourceTree = "<group>"; };
 		A1B94D041A511CBF004CFBD2 /* ESCPainter+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCPainter+Private.h"; sourceTree = "<group>"; };
 		A1B94D051A511CBF004CFBD2 /* ESCPainter+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPainter+Private.m"; sourceTree = "<group>"; };
+		A1C299691A559EB300C8D74E /* PopoverViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PopoverViewController.json; sourceTree = "<group>"; };
+		A1C2996B1A5623C400C8D74E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		A1C2996E1A56246500C8D74E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		A1C299701A56246F00C8D74E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A1C299721A56247700C8D74E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A1C299741A56247F00C8D74E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A1C299761A56248500C8D74E /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libz.1.2.5.dylib; sourceTree = DEVELOPER_DIR; };
+		A1C299781A56249600C8D74E /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libc++.1.dylib"; sourceTree = DEVELOPER_DIR; };
+		A1C2997A1A5624A100C8D74E /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libsqlite3.0.dylib; sourceTree = DEVELOPER_DIR; };
+		A1C2997C1A5624AC00C8D74E /* libiconv.2.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.4.0.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libiconv.2.4.0.dylib; sourceTree = DEVELOPER_DIR; };
+		A1C2997F1A56254000C8D74E /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
+		A1C299801A56254100C8D74E /* ImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryViewController.m; sourceTree = "<group>"; };
+		A1C299821A5626B400C8D74E /* ImageGalleryViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImageGalleryViewController.json; sourceTree = "<group>"; };
 		A1D4FEFB1A2770BE001EF98C /* IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D4FEFE1A2770BE001EF98C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1D4FEFF1A2770BE001EF98C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -338,11 +352,6 @@
 		A1D4FF7C1A2771DF001EF98C /* __ESCToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __ESCToastView.h; sourceTree = "<group>"; };
 		A1D4FF7D1A2771DF001EF98C /* __ESCToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __ESCToastView.m; sourceTree = "<group>"; };
 		A1D4FF7F1A2771DF001EF98C /* UIView+ESC_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ESC_Private.h"; sourceTree = "<group>"; };
-		A1D4FF831A277202001EF98C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/usr/lib/libsqlite3.0.dylib; sourceTree = DEVELOPER_DIR; };
-		A1D4FF851A277210001EF98C /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/usr/lib/libc++.1.dylib"; sourceTree = DEVELOPER_DIR; };
-		A1D4FF891A277221001EF98C /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/usr/lib/libz.1.2.5.dylib; sourceTree = DEVELOPER_DIR; };
-		A1D4FF8C1A277664001EF98C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		A1D4FF8E1A277671001EF98C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A1D4FF921A27FE59001EF98C /* __ESCIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __ESCIndicatorView.h; sourceTree = "<group>"; };
 		A1D4FF931A27FE59001EF98C /* __ESCIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __ESCIndicatorView.m; sourceTree = "<group>"; };
 		A1D636F81A557253006B8205 /* ESCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCBaseViewController.h; sourceTree = "<group>"; };
@@ -366,8 +375,6 @@
 		A1EDAEEC1A4D1E36000E2CE3 /* NSTextView+ESC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+ESC.m"; sourceTree = "<group>"; };
 		A1F1D1B71A31F560007FD09E /* ESCJSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCJSContext.h; sourceTree = "<group>"; };
 		A1F1D1B81A31F560007FD09E /* ESCJSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCJSContext.m; sourceTree = "<group>"; };
-		A1F1D1BB1A31F5CC007FD09E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
-		A1F1D1BD1A31F5D5007FD09E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		A1F1D1C51A32DCA4007FD09E /* ESCJSContext_Prevate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCJSContext_Prevate.h; sourceTree = "<group>"; };
 		A1F1D1C71A34347E007FD09E /* IOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IOS.xcdatamodel; sourceTree = "<group>"; };
 		A1F1D1C91A3434C2007FD09E /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
@@ -379,15 +386,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A18716211A354F5900514C57 /* libiconv.2.4.0.dylib in Frameworks */,
-				A1F1D1C01A31F5FC007FD09E /* JavaScriptCore.framework in Frameworks */,
-				A1F1D1BF1A31F5F6007FD09E /* CoreData.framework in Frameworks */,
-				A131DE9F1A2B3FA30060E74E /* QuartzCore.framework in Frameworks */,
-				A1D4FF911A277695001EF98C /* UIKit.framework in Frameworks */,
-				A1D4FF901A27768D001EF98C /* Foundation.framework in Frameworks */,
-				A1D4FF8A1A277221001EF98C /* libz.1.2.5.dylib in Frameworks */,
-				A1D4FF861A277210001EF98C /* libc++.1.dylib in Frameworks */,
-				A1D4FF841A277202001EF98C /* libsqlite3.0.dylib in Frameworks */,
+				A1C2997D1A5624AC00C8D74E /* libiconv.2.4.0.dylib in Frameworks */,
+				A1C2997B1A5624A100C8D74E /* libsqlite3.0.dylib in Frameworks */,
+				A1C299791A56249600C8D74E /* libc++.1.dylib in Frameworks */,
+				A1C299771A56248500C8D74E /* libz.1.2.5.dylib in Frameworks */,
+				A1C299751A56247F00C8D74E /* UIKit.framework in Frameworks */,
+				A1C299731A56247700C8D74E /* Foundation.framework in Frameworks */,
+				A1C299711A56246F00C8D74E /* QuartzCore.framework in Frameworks */,
+				A1C2996F1A56246500C8D74E /* CoreData.framework in Frameworks */,
+				A1C2996D1A56243C00C8D74E /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +453,7 @@
 				A14398BB1A52CC69001B4255 /* PopoverViewController.h */,
 				A14398BC1A52CC69001B4255 /* PopoverViewController.m */,
 				A14398BD1A52CC69001B4255 /* PopoverViewController.xib */,
+				A1C299691A559EB300C8D74E /* PopoverViewController.json */,
 			);
 			path = ESCPopover;
 			sourceTree = "<group>";
@@ -614,10 +622,10 @@
 				A1D4FF731A2771DF001EF98C /* UIKit */,
 				A1D4FF211A2771C6001EF98C /* Foundation */,
 				A1987A001A26033400C4FCE8 /* AppKit */,
+				A1D4FEFC1A2770BE001EF98C /* IOS */,
 				A1D694591A262702008D027D /* IOSTests */,
 				A1D694691A26272A008D027D /* OSX */,
 				A1D6947D1A26272A008D027D /* OSXTests */,
-				A1D4FEFC1A2770BE001EF98C /* IOS */,
 				A1D694441A262701008D027D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -774,6 +782,16 @@
 			path = ESCPainter;
 			sourceTree = "<group>";
 		};
+		A1C2997E1A56251100C8D74E /* ImageGallery */ = {
+			isa = PBXGroup;
+			children = (
+				A1C2997F1A56254000C8D74E /* ImageGalleryViewController.h */,
+				A1C299801A56254100C8D74E /* ImageGalleryViewController.m */,
+				A1C299821A5626B400C8D74E /* ImageGalleryViewController.json */,
+			);
+			path = ImageGallery;
+			sourceTree = "<group>";
+		};
 		A1D4FEFC1A2770BE001EF98C /* IOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -782,6 +800,7 @@
 				A1D4FF041A2770BE001EF98C /* ViewController.h */,
 				A1D4FF051A2770BE001EF98C /* ViewController.m */,
 				A187EA0A1A52892900B4564E /* ViewController.json */,
+				A1C2997E1A56251100C8D74E /* ImageGallery */,
 				A14398CC1A52DE70001B4255 /* ESCPainter */,
 				A14398BA1A52CC20001B4255 /* ESCPopover */,
 				A187EA111A528D8300B4564E /* ESCWebView */,
@@ -941,15 +960,15 @@
 		A1D4FF8B1A27758F001EF98C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A18716201A354F5900514C57 /* libiconv.2.4.0.dylib */,
-				A1F1D1BD1A31F5D5007FD09E /* JavaScriptCore.framework */,
-				A1F1D1BB1A31F5CC007FD09E /* CoreData.framework */,
-				A131DE9D1A2B3F900060E74E /* QuartzCore.framework */,
-				A1D4FF8E1A277671001EF98C /* Foundation.framework */,
-				A1D4FF8C1A277664001EF98C /* UIKit.framework */,
-				A1D4FF891A277221001EF98C /* libz.1.2.5.dylib */,
-				A1D4FF851A277210001EF98C /* libc++.1.dylib */,
-				A1D4FF831A277202001EF98C /* libsqlite3.0.dylib */,
+				A1C2997C1A5624AC00C8D74E /* libiconv.2.4.0.dylib */,
+				A1C2997A1A5624A100C8D74E /* libsqlite3.0.dylib */,
+				A1C299781A56249600C8D74E /* libc++.1.dylib */,
+				A1C299761A56248500C8D74E /* libz.1.2.5.dylib */,
+				A1C299741A56247F00C8D74E /* UIKit.framework */,
+				A1C299721A56247700C8D74E /* Foundation.framework */,
+				A1C299701A56246F00C8D74E /* QuartzCore.framework */,
+				A1C2996E1A56246500C8D74E /* CoreData.framework */,
+				A1C2996B1A5623C400C8D74E /* JavaScriptCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1169,10 +1188,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A187EA0B1A52892900B4564E /* ViewController.json in Resources */,
+				A1C299831A5626B400C8D74E /* ImageGalleryViewController.json in Resources */,
 				A14398BF1A52CC69001B4255 /* PopoverViewController.xib in Resources */,
 				A187EA1A1A5293C100B4564E /* webview.html in Resources */,
 				A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */,
 				A1D4FF0B1A2770BE001EF98C /* Images.xcassets in Resources */,
+				A1C2996A1A559EB300C8D74E /* PopoverViewController.json in Resources */,
 				A14398D41A52DE9E001B4255 /* PainterFigureList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1229,6 +1250,7 @@
 				A131DEB21A2C1FBC0060E74E /* UIControl+ESC.m in Sources */,
 				A1450C871A4857F4003B8988 /* ESCWebView.m in Sources */,
 				A1B3A4F71A399115009F8E9E /* rs.c in Sources */,
+				A1C299811A56254100C8D74E /* ImageGalleryViewController.m in Sources */,
 				A1B3A4E91A399115009F8E9E /* image.c in Sources */,
 				A1D4FF5C1A2771C6001EF98C /* NSDate+ESC.m in Sources */,
 				A1D4FF801A2771DF001EF98C /* UIView+ESC.m in Sources */,
@@ -1416,6 +1438,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1462,6 +1485,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

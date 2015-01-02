@@ -47,6 +47,8 @@ UIKIT_EXTERN void kESCImageGalleryDownloader(NSMutableDictionary *imageInfo);
 
 @property (nonatomic, strong) UIView *loading;
 
+@property (nonatomic, copy) void (^zoomScaleDidChanged)(__ESCImageView *imageView);
+
 - (void)__updateImage;
 
 - (void)__showLoading;

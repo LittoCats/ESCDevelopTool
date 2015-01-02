@@ -6,8 +6,8 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+#import "ESCBaseViewController.h"
 
-@interface PopoverViewController : UIViewController
+@interface PopoverViewController : ESCBaseViewController
 
 @end

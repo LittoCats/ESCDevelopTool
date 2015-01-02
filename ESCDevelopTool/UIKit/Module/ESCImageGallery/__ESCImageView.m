@@ -32,11 +32,11 @@
     UIImage *image = [self.imageInfo objectForKey:@"image"];
     if (image) {
         [self.imageView setImage:image];
-        CGFloat zoomScal = [[_imageInfo objectForKey:@"zoomScale"] floatValue];
-        self.zoomScale = zoomScal > 0 ? zoomScal : 1.0;
+//        CGFloat zoomScal = [[_imageInfo objectForKey:@"zoomScale"] floatValue];
+//        self.zoomScale = zoomScal > 0 ? zoomScal : 1.0;
     }else{
         [self.imageView setImage:[_imageInfo objectForKey:@"imageHolder"]];
-        self.zoomScale = 1.0;
+//        self.zoomScale = 1.0;
         
         if (![_imageInfo objectForKey:@"error"])
             kESCImageGalleryDownloader(_imageInfo);
@@ -94,7 +94,7 @@
 - (void)layoutSubviews
 {
     _imageView.frame = CGRectMake(0, 0, self.frame.size.width*self.zoomScale, self.frame.size.height*self.zoomScale);
-    _loading.center = self.center;
+    _loading.center = CGPointMake(self.contentSize.width/2, self.contentSize.height/2);
 }
 
 #pragma mark- frame
@@ -130,5 +130,11 @@
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
     return _imageView;
+}
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView
+{
+    if (self.zoomScaleDidChanged) {
+        self.zoomScaleDidChanged(self);
+    }
 }
 @end

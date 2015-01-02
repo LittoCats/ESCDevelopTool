@@ -24,9 +24,9 @@
         NSString *JSONPath = [[NSBundle mainBundle] pathForResource:NSStringFromClass(self.class) ofType:@"json"];
         NSError *error;
         NSData *JSONData = [NSData dataWithContentsOfFile:JSONPath];
-        self.settings = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableContainers error:&error];
+        self.settings = JSONData ? [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableContainers error:&error] : [NSMutableDictionary new];
 #ifdef DEBUG
-        NSLog(@"ESCBaseViewController load settings error : %@",error);
+        error ? NSLog(@"ESCBaseViewController load settings error : %@",error) : nil;
 #endif
     }
     return self;
@@ -36,13 +36,16 @@
 {
     Class viewClass = NSClassFromString(_settings[@"view"][@"Class"]);
     if (viewClass) self.view = [[viewClass alloc] initWithFrame:CGRectZero];
-    else [super loadView];
+    else {
+        UIView *view = [[self.nibBundle ? self.nibBundle : [NSBundle mainBundle] loadNibNamed:self.nibName ? self.nibName : NSStringFromClass(self.class) owner:self options:nil] firstObject];
+        self.view = view ? view : [[UIView alloc] initWithFrame:CGRectZero];
+    }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     // 配制 navigationItem
     [self updateNavigationItems];
 }
@@ -58,8 +61,9 @@
 #pragma mark- 
 - (void)updateNavigationItems
 {
+    NSDictionary *settings = [self.settings objectForKey:@"navItem"];
     // title
-    id title = self.settings[@"title"];
+    id title = settings[@"title"];
     UILabel *titleLabel = title[@"NavigationItem__titleLabel__"];
     if (!titleLabel) {
         id internationalTitle;
@@ -70,24 +74,24 @@
         if ([title isKindOfClass:NSString.class] && [title length]) {
             titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
             
-            NSString *fontName = self.settings[@"title"][@"font"];
-            CGFloat fontSize = [self.settings[@"title"][@"fontSize"] floatValue];
+            NSString *fontName = settings[@"title"][@"font"];
+            CGFloat fontSize = [settings[@"title"][@"fontSize"] floatValue];
             fontSize = fontSize ? fontSize : 17;
             titleLabel.font = fontName && fontName.length ? [UIFont fontWithName:fontName size:fontSize] : [UIFont systemFontOfSize:fontSize];
             
-            NSString *color = self.settings[@"title"][@"color"];
+            NSString *color = settings[@"title"][@"color"];
             if (color && color.length) titleLabel.textColor = [UIColor colorWithScript:color];
             
             [titleLabel setText:title withInternational:internationalTitle];
             
-            [self.settings[@"title"] setObject:titleLabel forKey:@"NavigationItem__titleLabel__"];
+            [settings[@"title"] setObject:titleLabel forKey:@"NavigationItem__titleLabel__"];
         }
     }
     [titleLabel sizeToFit];
     self.navigationItem.titleView = titleLabel;
     
     // back
-    NSMutableDictionary *backItemInfo = self.settings[@"back"];
+    NSMutableDictionary *backItemInfo = settings[@"back"];
     if (backItemInfo && [backItemInfo count]) {
         UIButton *button = backItemInfo[@"NavigationItem__back_button__"];
         if (!button) button = [self __navigationButtonWithInfo:backItemInfo];
@@ -100,7 +104,7 @@
     
     // left
     NSMutableArray *leftItems = [NSMutableArray new];
-    for (NSMutableDictionary *itemInfo in self.settings[@"left"]) {
+    for (NSMutableDictionary *itemInfo in settings[@"left"]) {
         UIButton *button = [itemInfo objectForKey:[NSString stringWithFormat:@"NavigationItem__button__%p",itemInfo]];
         if (!button) button = [self __navigationButtonWithInfo:itemInfo];
         if (button) [itemInfo setObject:button forKey:[NSString stringWithFormat:@"NavigationItem__button__%p",itemInfo]];
@@ -111,7 +115,7 @@
     
     // right
     NSMutableArray *rightItems = [NSMutableArray new];
-    for (NSMutableDictionary *itemInfo in self.settings[@"right"]) {
+    for (NSMutableDictionary *itemInfo in settings[@"right"]) {
         UIButton *button = [itemInfo objectForKey:[NSString stringWithFormat:@"NavigationItem__button__%p",itemInfo]];
         if (!button) button = [self __navigationButtonWithInfo:itemInfo];
         if (button) [itemInfo setObject:button forKey:[NSString stringWithFormat:@"NavigationItem__button__%p",itemInfo]];
@@ -119,7 +123,7 @@
         [button sizeToFit];
         [rightItems addObject:[[UIBarButtonItem alloc] initWithCustomView:button]];
     }
-    if (rightItems.count) [self.navigationItem setLeftBarButtonItems:rightItems animated:YES];
+    if (rightItems.count) [self.navigationItem setRightBarButtonItems:rightItems animated:YES];
 }
 
 - (UIButton *)__navigationButtonWithInfo:(NSDictionary *)info
@@ -170,7 +174,7 @@
     switch (item.tag) {
         case 1: [self.navigationController popViewControllerAnimated:YES];break;
             
-        default:[self respondsToSelector:@selector(navigationItemSelected:)] ? [self navigationItemSelected:item.tag] : nil;
+        default:[self navigationItemSelected:item.tag];
     }
 }
 @end

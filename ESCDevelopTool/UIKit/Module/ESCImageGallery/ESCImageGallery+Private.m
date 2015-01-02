@@ -23,6 +23,10 @@
             // 如果是 imageFilePath
             image = [UIImage imageWithContentsOfFile:info];
             if (image) [imageInfo setObject:image forKey:@"image"];
+            else if ([info rangeOfString:@"(http|ftp|https):\\/\\/[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?" options:NSRegularExpressionSearch].location != NSNotFound){
+                info = [NSURL URLWithString:info];
+                [imageInfo setObject:info forKey:@"url"];
+            }
         }else if ([info isKindOfClass:NSURL.class]){
             // 如果是 url 则异步下载
             [imageInfo setObject:info forKey:@"url"];
