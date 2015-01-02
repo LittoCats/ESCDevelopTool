@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 #import "ESCArchiver.h"
-
+#import "ESCPopover.h"
 #import "UIControl+ESC.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -45,6 +45,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
 //    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost:7461"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
 //    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -71,6 +72,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)showDetail:(id)sender
+{
+    
+}
+
 #pragma mark- UITableViewDataSource, UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -79,7 +85,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 64.0;
+    return 44.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,6 +93,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@""];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@""];
+        cell.accessoryType = UITableViewCellAccessoryDetailButton;
     }
     NSDictionary *options = [self.moduleList objectAtIndex:indexPath.row];
     cell.textLabel.text = [options objectForKey:@"title"];
@@ -108,6 +115,28 @@
         }
         UIViewController *vc = [[vcClass alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *options = [self.moduleList objectAtIndex:indexPath.row];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width-10, tableView.frame.size.height)];
+    
+    label.numberOfLines = 0;
+    label.textColor = [UIColor whiteColor];
+    label.text = options[@"description"];
+    [label sizeToFit];
+    
+    ESCPopover *popover = [[ESCPopover alloc] init];
+    popover.contentView = label;
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    for (UIView *view in [cell subviews]) {
+        if ([view isKindOfClass:UIButton.class]){
+            CGRect rect = [cell convertRect:view.frame toView:tableView];
+            rect.origin.y -= tableView.contentOffset.y;
+            [popover presentFromRect:rect inView:tableView options:nil];
+        }
     }
 }
 @end

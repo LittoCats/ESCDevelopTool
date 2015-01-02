@@ -10,7 +10,7 @@
     	"action":"ESCM://PopoverViewController"
     },{
       "title":"PainterViewController",
-      "description":"",
+      "description":"一个简单的绘图板工具，功能不强大，要点在于代码的结构设计，缓存的管理；极简的结构和设计模式，使功能易于扩展（增加画毛工具，只需继承 PaintedFigure 类，实现相应画笔的算法即可",
       "action":"ESCM://PainterViewController"
     },{
       "title":"ImageGalleryViewController",

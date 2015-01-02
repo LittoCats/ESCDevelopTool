@@ -133,6 +133,7 @@ typedef enum {
 - (void)setContentView:(UIView *)contentView
 {
     [_contentView removeFromSuperview];
+    contentView.frame = (CGRect){0.0,0.0,contentView.frame.size};
     _contentView = contentView;
     [_scrollView addSubview:contentView];
     _scrollView.frame = contentView.bounds;
