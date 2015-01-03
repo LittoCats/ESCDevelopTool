@@ -47,6 +47,8 @@ NS_INLINE PageRect PageRectCopy(PageRect pageRect){
 @class ESCPDFPageView;
 @interface ESCPDFGallery ()
 
+@property (nonatomic, strong) UIScrollView *scrollView;
+
 @property (nonatomic, strong) UIView *contentView;
 
 @property (nonatomic, strong) NSArray *pagesRect;

@@ -14,7 +14,7 @@ typedef NS_ENUM(NSUInteger, ESCPDFGalleyrMode) {
 };
 
 @class ESCPDFDocument;
-@interface ESCPDFGallery : UIScrollView
+@interface ESCPDFGallery : UIView
 
 @property (nonatomic, strong) ESCPDFDocument *document;
 

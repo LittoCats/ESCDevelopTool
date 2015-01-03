@@ -30,14 +30,17 @@
 - (void)defaultInit
 {
     self.clipsToBounds = YES;
-    self.delegate = self;
-    self.maximumZoomScale = 1.0;
-    self.minimumZoomScale = 1.0;
+    
+    self.scrollView = [[UIScrollView alloc] init];
+    _scrollView.delegate = self;
+    _scrollView.maximumZoomScale = 1.0;
+    _scrollView.minimumZoomScale = 1.0;
+    [self addSubview:_scrollView];
 
     self.contentView = [[UIView alloc] init];
     _contentView.clipsToBounds = YES;
     
-    [self addSubview:_contentView];
+    [_scrollView addSubview:_contentView];
     self.pageSpace = 13.0f;
     
     self.vissablePageRange = PageRangeMake(0, -1);
@@ -47,12 +50,11 @@
 
 - (void)setBounds:(CGRect)bounds
 {
-    BOOL isNeedUpdateContentSize = fabsf(bounds.size.width - self.frame.size.width) > 1.0;
-    [super setBounds:bounds];
-    _vissablePageRect.x1 = _vissablePageRect.x0 + bounds.size.width;
-    isNeedUpdateContentSize ? [self updateContentSize] : nil;
-    
-    [self updateContentInRect:CGRectMake(0, self.contentOffset.y, self.frame.size.width, self.frame.size.height)];
+    BOOL isBoundsChanged = fabsf(self.bounds.size.width-bounds.size.width) > 0.1 || fabsf(self.bounds.size.height-bounds.size.height)>0.1;
+    [super setFrame:bounds];
+    if (!isBoundsChanged) return;
+    [self.scrollView setFrame:self.bounds];
+    [self updateContentSize];
 }
 
 #pragma mark- document 控制
