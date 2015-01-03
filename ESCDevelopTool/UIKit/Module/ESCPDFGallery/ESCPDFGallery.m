@@ -33,7 +33,7 @@
     
     self.scrollView = [[UIScrollView alloc] init];
     _scrollView.delegate = self;
-    _scrollView.maximumZoomScale = 1.0;
+    _scrollView.maximumZoomScale = 2.0;
     _scrollView.minimumZoomScale = 1.0;
     [self addSubview:_scrollView];
 

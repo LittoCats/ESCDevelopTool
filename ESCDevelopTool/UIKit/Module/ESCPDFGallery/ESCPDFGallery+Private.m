@@ -40,15 +40,16 @@
     self.contentView.frame = CGRectMake(0.0, 0.0,
                                         self.frame.size.width,
                                         (lastPageRect.origin.y+lastPageRect.size.height)*pageScal);
+    self.contentView.transform = CGAffineTransformMakeScale(self.scrollView.zoomScale, self.scrollView.zoomScale);
     self.contentView.backgroundColor = [UIColor yellowColor];
-    self.scrollView.contentSize = self.contentView.frame.size;
+    self.scrollView.contentSize = CGSizeApplyAffineTransform(self.contentView.frame.size, self.contentView.transform);
     
-    [self updateContentInRect:CGRectMake(0, self.scrollView.contentOffset.y, self.scrollView.contentSize.width, self.scrollView.frame.size.height)];
+    [self updateContentInRect:CGRectMake(0, self.scrollView.contentOffset.y/self.scrollView.zoomScale, self.scrollView.contentSize.width/self.scrollView.zoomScale, self.scrollView.frame.size.height)];
 }
 
 - (NSInteger)firstPageInRect:(CGRect)rect
 {
-    CGFloat location = rect.origin.y / (self.scrollView.contentSize.width / self.maxPageWidth);
+    CGFloat location = rect.origin.y / (self.contentView.frame.size.width/self.scrollView.zoomScale / self.maxPageWidth);
     // 使用二分法，找到指定区域中的第一个 page 的 pageNumber
     NSInteger startNumber = 0, endNumber = self.pagesRect.count;
     NSInteger pageNumber = 0;
@@ -76,8 +77,10 @@
 - (void)enqueueUnvissiblePageViewForReuse
 {
     //将不在可视区域的 page 放入缓存
+    CGFloat offsetY = self.scrollView.contentOffset.y;
+    if (offsetY <=0 || offsetY >= self.scrollView.contentSize.height) return;
     for (ESCPDFPageView *pageView in self.contentView.subviews) {
-        CGRect vissibleBounds = self.scrollView.bounds;
+        CGRect vissibleBounds = CGRectMake(0, self.scrollView.contentOffset.y/self.scrollView.zoomScale, self.scrollView.contentSize.width/self.scrollView.zoomScale, self.scrollView.frame.size.height);
         if (pageView.pageNumber == self.vissablePageRange.start) {
             if (pageView.frame.origin.y+pageView.frame.size.height < vissibleBounds.origin.y){
                 [pageView removeFromSuperview];
@@ -106,12 +109,12 @@
 - (ESCPDFPageView *)dequeueReusablePageViewForPageNumber:(NSInteger)pageNumber
 {
     CGRect rect = CGRectFromString([self.pagesRect objectAtIndex:pageNumber]);
-    CGFloat scale = self.scrollView.contentSize.width/self.maxPageWidth;
+    CGFloat scale = self.contentView.frame.size.width/self.scrollView.zoomScale/self.maxPageWidth;
     rect.origin.y *= scale;
     rect.size.width *= scale;
     rect.size.height *= scale;
     // pageView 在 Ｘ 方向居中显示
-    rect.origin.x = (self.scrollView.contentSize.width - rect.size.width)/2.0;
+    rect.origin.x = (self.contentView.frame.size.width/self.scrollView.zoomScale - rect.size.width)/2.0;
     
     ESCPDFPageView *pageView = [self.reusablePageView lastObject];
     if (!pageView) {
@@ -178,11 +181,6 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [self enqueueUnvissiblePageViewForReuse];
-    [self updateContentInRect:CGRectMake(0, scrollView.contentOffset.y, scrollView.contentSize.width, scrollView.frame.size.height)];
-}
-
-- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
-{
-    
+    [self updateContentInRect:CGRectMake(0, scrollView.contentOffset.y/self.scrollView.zoomScale, scrollView.contentSize.width/self.scrollView.zoomScale, scrollView.frame.size.height)];
 }
 @end
