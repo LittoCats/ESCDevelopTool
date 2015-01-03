@@ -8,8 +8,6 @@
 
 #import "ESCPDFGallery+Private.h"
 #import "ESCPDFDocument+Private.h"
-#import "UIImage+ESC.h"
-#import "UIColor+ESC.h"
 
 #import "ESCPDFPageView.h"
 
@@ -79,21 +77,24 @@
     //将不在可视区域的 page 放入缓存
     CGFloat offsetY = self.scrollView.contentOffset.y;
     if (offsetY <=0 || offsetY >= self.scrollView.contentSize.height) return;
-    for (ESCPDFPageView *pageView in self.contentView.subviews) {
+    
+    NSArray *subviews = [self.contentView.subviews copy];
+    for (ESCPDFPageView *pageView in subviews) {
         CGRect vissibleBounds = CGRectMake(0, self.scrollView.contentOffset.y/self.scrollView.zoomScale, self.scrollView.contentSize.width/self.scrollView.zoomScale, self.scrollView.frame.size.height);
+
         if (pageView.pageNumber == self.vissablePageRange.start) {
-            if (pageView.frame.origin.y+pageView.frame.size.height < vissibleBounds.origin.y){
+            if (pageView.frame.origin.y+pageView.frame.size.height < vissibleBounds.origin.y-vissibleBounds.size.height/2){
                 [pageView removeFromSuperview];
                 [self.reusablePageView addObject:pageView];
                 
                 PageRect rect = PageRectCopy(self.vissablePageRect);
                 rect.y0 = pageView.frame.origin.y+pageView.frame.size.height;
                 self.vissablePageRect = rect;
-                
                 self.vissablePageRange = PageRangeMake(pageView.pageNumber+1, self.vissablePageRange.end);
             }
         }else if(pageView.pageNumber == self.vissablePageRange.end){
             if (pageView.frame.origin.y > vissibleBounds.origin.y+vissibleBounds.size.height){
+                
                 [pageView removeFromSuperview];
                 [self.reusablePageView addObject:pageView];
                 
@@ -122,7 +123,6 @@
     }
     pageView.frame = rect;
     
-    pageView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithSize:rect.size colors:@[[UIColor randomColor],[UIColor randomColor],[UIColor randomColor]] gradientDirection:M_PI_2-0.3]];
     pageView.pageNumber = pageNumber;
     return pageView;
 }
@@ -180,7 +180,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [self enqueueUnvissiblePageViewForReuse];
+    if (self.enableReuseQueue) [self enqueueUnvissiblePageViewForReuse];
     [self updateContentInRect:CGRectMake(0, scrollView.contentOffset.y/self.scrollView.zoomScale, scrollView.contentSize.width/self.scrollView.zoomScale, scrollView.frame.size.height)];
 }
 @end
