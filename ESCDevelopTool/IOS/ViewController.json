@@ -16,6 +16,10 @@
       "title":"ImageGalleryViewController",
       "description":"轻量机的缓冲和便捷的设置，使大量的图片预览资源占用量大幅降低。",
       "action":"ESCM://ImageGalleryViewController"
+    },{
+      "title":"PDFGalleryViewController",
+      "description":"PDF查看。",
+      "action":"ESCM://PDFGalleryViewController"
     }
   ]
 }

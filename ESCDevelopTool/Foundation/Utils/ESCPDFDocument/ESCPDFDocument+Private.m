@@ -113,4 +113,13 @@ static void kESCCGPDFDictionaryApplyFunction(const char *key, CGPDFObjectRef obj
             break;
     }
 }
+
+#pragma mark- document info
+- (BOOL)__getPageRect:(CGRect *)rect withPageNumber:(NSUInteger)pageNumber
+{
+    if (pageNumber > self.pageCount-1 || !self.document) return NO;
+    CGPDFPageRef page = CGPDFDocumentGetPage(self.document, pageNumber+1);
+    *rect = CGPDFPageGetBoxRect(page, kCGPDFCropBox);
+    return YES;
+}
 @end

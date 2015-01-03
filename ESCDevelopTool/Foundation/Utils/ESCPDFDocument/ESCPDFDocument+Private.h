@@ -76,6 +76,8 @@
 
 - (NSDictionary *)__AppearenceWithCGPDFDictionary:(CGPDFDictionaryRef)dictionaryRef;
 
+- (BOOL)__getPageRect:(CGRect *)size withPageNumber:(NSUInteger)pageNumber;
+
 @end
 
 #pragma mark-

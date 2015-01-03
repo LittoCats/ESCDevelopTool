@@ -44,6 +44,12 @@
 		A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = A187EA131A528D8300B4564E /* __esc_webview_bridge.js */; };
 		A187EA181A528DED00B4564E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A187EA171A528DED00B4564E /* WebViewController.m */; };
 		A187EA1A1A5293C100B4564E /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = A187EA191A5293C100B4564E /* webview.html */; };
+		A1A7B4951A56632F00311081 /* ESCPDFGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7B4941A56632F00311081 /* ESCPDFGallery.m */; };
+		A1A7B4981A5667A500311081 /* ESCPDFGallery+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7B4971A5667A500311081 /* ESCPDFGallery+Private.m */; };
+		A1A7B49B1A56692400311081 /* ESCPDFPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7B49A1A56692400311081 /* ESCPDFPageView.m */; };
+		A1A7B4A01A56755A00311081 /* PDFGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7B49E1A56755A00311081 /* PDFGalleryViewController.m */; };
+		A1A7B4A11A56755A00311081 /* PDFGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1A7B49F1A56755A00311081 /* PDFGalleryViewController.xib */; };
+		A1A7B4A31A56762400311081 /* Python study.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A1A7B4A21A56762400311081 /* Python study.pdf */; };
 		A1B3A3CB1A397663009F8E9E /* ESCCodeSymbol+Generator.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A3CA1A397663009F8E9E /* ESCCodeSymbol+Generator.mm */; };
 		A1B3A3CC1A397663009F8E9E /* ESCCodeSymbol+Generator.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A3CA1A397663009F8E9E /* ESCCodeSymbol+Generator.mm */; };
 		A1B3A4361A397BE7009F8E9E /* qr_encode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A4341A397BE7009F8E9E /* qr_encode.cpp */; };
@@ -234,6 +240,16 @@
 		A187EA161A528DED00B4564E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		A187EA171A528DED00B4564E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		A187EA191A5293C100B4564E /* webview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
+		A1A7B4931A56632F00311081 /* ESCPDFGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCPDFGallery.h; sourceTree = "<group>"; };
+		A1A7B4941A56632F00311081 /* ESCPDFGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPDFGallery.m; sourceTree = "<group>"; };
+		A1A7B4961A5667A500311081 /* ESCPDFGallery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCPDFGallery+Private.h"; sourceTree = "<group>"; };
+		A1A7B4971A5667A500311081 /* ESCPDFGallery+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPDFGallery+Private.m"; sourceTree = "<group>"; };
+		A1A7B4991A56692400311081 /* ESCPDFPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCPDFPageView.h; sourceTree = "<group>"; };
+		A1A7B49A1A56692400311081 /* ESCPDFPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPDFPageView.m; sourceTree = "<group>"; };
+		A1A7B49D1A56755A00311081 /* PDFGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFGalleryViewController.h; sourceTree = "<group>"; };
+		A1A7B49E1A56755A00311081 /* PDFGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFGalleryViewController.m; sourceTree = "<group>"; };
+		A1A7B49F1A56755A00311081 /* PDFGalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFGalleryViewController.xib; sourceTree = "<group>"; };
+		A1A7B4A21A56762400311081 /* Python study.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Python study.pdf"; path = "../../../../../Downloads/Python study.pdf"; sourceTree = "<group>"; };
 		A1B3A3C81A39753D009F8E9E /* ESCCodeSymbol_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCCodeSymbol_Private.h; sourceTree = "<group>"; };
 		A1B3A3CA1A397663009F8E9E /* ESCCodeSymbol+Generator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "ESCCodeSymbol+Generator.mm"; sourceTree = "<group>"; };
 		A1B3A4341A397BE7009F8E9E /* qr_encode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qr_encode.cpp; sourceTree = "<group>"; };
@@ -671,6 +687,30 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A1A7B4921A5662F200311081 /* ESCPDFGallery */ = {
+			isa = PBXGroup;
+			children = (
+				A1A7B4931A56632F00311081 /* ESCPDFGallery.h */,
+				A1A7B4941A56632F00311081 /* ESCPDFGallery.m */,
+				A1A7B4961A5667A500311081 /* ESCPDFGallery+Private.h */,
+				A1A7B4971A5667A500311081 /* ESCPDFGallery+Private.m */,
+				A1A7B4991A56692400311081 /* ESCPDFPageView.h */,
+				A1A7B49A1A56692400311081 /* ESCPDFPageView.m */,
+			);
+			path = ESCPDFGallery;
+			sourceTree = "<group>";
+		};
+		A1A7B49C1A56753700311081 /* PDFGallery */ = {
+			isa = PBXGroup;
+			children = (
+				A1A7B49D1A56755A00311081 /* PDFGalleryViewController.h */,
+				A1A7B49E1A56755A00311081 /* PDFGalleryViewController.m */,
+				A1A7B49F1A56755A00311081 /* PDFGalleryViewController.xib */,
+				A1A7B4A21A56762400311081 /* Python study.pdf */,
+			);
+			path = PDFGallery;
+			sourceTree = "<group>";
+		};
 		A1B3A3D11A397841009F8E9E /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -800,6 +840,7 @@
 				A1D4FF041A2770BE001EF98C /* ViewController.h */,
 				A1D4FF051A2770BE001EF98C /* ViewController.m */,
 				A187EA0A1A52892900B4564E /* ViewController.json */,
+				A1A7B49C1A56753700311081 /* PDFGallery */,
 				A1C2997E1A56251100C8D74E /* ImageGallery */,
 				A14398CC1A52DE70001B4255 /* ESCPainter */,
 				A14398BA1A52CC20001B4255 /* ESCPopover */,
@@ -929,6 +970,7 @@
 				A1D4FF7A1A2771DF001EF98C /* ESCPopover.m */,
 				A1D4FF7B1A2771DF001EF98C /* Private */,
 				A1B3A50A1A3ADA5C009F8E9E /* ESCImageGallery */,
+				A1A7B4921A5662F200311081 /* ESCPDFGallery */,
 				A16875C61A3DD74F004B873E /* ESCAlertControl.h */,
 				A16875C71A3DD74F004B873E /* ESCAlertControl.m */,
 				A16AA6B21A47A22A00AC00DB /* ESCAnimation */,
@@ -1190,7 +1232,9 @@
 				A187EA0B1A52892900B4564E /* ViewController.json in Resources */,
 				A1C299831A5626B400C8D74E /* ImageGalleryViewController.json in Resources */,
 				A14398BF1A52CC69001B4255 /* PopoverViewController.xib in Resources */,
+				A1A7B4A11A56755A00311081 /* PDFGalleryViewController.xib in Resources */,
 				A187EA1A1A5293C100B4564E /* webview.html in Resources */,
+				A1A7B4A31A56762400311081 /* Python study.pdf in Resources */,
 				A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */,
 				A1D4FF0B1A2770BE001EF98C /* Images.xcassets in Resources */,
 				A1C2996A1A559EB300C8D74E /* PopoverViewController.json in Resources */,
@@ -1233,6 +1277,7 @@
 				A1D636FA1A557253006B8205 /* ESCBaseViewController.m in Sources */,
 				A1B3A5031A39F197009F8E9E /* ESCPDFPage+Private.m in Sources */,
 				A1B3A4D71A399115009F8E9E /* code128.c in Sources */,
+				A1A7B4A01A56755A00311081 /* PDFGalleryViewController.m in Sources */,
 				A1B3A4D91A399115009F8E9E /* code39.c in Sources */,
 				A1D4FF6B1A2771C6001EF98C /* ESCRuntime.m in Sources */,
 				A1D4FF5B1A2771C6001EF98C /* NSData+ESC.m in Sources */,
@@ -1246,6 +1291,7 @@
 				A16875BB1A3D7844004B873E /* ESCCoreData+Private.m in Sources */,
 				A1B3A4D51A399115009F8E9E /* codabar.c in Sources */,
 				A1B3A4F31A399115009F8E9E /* qrdec.c in Sources */,
+				A1A7B4981A5667A500311081 /* ESCPDFGallery+Private.m in Sources */,
 				A1B3A5151A3B2C76009F8E9E /* ESCImageGallery+ScrollView.m in Sources */,
 				A131DEB21A2C1FBC0060E74E /* UIControl+ESC.m in Sources */,
 				A1450C871A4857F4003B8988 /* ESCWebView.m in Sources */,
@@ -1260,6 +1306,7 @@
 				A1B94D061A511CBF004CFBD2 /* ESCPainter+Private.m in Sources */,
 				A131DE971A28C6870060E74E /* ESCCoreData.m in Sources */,
 				A1B3A4E51A399115009F8E9E /* decoder.c in Sources */,
+				A1A7B49B1A56692400311081 /* ESCPDFPageView.m in Sources */,
 				A1B3A4E71A399115009F8E9E /* error.c in Sources */,
 				A1D637031A557477006B8205 /* ESCInternationalManager+UIKit.m in Sources */,
 				A1450C8A1A485A91003B8988 /* ESCWebView+CMethod.m in Sources */,
@@ -1314,6 +1361,7 @@
 				A1B3A4D31A399115009F8E9E /* config.c in Sources */,
 				A187E9E91A519C2600B4564E /* ESCPainterCanvas.m in Sources */,
 				A131DE931A28AF580060E74E /* ESCPDFDocument.m in Sources */,
+				A1A7B4951A56632F00311081 /* ESCPDFGallery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
