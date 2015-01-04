@@ -26,7 +26,7 @@ typedef NS_ENUM(NSUInteger, ESCPDFGalleyrMode) {
 //@property (nonatomic) BOOL enableReuseQueue;
 
 /**
- *  连续滚动时，上一页与下一页之间的空隙，默认值为 13.0f
+ *  连续滚动时，上一页与下一页之间的空隙，默认值为 13.0f。该值应在设置 document 之前设置，否则不生效
  */
 @property (nonatomic) CGFloat pageSpace;
 

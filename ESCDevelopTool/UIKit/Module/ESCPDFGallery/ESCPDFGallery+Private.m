@@ -23,7 +23,7 @@
         rect.size = crop.size;
         self.maxPageWidth = rect.size.width > self.maxPageWidth ? rect.size.width : self.maxPageWidth;
         [pagesRect addObject:NSStringFromCGRect(rect)];
-        rect.origin.y += crop.size.height;
+        rect.origin.y += crop.size.height+self.pageSpace;
     }
     return [NSArray arrayWithArray:pagesRect];
 }
@@ -32,14 +32,13 @@
 {
     // 设置 contentView size
     // page 的最大宽度缩放到 self 的宽度，总高度出需要做同比例的缩放
-    // 需根据 self (UIScrollView）的 zoomScale 缩放宽高
+    // 需根据 self (UIScrollView）的 zoomScale 设置 contentView 的 transform
     CGRect lastPageRect = CGRectFromString([self.pagesRect lastObject]);
     CGFloat pageScal = self.scrollView.frame.size.width/self.maxPageWidth;
     self.contentView.frame = CGRectMake(0.0, 0.0,
                                         self.scrollView.frame.size.width,
                                         (lastPageRect.origin.y+lastPageRect.size.height)*pageScal);
     self.contentView.transform = CGAffineTransformMakeScale(self.scrollView.zoomScale, self.scrollView.zoomScale);
-    self.contentView.backgroundColor = [UIColor yellowColor];
     self.scrollView.contentSize = CGSizeApplyAffineTransform(self.contentView.frame.size, self.contentView.transform);
     
     for (UIView *subview in self.contentView.subviews) {
@@ -47,6 +46,8 @@
         self.vissablePageRect = PageRectMake(0, 0, 0, 0);
         self.vissablePageRange = PageRangeMake(0, -1);
     }
+    
+    [self.reusablePageView removeAllObjects];
     
     [self updateContentInRect:CGRectMake(0, self.scrollView.contentOffset.y/self.scrollView.zoomScale, self.scrollView.contentSize.width/self.scrollView.zoomScale, self.scrollView.frame.size.height)];
 }
@@ -154,7 +155,7 @@
     }else {return;}
     
     NSInteger pageNumber = [self firstPageInRect:vissibleRect];
-    if (isPageInRange(pageNumber, self.vissablePageRange)) return;
+    if (isPageInRange(pageNumber, self.vissablePageRange)) return;  //page 已显示，则不需要再次更新
     
     // 从缓区取出一个 pageView,如果缓冲区中没有，则会生成一个
     ESCPDFPageView *pageView = [self dequeueReusablePageViewForPageNumber:pageNumber];

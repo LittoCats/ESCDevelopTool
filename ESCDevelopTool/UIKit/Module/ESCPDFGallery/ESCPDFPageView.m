@@ -10,6 +10,15 @@
 
 @implementation ESCPDFPageView
 
+- (id)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        self.layer.shadowColor = [[UIColor blackColor] CGColor];
+        self.layer.shadowOffset = CGSizeMake(3.0, 4.0);
+    }
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -19,8 +28,6 @@
     
     CGContextTranslateCTM( context, 0.0, self.bounds.size.height );
     CGContextScaleCTM( context, self.scale, -self.scale );
-    
-    
     
     [[self.document pageWithPageNumber:self.pageNumber+1] drawContext:context];
 }
