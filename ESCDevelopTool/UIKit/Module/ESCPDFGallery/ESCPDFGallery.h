@@ -23,7 +23,7 @@ typedef NS_ENUM(NSUInteger, ESCPDFGalleyrMode) {
 /**
  *  重用不在可视区域的 页面，默认为 NO。
  */
-@property (nonatomic) BOOL enableReuseQueue;
+//@property (nonatomic) BOOL enableReuseQueue;
 
 /**
  *  连续滚动时，上一页与下一页之间的空隙，默认值为 13.0f

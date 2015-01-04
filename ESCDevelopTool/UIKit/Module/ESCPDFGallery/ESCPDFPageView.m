@@ -8,15 +8,21 @@
 
 #import "ESCPDFPageView.h"
 
-#import "UIImage+ESC.h"
-#import "UIColor+ESC.h"
-
 @implementation ESCPDFPageView
 
-- (void)setPageNumber:(NSInteger)pageNumber
+- (void)drawRect:(CGRect)rect
 {
-    _pageNumber = pageNumber;
-    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithSize:self.frame.size colors:@[[UIColor randomColor],[UIColor randomColor],[UIColor randomColor]] gradientDirection:M_PI_2-0.3]];
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetRGBFillColor( context, 1, 1.0, 1.0, 1.0 );
+    CGContextFillRect( context, self.bounds );
+    
+    CGContextTranslateCTM( context, 0.0, self.bounds.size.height );
+    CGContextScaleCTM( context, self.scale, -self.scale );
+    
+    
+    
+    [[self.document pageWithPageNumber:self.pageNumber+1] drawContext:context];
 }
 
 @end

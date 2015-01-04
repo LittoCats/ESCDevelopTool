@@ -34,13 +34,19 @@
     // page 的最大宽度缩放到 self 的宽度，总高度出需要做同比例的缩放
     // 需根据 self (UIScrollView）的 zoomScale 缩放宽高
     CGRect lastPageRect = CGRectFromString([self.pagesRect lastObject]);
-    CGFloat pageScal = self.frame.size.width/self.maxPageWidth;
+    CGFloat pageScal = self.scrollView.frame.size.width/self.maxPageWidth;
     self.contentView.frame = CGRectMake(0.0, 0.0,
-                                        self.frame.size.width,
+                                        self.scrollView.frame.size.width,
                                         (lastPageRect.origin.y+lastPageRect.size.height)*pageScal);
     self.contentView.transform = CGAffineTransformMakeScale(self.scrollView.zoomScale, self.scrollView.zoomScale);
     self.contentView.backgroundColor = [UIColor yellowColor];
     self.scrollView.contentSize = CGSizeApplyAffineTransform(self.contentView.frame.size, self.contentView.transform);
+    
+    for (UIView *subview in self.contentView.subviews) {
+        [subview removeFromSuperview];
+        self.vissablePageRect = PageRectMake(0, 0, 0, 0);
+        self.vissablePageRange = PageRangeMake(0, -1);
+    }
     
     [self updateContentInRect:CGRectMake(0, self.scrollView.contentOffset.y/self.scrollView.zoomScale, self.scrollView.contentSize.width/self.scrollView.zoomScale, self.scrollView.frame.size.height)];
 }
@@ -83,25 +89,26 @@
         CGRect vissibleBounds = CGRectMake(0, self.scrollView.contentOffset.y/self.scrollView.zoomScale, self.scrollView.contentSize.width/self.scrollView.zoomScale, self.scrollView.frame.size.height);
 
         if (pageView.pageNumber == self.vissablePageRange.start) {
-            if (pageView.frame.origin.y+pageView.frame.size.height < vissibleBounds.origin.y-vissibleBounds.size.height/2){
+            if (pageView.frame.origin.y+pageView.frame.size.height < vissibleBounds.origin.y-44){
+//                NSLog(@"+ remove page : %li",(long)pageView.pageNumber);
                 [pageView removeFromSuperview];
                 [self.reusablePageView addObject:pageView];
-                
                 PageRect rect = PageRectCopy(self.vissablePageRect);
                 rect.y0 = pageView.frame.origin.y+pageView.frame.size.height;
                 self.vissablePageRect = rect;
                 self.vissablePageRange = PageRangeMake(pageView.pageNumber+1, self.vissablePageRange.end);
+                pageView.pageNumber = -1;
             }
         }else if(pageView.pageNumber == self.vissablePageRange.end){
-            if (pageView.frame.origin.y > vissibleBounds.origin.y+vissibleBounds.size.height){
-                
+            if (pageView.frame.origin.y > vissibleBounds.origin.y+vissibleBounds.size.height+44){
+//                NSLog(@"- remove page : %li",(long)pageView.pageNumber);
                 [pageView removeFromSuperview];
                 [self.reusablePageView addObject:pageView];
-                
                 PageRect rect = PageRectCopy(self.vissablePageRect);
                 rect.y1 = pageView.frame.origin.y;
                 self.vissablePageRect = rect;
                 self.vissablePageRange = PageRangeMake(self.vissablePageRange.start, pageView.pageNumber-1);
+                pageView.pageNumber = -1;
             }
         }
     }
@@ -120,10 +127,13 @@
     ESCPDFPageView *pageView = [self.reusablePageView lastObject];
     if (!pageView) {
         pageView = [[ESCPDFPageView alloc] initWithFrame:rect];
+        pageView.document = self.document;
+        pageView.scale = self.frame.size.width/self.maxPageWidth;
     }
     pageView.frame = rect;
     
     pageView.pageNumber = pageNumber;
+    [pageView setNeedsDisplay];
     return pageView;
 }
 
@@ -180,7 +190,8 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (self.enableReuseQueue) [self enqueueUnvissiblePageViewForReuse];
+//    if (self.enableReuseQueue)
+        [self enqueueUnvissiblePageViewForReuse];
     [self updateContentInRect:CGRectMake(0, scrollView.contentOffset.y/self.scrollView.zoomScale, scrollView.contentSize.width/self.scrollView.zoomScale, scrollView.frame.size.height)];
 }
 @end

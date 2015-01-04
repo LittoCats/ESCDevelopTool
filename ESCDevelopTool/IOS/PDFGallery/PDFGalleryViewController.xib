@@ -21,7 +21,7 @@
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="nYz-8z-3Gw" secondAttribute="bottom" id="Udm-7N-3Ki"/>
                 <constraint firstItem="nYz-8z-3Gw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Veo-OI-fLm"/>

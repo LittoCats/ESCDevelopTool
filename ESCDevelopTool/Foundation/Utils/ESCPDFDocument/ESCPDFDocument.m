@@ -7,6 +7,7 @@
 //
 
 #import "ESCPDFDocument+Private.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 const NSString *ESCPDFCatalogKey_Title          = @"title";
 const NSString *ESCPDFCatalogKey_Subcatalog     = @"subcatalog";
@@ -106,7 +107,9 @@ const NSString *ESCPDFPageInfoKey_Width         = @"width";
 
 - (void)drawContext:(CGContextRef)context
 {
-    
+    CGContextSaveGState(context);
+    CGContextDrawPDFPage(context, CGPDFDocumentGetPage(self.document.document, self.pageNumber));
+    CGContextRestoreGState(context);
 }
 
 - (NSData *)thumbnail

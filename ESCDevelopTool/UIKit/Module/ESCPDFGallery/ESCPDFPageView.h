@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ESCPDFDocument.h"
 
 @interface ESCPDFPageView : UIView
+
+@property (nonatomic,weak) ESCPDFDocument *document;
+
+@property (nonatomic) CGFloat scale;
 
 @property (nonatomic) NSInteger pageNumber;
 
