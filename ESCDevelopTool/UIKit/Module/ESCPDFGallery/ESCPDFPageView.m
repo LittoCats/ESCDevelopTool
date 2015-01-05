@@ -15,6 +15,7 @@
     if (self = [super initWithFrame:frame]) {
         self.layer.shadowColor = [[UIColor blackColor] CGColor];
         self.layer.shadowOffset = CGSizeMake(3.0, 4.0);
+        self.layer.shadowOpacity = 0.7;
     }
     return self;
 }

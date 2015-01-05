@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A16A03771A5A8BBF00D2ACF1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16A03761A5A8BBF00D2ACF1 /* QuartzCore.framework */; };
 		A1F53CFE1A53B0020029A2A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F53CFD1A53B0020029A2A6 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A16A03761A5A8BBF00D2ACF1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A1F53CFA1A53B0020029A2A6 /* image resizer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "image resizer"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F53CFD1A53B0020029A2A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A1F53D041A53B3E20029A2A6 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16A03771A5A8BBF00D2ACF1 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 		A1F53CF11A53B0020029A2A6 = {
 			isa = PBXGroup;
 			children = (
+				A16A03761A5A8BBF00D2ACF1 /* QuartzCore.framework */,
 				A1F53CFC1A53B0020029A2A6 /* image resizer */,
 				A1F53CFB1A53B0020029A2A6 /* Products */,
 			);
@@ -234,6 +238,7 @@
 				A1F53D031A53B0020029A2A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

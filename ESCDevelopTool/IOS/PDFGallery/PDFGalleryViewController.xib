@@ -2,12 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PDFGalleryViewController">
             <connections>
-                <outlet property="pdfGallery" destination="nYz-8z-3Gw" id="fJT-wE-xsp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,17 +15,42 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nYz-8z-3Gw" customClass="ESCPDFGallery">
-                    <rect key="frame" x="44" y="0.0" width="556" height="600"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                </view>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkh-eY-3cL">
+                    <rect key="frame" x="244" y="413" width="111" height="30"/>
+                    <state key="normal" title="WebViewGallery">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="galleryPDF:" destination="-1" eventType="touchUpInside" id="vIL-kO-7kG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4T-H5-cpZ">
+                    <rect key="frame" x="263" y="157" width="74" height="30"/>
+                    <state key="normal" title="QuickLook">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="galleryPDF:" destination="-1" eventType="touchUpInside" id="zus-S0-Sp8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yR-cR-RWs">
+                    <rect key="frame" x="246" y="285" width="108" height="30"/>
+                    <state key="normal" title="ESCPDFGallery">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="galleryPDF:" destination="-1" eventType="touchUpInside" id="K9W-Cb-9iA"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="nYz-8z-3Gw" secondAttribute="bottom" id="Udm-7N-3Ki"/>
-                <constraint firstItem="nYz-8z-3Gw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Veo-OI-fLm"/>
-                <constraint firstAttribute="trailing" secondItem="nYz-8z-3Gw" secondAttribute="trailing" id="c2b-QF-v1r"/>
-                <constraint firstItem="nYz-8z-3Gw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="wlL-Eg-lOD"/>
+                <constraint firstAttribute="centerY" secondItem="8yR-cR-RWs" secondAttribute="centerY" id="Tl7-5f-zon"/>
+                <constraint firstAttribute="centerX" secondItem="J4T-H5-cpZ" secondAttribute="centerX" id="W63-wh-6W2"/>
+                <constraint firstAttribute="centerY" secondItem="Nkh-eY-3cL" secondAttribute="centerY" constant="-128" id="WNk-EO-uk4"/>
+                <constraint firstAttribute="centerX" secondItem="Nkh-eY-3cL" secondAttribute="centerX" id="oui-a0-4xv"/>
+                <constraint firstAttribute="centerX" secondItem="8yR-cR-RWs" secondAttribute="centerX" id="wOE-dI-ESJ"/>
+                <constraint firstAttribute="centerY" secondItem="J4T-H5-cpZ" secondAttribute="centerY" constant="128" id="xcp-AJ-FYa"/>
             </constraints>
         </view>
     </objects>

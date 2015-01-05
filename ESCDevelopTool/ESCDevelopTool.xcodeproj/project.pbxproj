@@ -22,9 +22,17 @@
 		A1450C841A485273003B8988 /* ESCWebView+URLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = A1450C831A485273003B8988 /* ESCWebView+URLProtocol.m */; };
 		A1450C871A4857F4003B8988 /* ESCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1450C861A4857F4003B8988 /* ESCWebView.m */; };
 		A1450C8A1A485A91003B8988 /* ESCWebView+CMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A1450C891A485A91003B8988 /* ESCWebView+CMethod.m */; };
+		A1512D901A59984D00EAE92C /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1512D8E1A59983700EAE92C /* QuickLook.framework */; };
+		A1512D931A59987300EAE92C /* QuickLookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1512D921A59987300EAE92C /* QuickLookViewController.m */; };
 		A16875BA1A3D7844004B873E /* ESCCoreData+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A16875B91A3D7844004B873E /* ESCCoreData+Private.m */; };
 		A16875BB1A3D7844004B873E /* ESCCoreData+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A16875B91A3D7844004B873E /* ESCCoreData+Private.m */; };
 		A16875C81A3DD74F004B873E /* ESCAlertControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A16875C71A3DD74F004B873E /* ESCAlertControl.m */; };
+		A16A036A1A5A33C000D2ACF1 /* PDFGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16A03681A5A33C000D2ACF1 /* PDFGalleryViewController.m */; };
+		A16A036B1A5A33C000D2ACF1 /* PDFGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16A03691A5A33C000D2ACF1 /* PDFGalleryViewController.xib */; };
+		A16A036D1A5A364500D2ACF1 /* PDFGalleryViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A16A036C1A5A364500D2ACF1 /* PDFGalleryViewController.json */; };
+		A16A03711A5A40CE00D2ACF1 /* CustomPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16A036F1A5A40CE00D2ACF1 /* CustomPDFViewController.m */; };
+		A16A03721A5A40CE00D2ACF1 /* CustomPDFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16A03701A5A40CE00D2ACF1 /* CustomPDFViewController.xib */; };
+		A16A03751A5A42A100D2ACF1 /* WebViewPDFGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16A03741A5A42A100D2ACF1 /* WebViewPDFGalleryController.m */; };
 		A16AA6B51A47A25E00AC00DB /* ESCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A16AA6B41A47A25E00AC00DB /* ESCAnimation.m */; };
 		A187160C1A352E7D00514C57 /* UIImage+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A187160B1A352E7D00514C57 /* UIImage+ESC.m */; };
 		A18716301A354FF900514C57 /* ESCArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A18716241A354FF900514C57 /* ESCArchiver.m */; };
@@ -47,9 +55,6 @@
 		A1A7B4951A56632F00311081 /* ESCPDFGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7B4941A56632F00311081 /* ESCPDFGallery.m */; };
 		A1A7B4981A5667A500311081 /* ESCPDFGallery+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7B4971A5667A500311081 /* ESCPDFGallery+Private.m */; };
 		A1A7B49B1A56692400311081 /* ESCPDFPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7B49A1A56692400311081 /* ESCPDFPageView.m */; };
-		A1A7B4A01A56755A00311081 /* PDFGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7B49E1A56755A00311081 /* PDFGalleryViewController.m */; };
-		A1A7B4A11A56755A00311081 /* PDFGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1A7B49F1A56755A00311081 /* PDFGalleryViewController.xib */; };
-		A1A7B4A31A56762400311081 /* Python study.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A1A7B4A21A56762400311081 /* Python study.pdf */; };
 		A1B3A3CB1A397663009F8E9E /* ESCCodeSymbol+Generator.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A3CA1A397663009F8E9E /* ESCCodeSymbol+Generator.mm */; };
 		A1B3A3CC1A397663009F8E9E /* ESCCodeSymbol+Generator.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A3CA1A397663009F8E9E /* ESCCodeSymbol+Generator.mm */; };
 		A1B3A4361A397BE7009F8E9E /* qr_encode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A4341A397BE7009F8E9E /* qr_encode.cpp */; };
@@ -198,10 +203,22 @@
 		A1450C851A4857F4003B8988 /* ESCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCWebView.h; sourceTree = "<group>"; };
 		A1450C861A4857F4003B8988 /* ESCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCWebView.m; sourceTree = "<group>"; };
 		A1450C891A485A91003B8988 /* ESCWebView+CMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCWebView+CMethod.m"; sourceTree = "<group>"; };
+		A1512D8E1A59983700EAE92C /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/QuickLook.framework; sourceTree = DEVELOPER_DIR; };
+		A1512D911A59987300EAE92C /* QuickLookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickLookViewController.h; sourceTree = "<group>"; };
+		A1512D921A59987300EAE92C /* QuickLookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickLookViewController.m; sourceTree = "<group>"; };
 		A16875B81A3D7844004B873E /* ESCCoreData+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCCoreData+Private.h"; sourceTree = "<group>"; };
 		A16875B91A3D7844004B873E /* ESCCoreData+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCCoreData+Private.m"; sourceTree = "<group>"; };
 		A16875C61A3DD74F004B873E /* ESCAlertControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCAlertControl.h; sourceTree = "<group>"; };
 		A16875C71A3DD74F004B873E /* ESCAlertControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCAlertControl.m; sourceTree = "<group>"; };
+		A16A03671A5A33C000D2ACF1 /* PDFGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFGalleryViewController.h; sourceTree = "<group>"; };
+		A16A03681A5A33C000D2ACF1 /* PDFGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFGalleryViewController.m; sourceTree = "<group>"; };
+		A16A03691A5A33C000D2ACF1 /* PDFGalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFGalleryViewController.xib; sourceTree = "<group>"; };
+		A16A036C1A5A364500D2ACF1 /* PDFGalleryViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PDFGalleryViewController.json; sourceTree = "<group>"; };
+		A16A036E1A5A40CE00D2ACF1 /* CustomPDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPDFViewController.h; sourceTree = "<group>"; };
+		A16A036F1A5A40CE00D2ACF1 /* CustomPDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPDFViewController.m; sourceTree = "<group>"; };
+		A16A03701A5A40CE00D2ACF1 /* CustomPDFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPDFViewController.xib; sourceTree = "<group>"; };
+		A16A03731A5A42A100D2ACF1 /* WebViewPDFGalleryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewPDFGalleryController.h; sourceTree = "<group>"; };
+		A16A03741A5A42A100D2ACF1 /* WebViewPDFGalleryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewPDFGalleryController.m; sourceTree = "<group>"; };
 		A16AA6B31A47A25E00AC00DB /* ESCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCAnimation.h; sourceTree = "<group>"; };
 		A16AA6B41A47A25E00AC00DB /* ESCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCAnimation.m; sourceTree = "<group>"; };
 		A16AA6B61A47AF7100AC00DB /* ESCAnimation+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCAnimation+Private.h"; sourceTree = "<group>"; };
@@ -246,10 +263,6 @@
 		A1A7B4971A5667A500311081 /* ESCPDFGallery+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPDFGallery+Private.m"; sourceTree = "<group>"; };
 		A1A7B4991A56692400311081 /* ESCPDFPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCPDFPageView.h; sourceTree = "<group>"; };
 		A1A7B49A1A56692400311081 /* ESCPDFPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPDFPageView.m; sourceTree = "<group>"; };
-		A1A7B49D1A56755A00311081 /* PDFGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFGalleryViewController.h; sourceTree = "<group>"; };
-		A1A7B49E1A56755A00311081 /* PDFGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFGalleryViewController.m; sourceTree = "<group>"; };
-		A1A7B49F1A56755A00311081 /* PDFGalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFGalleryViewController.xib; sourceTree = "<group>"; };
-		A1A7B4A21A56762400311081 /* Python study.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Python study.pdf"; path = "../../../../../Downloads/Python study.pdf"; sourceTree = "<group>"; };
 		A1B3A3C81A39753D009F8E9E /* ESCCodeSymbol_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCCodeSymbol_Private.h; sourceTree = "<group>"; };
 		A1B3A3CA1A397663009F8E9E /* ESCCodeSymbol+Generator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "ESCCodeSymbol+Generator.mm"; sourceTree = "<group>"; };
 		A1B3A4341A397BE7009F8E9E /* qr_encode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qr_encode.cpp; sourceTree = "<group>"; };
@@ -402,6 +415,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1512D901A59984D00EAE92C /* QuickLook.framework in Frameworks */,
 				A1C2997D1A5624AC00C8D74E /* libiconv.2.4.0.dylib in Frameworks */,
 				A1C2997B1A5624A100C8D74E /* libsqlite3.0.dylib in Frameworks */,
 				A1C299791A56249600C8D74E /* libc++.1.dylib in Frameworks */,
@@ -496,6 +510,15 @@
 				A1450C891A485A91003B8988 /* ESCWebView+CMethod.m */,
 			);
 			path = ESCWebView;
+			sourceTree = "<group>";
+		};
+		A1512D8D1A5997BC00EAE92C /* QuickLookViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A1512D911A59987300EAE92C /* QuickLookViewController.h */,
+				A1512D921A59987300EAE92C /* QuickLookViewController.m */,
+			);
+			path = QuickLookViewController;
 			sourceTree = "<group>";
 		};
 		A16AA6B21A47A22A00AC00DB /* ESCAnimation */ = {
@@ -703,10 +726,15 @@
 		A1A7B49C1A56753700311081 /* PDFGallery */ = {
 			isa = PBXGroup;
 			children = (
-				A1A7B49D1A56755A00311081 /* PDFGalleryViewController.h */,
-				A1A7B49E1A56755A00311081 /* PDFGalleryViewController.m */,
-				A1A7B49F1A56755A00311081 /* PDFGalleryViewController.xib */,
-				A1A7B4A21A56762400311081 /* Python study.pdf */,
+				A16A03671A5A33C000D2ACF1 /* PDFGalleryViewController.h */,
+				A16A03681A5A33C000D2ACF1 /* PDFGalleryViewController.m */,
+				A16A03691A5A33C000D2ACF1 /* PDFGalleryViewController.xib */,
+				A16A036C1A5A364500D2ACF1 /* PDFGalleryViewController.json */,
+				A16A036E1A5A40CE00D2ACF1 /* CustomPDFViewController.h */,
+				A16A036F1A5A40CE00D2ACF1 /* CustomPDFViewController.m */,
+				A16A03701A5A40CE00D2ACF1 /* CustomPDFViewController.xib */,
+				A16A03731A5A42A100D2ACF1 /* WebViewPDFGalleryController.h */,
+				A16A03741A5A42A100D2ACF1 /* WebViewPDFGalleryController.m */,
 			);
 			path = PDFGallery;
 			sourceTree = "<group>";
@@ -846,6 +874,7 @@
 				A14398BA1A52CC20001B4255 /* ESCPopover */,
 				A187EA111A528D8300B4564E /* ESCWebView */,
 				A1D4FF071A2770BE001EF98C /* Main.storyboard */,
+				A1512D8D1A5997BC00EAE92C /* QuickLookViewController */,
 				A1D4FF0A1A2770BE001EF98C /* Images.xcassets */,
 				A1D4FF0C1A2770BE001EF98C /* LaunchScreen.xib */,
 				A1D4FF8B1A27758F001EF98C /* Frameworks */,
@@ -1002,6 +1031,7 @@
 		A1D4FF8B1A27758F001EF98C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1512D8E1A59983700EAE92C /* QuickLook.framework */,
 				A1C2997C1A5624AC00C8D74E /* libiconv.2.4.0.dylib */,
 				A1C2997A1A5624A100C8D74E /* libsqlite3.0.dylib */,
 				A1C299781A56249600C8D74E /* libc++.1.dylib */,
@@ -1232,11 +1262,12 @@
 				A187EA0B1A52892900B4564E /* ViewController.json in Resources */,
 				A1C299831A5626B400C8D74E /* ImageGalleryViewController.json in Resources */,
 				A14398BF1A52CC69001B4255 /* PopoverViewController.xib in Resources */,
-				A1A7B4A11A56755A00311081 /* PDFGalleryViewController.xib in Resources */,
+				A16A036B1A5A33C000D2ACF1 /* PDFGalleryViewController.xib in Resources */,
+				A16A036D1A5A364500D2ACF1 /* PDFGalleryViewController.json in Resources */,
 				A187EA1A1A5293C100B4564E /* webview.html in Resources */,
-				A1A7B4A31A56762400311081 /* Python study.pdf in Resources */,
 				A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */,
 				A1D4FF0B1A2770BE001EF98C /* Images.xcassets in Resources */,
+				A16A03721A5A40CE00D2ACF1 /* CustomPDFViewController.xib in Resources */,
 				A1C2996A1A559EB300C8D74E /* PopoverViewController.json in Resources */,
 				A14398D41A52DE9E001B4255 /* PainterFigureList.json in Resources */,
 			);
@@ -1272,12 +1303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1D4FF061A2770BE001EF98C /* ViewController.m in Sources */,
+				A1512D931A59987300EAE92C /* QuickLookViewController.m in Sources */,
 				A1B3A4FB1A399115009F8E9E /* refcnt.c in Sources */,
 				A1B3A4DD1A399115009F8E9E /* databar.c in Sources */,
 				A1D636FA1A557253006B8205 /* ESCBaseViewController.m in Sources */,
 				A1B3A5031A39F197009F8E9E /* ESCPDFPage+Private.m in Sources */,
 				A1B3A4D71A399115009F8E9E /* code128.c in Sources */,
-				A1A7B4A01A56755A00311081 /* PDFGalleryViewController.m in Sources */,
 				A1B3A4D91A399115009F8E9E /* code39.c in Sources */,
 				A1D4FF6B1A2771C6001EF98C /* ESCRuntime.m in Sources */,
 				A1D4FF5B1A2771C6001EF98C /* NSData+ESC.m in Sources */,
@@ -1314,6 +1345,7 @@
 				A14398D21A52DE70001B4255 /* PainterViewController.m in Sources */,
 				A18716341A354FF900514C57 /* unzip.c in Sources */,
 				A1B3A4F11A399115009F8E9E /* isaac.c in Sources */,
+				A16A03751A5A42A100D2ACF1 /* WebViewPDFGalleryController.m in Sources */,
 				A187E9ED1A522FD800B4564E /* ESCPainterFigureRoute.m in Sources */,
 				A1D4FF5A1A2771C6001EF98C /* NSArray+ESC.m in Sources */,
 				A1D4FF601A2771C6001EF98C /* NSTimer+ESC.m in Sources */,
@@ -1333,9 +1365,11 @@
 				A1B3A5131A3AF4F4009F8E9E /* __ESCImageView.m in Sources */,
 				A1B3A4371A397BE7009F8E9E /* qr_encode.cpp in Sources */,
 				A1450C841A485273003B8988 /* ESCWebView+URLProtocol.m in Sources */,
+				A16A036A1A5A33C000D2ACF1 /* PDFGalleryViewController.m in Sources */,
 				A1B3A4DB1A399115009F8E9E /* code93.c in Sources */,
 				A1D4FF5F1A2771C6001EF98C /* NSString+ESC.m in Sources */,
 				A1B3A4E31A399115009F8E9E /* qr_finder.c in Sources */,
+				A16A03711A5A40CE00D2ACF1 /* CustomPDFViewController.m in Sources */,
 				A187163A1A37494600514C57 /* ESCCodeSymbol.m in Sources */,
 				A16875C81A3DD74F004B873E /* ESCAlertControl.m in Sources */,
 				A131DEA81A2B48C30060E74E /* ESCPDFDocument+Private.m in Sources */,

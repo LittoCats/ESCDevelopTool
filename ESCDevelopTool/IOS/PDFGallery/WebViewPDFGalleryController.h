@@ -1,5 +1,5 @@
 //
-//  PDFGalleryViewController.h
+//  WebViewPDFGalleryController.h
 //  ESCDevelopTool
 //
 //  Created by 程巍巍 on 1/5/15.
@@ -8,6 +8,6 @@
 
 #import "ESCBaseViewController.h"
 
-@interface PDFGalleryViewController : ESCBaseViewController
+@interface WebViewPDFGalleryController : ESCBaseViewController
 
 @end

@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import <Quartz/Quartz.h>
+#include <QuartzCore/../Frameworks/CoreImage.framework/Headers/CIFilter.h>
 
-static NSString *kcfgstr = @"{\"readme\":[\"image-resizer [imagePath] [options] options\",\"example: image-resizer appicon.png -u icon -o ~/Desktop/appicon\",\"options\",\"\\t-h\\tshow this message\",\"\\t-o\\toutput dictionary, use current directory by default\",\"\\t-s\\tsize of the resized image. You can set more than size option divided by space .\",\"\\t-cfg\\tcustom config file path. A json file and must contain key named \'images\' with value typed array with object that contain key named size with value like 128*128 or 128 .\",\"\\t-u\\tuse of the resized images . This option can be \'icon\' or \'lanuchimage (ingore case). If set this option, option -s and -cfg will be ingored .\",\"Discussion : \\n\\tThe output image file has same name with the source image but append it\'s size pixel and type named png .\"],\"options\":{\"-o\":\"output\",\"-s\":\"size\",\"-cfg\":\"config_file\",\"-u\":\"use_type\"}}";
+static NSString *kcfgstr = @"{\"readme\":[\"image-resizer [imagePath] [options] options\",\"example: image-resizer appicon.png -u icon -o ~/Desktop/appicon\",\"options\",\"\\t-h\\tshow this message\",\"\\t-o\\toutput dictionary, use current directory by default\",\"\\t-s\\tsize of the resized image. You can set more than size option divided by space .\",\"\\t-cfg\\tcustom config file path. A json file and must contain key named \'images\' with value typed array with object that contain key named size with value like 128*128 or 128 .\",\"\\t-u\\tuse of the resized images . This option can be \'icon\' or \'lanuchimage (ingore case). If set this option, option -s and -cfg will be ingored .\",\"\\t-i\\tshow resize infomation\",\"Discussion : \\n\\tThe output image file has same name with the source image but append it\'s size pixel and type named png .\"],\"options\":{\"-o\":\"output\",\"-s\":\"size\",\"-cfg\":\"config_file\",\"-u\":\"use_type\"}}";
 static NSMutableDictionary *kcfg;
 
 static void showReadMe()
@@ -18,6 +20,13 @@ static void showReadMe()
     for (NSString *readme in kcfg[@"readme"]) {
         printf("%s\n",[readme cStringUsingEncoding:NSUTF8StringEncoding]);
     }
+}
+
+static inline BOOL show_step_info(int argc, const char *argv[]){
+    for (int i = 1; i < argc; i ++) {
+        if (strcmp(argv[i], "-i") == 0) return YES;
+    }
+    return NO;
 }
 
 static BOOL analyse_argv(int argc, const char * argv[], NSMutableDictionary *__autoreleasing* optionsPointer)
@@ -65,6 +74,9 @@ static BOOL analyse_source_image(NSMutableDictionary *__autoreleasing* optionsPo
     
     options[@"image_name"] = [[imagePath lastPathComponent] stringByDeletingPathExtension];
     options[@"imageRep"] = image;
+    
+    // 获取 CIImage
+    options[@"ciimage"] = [CIImage imageWithContentsOfURL:[NSURL fileURLWithPath:imagePath]];
     
     return YES;
 }
@@ -120,38 +132,50 @@ static CGSize size_from_str(NSString *sizeStr){
     return size;
 }
 
-static NSData *resized_image_data(NSBitmapImageRep *imageRep, CGSize size){
+static NSData *resized_image_data(CIImage *image, CGSize size){
     if (size.width < 2.0 || size.height < 2.0) return nil;
     
-    CGRect rect = (CGRect){0,0,size.width/2, size.height/2};
-    NSImage *output = [[NSImage alloc] initWithSize:rect.size];
-    [output setPrefersColorMatch:YES];
-    [output setUsesEPSOnResolutionMismatch:YES];
+    NSDictionary *properties = image.properties;
+    CGFloat iWidth = [[properties objectForKey:@"PixelWidth"] floatValue];
+    CGFloat iHeight = [[properties objectForKey:@"PixelHeight"] floatValue];
     
-    [output lockFocus];
-    [imageRep drawInRect:rect];
-    [output unlockFocus];
+    if (iWidth < 1 || iHeight < 1) {
+        return nil;
+    }
+    NSAffineTransform *transform = [[NSAffineTransform alloc] init];
+    [transform scaleXBy:size.width/iWidth yBy:size.height/iHeight];
+    CIFilter *scaleFilter = [CIFilter filterWithName:@"CIAffineTransform" withInputParameters:@{kCIInputImageKey:image,
+                                                                                    kCIInputTransformKey:transform}];
     
-    imageRep = [NSBitmapImageRep imageRepWithData:[output TIFFRepresentation]];
+    CIImage *scaledImage = [scaleFilter outputImage];
+    
+    CIContext *context = [CIContext contextWithCGContext:[[NSGraphicsContext currentContext] graphicsPort]
+                                                 options:@{kCIContextUseSoftwareRenderer:@(NO)}];
+    
+    CGImageRef imageRef = [context createCGImage:scaledImage fromRect:(CGRect){0,0,size}];
+    NSBitmapImageRep *imageRep = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];
     NSDictionary *imageProps = [NSDictionary dictionaryWithObject:@(YES) forKey:NSImageInterlaced];
-    return [imageRep representationUsingType:NSPNGFileType properties:imageProps];
+    NSData *imageData = [imageRep representationUsingType:NSPNGFileType properties:imageProps];
+    CGImageRelease(imageRef);
+    return imageData;
 }
 
-static void save_image_data(NSData *imageData, CGSize size, NSDictionary *options){
+static BOOL save_image_data(NSData *imageData, CGSize size, NSDictionary *options){
     NSString *image_file = [NSString stringWithFormat:@"%@/%@_%i_%i.png",options[@"output_dir"],options[@"image_name"],(int)size.width,(int)size.height];
 
-    printf("resized image < %s > %s .\n",[[image_file lastPathComponent] cStringUsingEncoding:NSUTF8StringEncoding],
-           [imageData writeToFile:image_file atomically:YES] ? "success" : "fail");
+    return [imageData writeToFile:image_file atomically:YES] ? YES : NO;
 }
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        BOOL showStepInfo = show_step_info(argc, argv);
+        
+        if (showStepInfo) printf("Image Resizer start ...\n");
         kcfg = [NSJSONSerialization JSONObjectWithData:[kcfgstr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
         
         NSMutableDictionary *options = [NSMutableDictionary new];
-        if (analyse_argv(argc, argv, &options)) 
+        if (analyse_argv(argc, argv, &options)) {
             if (analyse_source_image(&options)){
                 analyse_output_dir(&options);
                 analyse_config_size(&options);
@@ -161,10 +185,18 @@ int main(int argc, const char * argv[]) {
                 NSArray *resize_configs = options[@"config"];
                 for (NSMutableDictionary *resize_cofnig in resize_configs) {
                     CGSize size = size_from_str(resize_cofnig[@"size"]);
-                    NSData *imageData = resized_image_data(options[@"imageRep"], size);
-                    if (imageData) save_image_data(imageData, size, options);
+                    NSData *imageData = resized_image_data(options[@"ciimage"], size);
+                    if (imageData){
+                        BOOL success = save_image_data(imageData, size, options);
+                        if (showStepInfo) printf("resized image < %.0fx%.0f > save %s .\n",size.width,size.height, success ? "success" : "fail");
+                    }
                 }
-            }
+            }else
+                if (showStepInfo) printf("Image is not exist .");
+        }else
+            if (showStepInfo) printf("Analyse argument faild .\n");
+        if (showStepInfo) printf("End .\n");
     }
+
     return 0;
 }

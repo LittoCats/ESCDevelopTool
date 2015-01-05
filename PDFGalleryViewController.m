@@ -9,7 +9,6 @@
 #import "PDFGalleryViewController.h"
 
 @interface PDFGalleryViewController ()
-- (IBAction)galleryPDF:(UIButton *)sender;
 
 @end
 
@@ -17,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,19 +34,4 @@
 }
 */
 
-- (IBAction)galleryPDF:(UIButton *)sender {
-    if ([self.settings[@"galleryAction"] count] < sender.tag) return;
-    NSDictionary *options = [self.settings[@"galleryAction"] objectAtIndex:sender.tag-1];
-    NSURL *url = [NSURL URLWithString:[options objectForKey:@"action"]];
-    
-    if ([[url.scheme lowercaseString] isEqualToString:@"escm"]) {
-        Class vcClass = NSClassFromString(url.host);
-        if (!vcClass) {
-            NSLog(@"vcClass is not exist : %@",url);
-            return;
-        }
-        UIViewController *vc = [[vcClass alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-}
 @end

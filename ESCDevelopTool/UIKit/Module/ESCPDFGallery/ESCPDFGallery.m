@@ -30,6 +30,7 @@
 - (void)defaultInit
 {
     self.clipsToBounds = YES;
+    self.backgroundColor = [UIColor whiteColor];
     
     self.scrollView = [[UIScrollView alloc] init];
     _scrollView.delegate = self;
@@ -48,10 +49,19 @@
     self.reusablePageView = [NSMutableArray new];
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    BOOL isBoundsChanged = fabsf(self.frame.size.width-frame.size.width) > 0.1 || fabsf(self.frame.size.height-frame.size.height)>0.1;
+    [super setFrame:frame];
+    if (!isBoundsChanged) return;
+    [self.scrollView setFrame:self.bounds];
+    [self updateContentSize];
+}
+
 - (void)setBounds:(CGRect)bounds
 {
     BOOL isBoundsChanged = fabsf(self.bounds.size.width-bounds.size.width) > 0.1 || fabsf(self.bounds.size.height-bounds.size.height)>0.1;
-    [super setFrame:bounds];
+    [super setBounds:bounds];
     if (!isBoundsChanged) return;
     [self.scrollView setFrame:self.bounds];
     [self updateContentSize];

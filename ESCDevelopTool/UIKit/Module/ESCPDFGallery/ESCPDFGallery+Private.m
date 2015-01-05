@@ -142,7 +142,7 @@
 - (void)updateContentInRect:(CGRect)vr
 {
     CGRect vissibleRect = vr;
-    if (vissibleRect.size.height <= 1 || vissibleRect.origin.y < 0) return;
+    if (vissibleRect.size.height <= 1 || vissibleRect.origin.y < 0 || !self.pagesRect.count) return;
     
     //  减去已显示的区域，主要是 Y 方向
     if (vissibleRect.origin.y < self.vissablePageRect.y0) {
