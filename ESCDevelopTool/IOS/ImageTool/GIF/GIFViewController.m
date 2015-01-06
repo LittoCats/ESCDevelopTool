@@ -15,7 +15,6 @@
     NSDictionary *gifProperties; // 保存gif动画属性
     size_t index; // gif动画播放开始的帧序号
     size_t count; // gif动画的总帧数
-    NSTimer *timer; // 播放gif动画所使用的timer
 }
 @end
 
@@ -30,11 +29,8 @@
     
     // load gif image
     NSURL *gifURL = [self.nibBundle URLForResource:@"gif" withExtension:@"gif"];
-    NSDictionary *gifLoopCount = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:0] forKey:(NSString *)kCGImagePropertyGIFLoopCount];
     
-    gifProperties = [NSDictionary dictionaryWithObject:gifLoopCount forKey:(NSString *)kCGImagePropertyGIFDictionary];
-    
-    gif = CGImageSourceCreateWithURL((CFURLRef)gifURL, (CFDictionaryRef)gifProperties);
+    gif = CGImageSourceCreateWithURL((CFURLRef)gifURL, NULL);
     
     count =CGImageSourceGetCount(gif);
     
@@ -54,13 +50,25 @@
     self.view.layer.contents = (__bridge id)ref;
     CFRelease(ref);
     
+    CFDictionaryRef properties = CGImageSourceCopyPropertiesAtIndex(gif, index, NULL);
+    CFDictionaryRef gifPro = CFDictionaryGetValue(properties, kCGImagePropertyGIFDictionary);
+    CFNumberRef delayTime = CFDictionaryGetValue(gifPro, kCGImagePropertyGIFDelayTime);
+    CGFloat interval = 0.2;
+    CFNumberGetValue(delayTime, CFNumberGetType(delayTime), &interval);
     __weak typeof(self) wself = self;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(interval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         __strong typeof(wself) sself = wself; if (!sself) return ;
         [sself displayGIF];
     });
 }
 
+- (void)dealloc
+{
+    if (gif) {
+        CFRelease(gif);
+        gif = nil;
+    }
+}
 /*
 #pragma mark - Navigation
 

@@ -22,6 +22,8 @@
 		A1450C841A485273003B8988 /* ESCWebView+URLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = A1450C831A485273003B8988 /* ESCWebView+URLProtocol.m */; };
 		A1450C871A4857F4003B8988 /* ESCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1450C861A4857F4003B8988 /* ESCWebView.m */; };
 		A1450C8A1A485A91003B8988 /* ESCWebView+CMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A1450C891A485A91003B8988 /* ESCWebView+CMethod.m */; };
+		A1482E0D1A5BBF2800DEC90F /* ESCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A1482E0C1A5BBF2800DEC90F /* ESCImage.m */; };
+		A1482E0E1A5BBF2800DEC90F /* ESCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A1482E0C1A5BBF2800DEC90F /* ESCImage.m */; };
 		A1512D901A59984D00EAE92C /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1512D8E1A59983700EAE92C /* QuickLook.framework */; };
 		A1512D931A59987300EAE92C /* QuickLookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1512D921A59987300EAE92C /* QuickLookViewController.m */; };
 		A16875BA1A3D7844004B873E /* ESCCoreData+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A16875B91A3D7844004B873E /* ESCCoreData+Private.m */; };
@@ -205,6 +207,9 @@
 		A1450C851A4857F4003B8988 /* ESCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCWebView.h; sourceTree = "<group>"; };
 		A1450C861A4857F4003B8988 /* ESCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCWebView.m; sourceTree = "<group>"; };
 		A1450C891A485A91003B8988 /* ESCWebView+CMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCWebView+CMethod.m"; sourceTree = "<group>"; };
+		A1482E0B1A5BBF2800DEC90F /* ESCImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCImage.h; sourceTree = "<group>"; };
+		A1482E0C1A5BBF2800DEC90F /* ESCImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCImage.m; sourceTree = "<group>"; };
+		A1482E0F1A5BC18000DEC90F /* ESCImage+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCImage+Private.h"; sourceTree = "<group>"; };
 		A1512D8E1A59983700EAE92C /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/QuickLook.framework; sourceTree = DEVELOPER_DIR; };
 		A1512D911A59987300EAE92C /* QuickLookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickLookViewController.h; sourceTree = "<group>"; };
 		A1512D921A59987300EAE92C /* QuickLookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickLookViewController.m; sourceTree = "<group>"; };
@@ -457,6 +462,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A10B9DAB1A5B82DB00DBD247 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				A10B9DAC1A5B82DB00DBD247 /* ESCImage */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		A10B9DAC1A5B82DB00DBD247 /* ESCImage */ = {
+			isa = PBXGroup;
+			children = (
+				A1482E0B1A5BBF2800DEC90F /* ESCImage.h */,
+				A1482E0C1A5BBF2800DEC90F /* ESCImage.m */,
+				A1482E0F1A5BC18000DEC90F /* ESCImage+Private.h */,
+			);
+			path = ESCImage;
+			sourceTree = "<group>";
+		};
 		A131DE881A28AF580060E74E /* ESCPDFDocument */ = {
 			isa = PBXGroup;
 			children = (
@@ -922,6 +945,7 @@
 		A1D4FF211A2771C6001EF98C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				A10B9DAB1A5B82DB00DBD247 /* Module */,
 				A1F1D1C31A32DC76007FD09E /* PrivateHeader */,
 				A1D4FF221A2771C6001EF98C /* Category */,
 				A1D4FF311A2771C6001EF98C /* Foundation+ESC.h */,
@@ -1362,6 +1386,7 @@
 				A131DE971A28C6870060E74E /* ESCCoreData.m in Sources */,
 				A1B3A4E51A399115009F8E9E /* decoder.c in Sources */,
 				A1A7B49B1A56692400311081 /* ESCPDFPageView.m in Sources */,
+				A1482E0E1A5BBF2800DEC90F /* ESCImage.m in Sources */,
 				A1B3A4E71A399115009F8E9E /* error.c in Sources */,
 				A1D637031A557477006B8205 /* ESCInternationalManager+UIKit.m in Sources */,
 				A1450C8A1A485A91003B8988 /* ESCWebView+CMethod.m in Sources */,
@@ -1470,6 +1495,7 @@
 				A1B3A4D21A399115009F8E9E /* config.c in Sources */,
 				A1B3A4F81A399115009F8E9E /* util.c in Sources */,
 				A1B3A4FA1A399115009F8E9E /* refcnt.c in Sources */,
+				A1482E0D1A5BBF2800DEC90F /* ESCImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
