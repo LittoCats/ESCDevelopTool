@@ -34,6 +34,10 @@
 		A16A03721A5A40CE00D2ACF1 /* CustomPDFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16A03701A5A40CE00D2ACF1 /* CustomPDFViewController.xib */; };
 		A16A03751A5A42A100D2ACF1 /* WebViewPDFGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16A03741A5A42A100D2ACF1 /* WebViewPDFGalleryController.m */; };
 		A16AA6B51A47A25E00AC00DB /* ESCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A16AA6B41A47A25E00AC00DB /* ESCAnimation.m */; };
+		A17AC0C81A5B6F5900C02DF3 /* ImageGalleryViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A17AC0C61A5B6F5900C02DF3 /* ImageGalleryViewController.json */; };
+		A17AC0C91A5B6F5900C02DF3 /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AC0C71A5B6F5900C02DF3 /* ImageGalleryViewController.m */; };
+		A17AC0CD1A5B715B00C02DF3 /* GIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AC0CC1A5B715B00C02DF3 /* GIFViewController.m */; };
+		A17AC0CF1A5B718200C02DF3 /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A17AC0CE1A5B718200C02DF3 /* gif.gif */; };
 		A187160C1A352E7D00514C57 /* UIImage+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A187160B1A352E7D00514C57 /* UIImage+ESC.m */; };
 		A18716301A354FF900514C57 /* ESCArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A18716241A354FF900514C57 /* ESCArchiver.m */; };
 		A18716321A354FF900514C57 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = A18716281A354FF900514C57 /* ioapi.c */; };
@@ -125,8 +129,6 @@
 		A1C299791A56249600C8D74E /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C299781A56249600C8D74E /* libc++.1.dylib */; };
 		A1C2997B1A5624A100C8D74E /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C2997A1A5624A100C8D74E /* libsqlite3.0.dylib */; };
 		A1C2997D1A5624AC00C8D74E /* libiconv.2.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C2997C1A5624AC00C8D74E /* libiconv.2.4.0.dylib */; };
-		A1C299811A56254100C8D74E /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C299801A56254100C8D74E /* ImageGalleryViewController.m */; };
-		A1C299831A5626B400C8D74E /* ImageGalleryViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C299821A5626B400C8D74E /* ImageGalleryViewController.json */; };
 		A1D4FF001A2770BE001EF98C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FEFF1A2770BE001EF98C /* main.m */; };
 		A1D4FF031A2770BE001EF98C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF021A2770BE001EF98C /* AppDelegate.m */; };
 		A1D4FF061A2770BE001EF98C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF051A2770BE001EF98C /* ViewController.m */; };
@@ -222,6 +224,12 @@
 		A16AA6B31A47A25E00AC00DB /* ESCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCAnimation.h; sourceTree = "<group>"; };
 		A16AA6B41A47A25E00AC00DB /* ESCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCAnimation.m; sourceTree = "<group>"; };
 		A16AA6B61A47AF7100AC00DB /* ESCAnimation+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCAnimation+Private.h"; sourceTree = "<group>"; };
+		A17AC0C51A5B6F5900C02DF3 /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
+		A17AC0C61A5B6F5900C02DF3 /* ImageGalleryViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImageGalleryViewController.json; sourceTree = "<group>"; };
+		A17AC0C71A5B6F5900C02DF3 /* ImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryViewController.m; sourceTree = "<group>"; };
+		A17AC0CB1A5B715B00C02DF3 /* GIFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIFViewController.h; sourceTree = "<group>"; };
+		A17AC0CC1A5B715B00C02DF3 /* GIFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIFViewController.m; sourceTree = "<group>"; };
+		A17AC0CE1A5B718200C02DF3 /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
 		A187160A1A352E7D00514C57 /* UIImage+ESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ESC.h"; sourceTree = "<group>"; };
 		A187160B1A352E7D00514C57 /* UIImage+ESC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ESC.m"; sourceTree = "<group>"; };
 		A18716231A354FF900514C57 /* ESCArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCArchiver.h; sourceTree = "<group>"; };
@@ -339,9 +347,6 @@
 		A1C299781A56249600C8D74E /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libc++.1.dylib"; sourceTree = DEVELOPER_DIR; };
 		A1C2997A1A5624A100C8D74E /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libsqlite3.0.dylib; sourceTree = DEVELOPER_DIR; };
 		A1C2997C1A5624AC00C8D74E /* libiconv.2.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.4.0.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libiconv.2.4.0.dylib; sourceTree = DEVELOPER_DIR; };
-		A1C2997F1A56254000C8D74E /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
-		A1C299801A56254100C8D74E /* ImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryViewController.m; sourceTree = "<group>"; };
-		A1C299821A5626B400C8D74E /* ImageGalleryViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImageGalleryViewController.json; sourceTree = "<group>"; };
 		A1D4FEFB1A2770BE001EF98C /* IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D4FEFE1A2770BE001EF98C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1D4FEFF1A2770BE001EF98C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -529,6 +534,35 @@
 				A16AA6B61A47AF7100AC00DB /* ESCAnimation+Private.h */,
 			);
 			path = ESCAnimation;
+			sourceTree = "<group>";
+		};
+		A17AC0C31A5B6F5900C02DF3 /* ImageTool */ = {
+			isa = PBXGroup;
+			children = (
+				A17AC0CA1A5B714E00C02DF3 /* GIF */,
+				A17AC0C41A5B6F5900C02DF3 /* ImageGallery */,
+			);
+			path = ImageTool;
+			sourceTree = "<group>";
+		};
+		A17AC0C41A5B6F5900C02DF3 /* ImageGallery */ = {
+			isa = PBXGroup;
+			children = (
+				A17AC0C51A5B6F5900C02DF3 /* ImageGalleryViewController.h */,
+				A17AC0C61A5B6F5900C02DF3 /* ImageGalleryViewController.json */,
+				A17AC0C71A5B6F5900C02DF3 /* ImageGalleryViewController.m */,
+			);
+			path = ImageGallery;
+			sourceTree = "<group>";
+		};
+		A17AC0CA1A5B714E00C02DF3 /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				A17AC0CB1A5B715B00C02DF3 /* GIFViewController.h */,
+				A17AC0CE1A5B718200C02DF3 /* gif.gif */,
+				A17AC0CC1A5B715B00C02DF3 /* GIFViewController.m */,
+			);
+			path = GIF;
 			sourceTree = "<group>";
 		};
 		A18716221A354FF900514C57 /* ESCArchiver */ = {
@@ -850,16 +884,6 @@
 			path = ESCPainter;
 			sourceTree = "<group>";
 		};
-		A1C2997E1A56251100C8D74E /* ImageGallery */ = {
-			isa = PBXGroup;
-			children = (
-				A1C2997F1A56254000C8D74E /* ImageGalleryViewController.h */,
-				A1C299801A56254100C8D74E /* ImageGalleryViewController.m */,
-				A1C299821A5626B400C8D74E /* ImageGalleryViewController.json */,
-			);
-			path = ImageGallery;
-			sourceTree = "<group>";
-		};
 		A1D4FEFC1A2770BE001EF98C /* IOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -868,8 +892,8 @@
 				A1D4FF041A2770BE001EF98C /* ViewController.h */,
 				A1D4FF051A2770BE001EF98C /* ViewController.m */,
 				A187EA0A1A52892900B4564E /* ViewController.json */,
+				A17AC0C31A5B6F5900C02DF3 /* ImageTool */,
 				A1A7B49C1A56753700311081 /* PDFGallery */,
-				A1C2997E1A56251100C8D74E /* ImageGallery */,
 				A14398CC1A52DE70001B4255 /* ESCPainter */,
 				A14398BA1A52CC20001B4255 /* ESCPopover */,
 				A187EA111A528D8300B4564E /* ESCWebView */,
@@ -1260,7 +1284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A187EA0B1A52892900B4564E /* ViewController.json in Resources */,
-				A1C299831A5626B400C8D74E /* ImageGalleryViewController.json in Resources */,
 				A14398BF1A52CC69001B4255 /* PopoverViewController.xib in Resources */,
 				A16A036B1A5A33C000D2ACF1 /* PDFGalleryViewController.xib in Resources */,
 				A16A036D1A5A364500D2ACF1 /* PDFGalleryViewController.json in Resources */,
@@ -1268,6 +1291,8 @@
 				A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */,
 				A1D4FF0B1A2770BE001EF98C /* Images.xcassets in Resources */,
 				A16A03721A5A40CE00D2ACF1 /* CustomPDFViewController.xib in Resources */,
+				A17AC0C81A5B6F5900C02DF3 /* ImageGalleryViewController.json in Resources */,
+				A17AC0CF1A5B718200C02DF3 /* gif.gif in Resources */,
 				A1C2996A1A559EB300C8D74E /* PopoverViewController.json in Resources */,
 				A14398D41A52DE9E001B4255 /* PainterFigureList.json in Resources */,
 			);
@@ -1327,7 +1352,6 @@
 				A131DEB21A2C1FBC0060E74E /* UIControl+ESC.m in Sources */,
 				A1450C871A4857F4003B8988 /* ESCWebView.m in Sources */,
 				A1B3A4F71A399115009F8E9E /* rs.c in Sources */,
-				A1C299811A56254100C8D74E /* ImageGalleryViewController.m in Sources */,
 				A1B3A4E91A399115009F8E9E /* image.c in Sources */,
 				A1D4FF5C1A2771C6001EF98C /* NSDate+ESC.m in Sources */,
 				A1D4FF801A2771DF001EF98C /* UIView+ESC.m in Sources */,
@@ -1362,6 +1386,7 @@
 				A1B3A3CC1A397663009F8E9E /* ESCCodeSymbol+Generator.mm in Sources */,
 				A1D4FF6A1A2771C6001EF98C /* ESCPersistenceCache.m in Sources */,
 				A18716351A354FF900514C57 /* zip.c in Sources */,
+				A17AC0C91A5B6F5900C02DF3 /* ImageGalleryViewController.m in Sources */,
 				A1B3A5131A3AF4F4009F8E9E /* __ESCImageView.m in Sources */,
 				A1B3A4371A397BE7009F8E9E /* qr_encode.cpp in Sources */,
 				A1450C841A485273003B8988 /* ESCWebView+URLProtocol.m in Sources */,
@@ -1388,6 +1413,7 @@
 				A1B3A4E11A399115009F8E9E /* i25.c in Sources */,
 				A1D4FF681A2771C6001EF98C /* ESCCrypt.m in Sources */,
 				A1B3A50D1A3ADA5C009F8E9E /* ESCImageGallery.m in Sources */,
+				A17AC0CD1A5B715B00C02DF3 /* GIFViewController.m in Sources */,
 				A187160C1A352E7D00514C57 /* UIImage+ESC.m in Sources */,
 				A14398BE1A52CC69001B4255 /* PopoverViewController.m in Sources */,
 				A1B3A43B1A3981FB009F8E9E /* ESCCodeSymbol+Scanner.m in Sources */,

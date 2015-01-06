@@ -37,7 +37,12 @@
     Class viewClass = NSClassFromString(_settings[@"view"][@"Class"]);
     if (viewClass) self.view = [[viewClass alloc] initWithFrame:CGRectZero];
     else {
-        UIView *view = [[self.nibBundle ? self.nibBundle : [NSBundle mainBundle] loadNibNamed:self.nibName ? self.nibName : NSStringFromClass(self.class) owner:self options:nil] firstObject];
+        NSBundle *nibBundle = self.nibBundle ? self.nibBundle : [NSBundle mainBundle];
+        NSString *nibName = self.nibName ? self.nibName : NSStringFromClass(self.class);
+        UIView *view;
+        if ([nibBundle pathForResource:nibName ofType:@"nib"]) {
+            view = [[nibBundle loadNibNamed:nibName owner:self options:nil] firstObject];
+        }
         self.view = view ? view : [[UIView alloc] initWithFrame:CGRectZero];
     }
 }

@@ -1,1 +1,34 @@
-{"moduleList":[{"title":"ESCWebView","description":"一个简单的 UIWebView <-> Nativie 交互实现。UIWebView 可以与 Native code 同步通讯，但效率较低。除非是必需，不建议 UIWebView 与 Native 有大量的通讯，运行 JavaScript 代码，建议使用 JSContext。","action":"ESCM://WebViewController"},{"title":"ESCPopoverControl","description":"比较小巧的弹出视图，可以根据提供的位置，较合理的自动判断最优显示方式。只是一个容器类，内容需自定义。","action":"ESCM://PopoverViewController"},{"title":"PainterViewController","description":"一个简单的绘图板工具，功能不强大，要点在于代码的结构设计，缓存的管理；极简的结构和设计模式，使功能易于扩展（增加画毛工具，只需继承 PaintedFigure 类，实现相应画笔的算法即可","action":"ESCM://PainterViewController"},{"title":"ImageGalleryViewController","description":"轻量机的缓冲和便捷的设置，使大量的图片预览资源占用量大幅降低。未对网络图片做持久化缓存，若需要，需自行实现","action":"ESCM://ImageGalleryViewController"},{"title":"PDFGalleryViewController","description":"PDF查看。列举了IOS中常见的三种 PDF 文档显示方法：webview、CoreGraphics、QuickLook。三种方法各有优略，使用 webView 与使用 QuickLook 功能相差不大，但可以通过 JS 对内容进行控制(示例中未做演示)。使用 CoreGraphics 可实现较好的自定义，但是工作量也最大，尤其是对 PDF 文件的解析；使用过程中可根据需求酌情考虑，只支持部分版本及功能。\n\n模拟器（8.0,8.1）中，CGContextDrawPDFPage 方法会参生内存泄露，未找到原因，若您知道解决方法或发现我使用的不当之处，请联系我，谢谢。","action":"ESCM://PDFGalleryViewController"}]}
+{
+  "moduleList": [
+    {
+      "title": "ESCWebView",
+      "description": "一个简单的 UIWebView <-> Nativie 交互实现。UIWebView 可以与 Native code 同步通讯，但效率较低。除非是必需，不建议 UIWebView 与 Native 有大量的通讯，运行 JavaScript 代码，建议使用 JSContext。",
+      "action": "ESCM://WebViewController"
+    },
+    {
+      "title": "ESCPopoverControl",
+      "description": "比较小巧的弹出视图，可以根据提供的位置，较合理的自动判断最优显示方式。只是一个容器类，内容需自定义。",
+      "action": "ESCM://PopoverViewController"
+    },
+    {
+      "title": "PainterViewController",
+      "description": "一个简单的绘图板工具，功能不强大，要点在于代码的结构设计，缓存的管理；极简的结构和设计模式，使功能易于扩展（增加画毛工具，只需继承 PaintedFigure 类，实现相应画笔的算法即可",
+      "action": "ESCM://PainterViewController"
+    },
+    {
+      "title": "ImageGalleryViewController",
+      "description": "轻量机的缓冲和便捷的设置，使大量的图片预览资源占用量大幅降低。未对网络图片做持久化缓存，若需要，需自行实现",
+      "action": "ESCM://ImageGalleryViewController"
+    },
+    {
+      "title": "PDFGalleryViewController",
+      "description": "PDF查看。列举了IOS中常见的三种 PDF 文档显示方法：webview、CoreGraphics、QuickLook。三种方法各有优略，使用 webView 与使用 QuickLook 功能相差不大，但可以通过 JS 对内容进行控制(示例中未做演示)。使用 CoreGraphics 可实现较好的自定义，但是工作量也最大，尤其是对 PDF 文件的解析；使用过程中可根据需求酌情考虑，只支持部分版本及功能。\n\n模拟器（8.0,8.1）中，CGContextDrawPDFPage 方法会参生内存泄露，未找到原因，若您知道解决方法或发现我使用的不当之处，请联系我，谢谢。",
+      "action": "ESCM://PDFGalleryViewController"
+    },
+    {
+      "title": "GIFViewController",
+      "description": "PDF查看。列举了IOS中常见的三种 PDF 文档显示方法：webview、CoreGraphics、QuickLook。三种方法各有优略，使用 webView 与使用 QuickLook 功能相差不大，但可以通过 JS 对内容进行控制(示例中未做演示)。使用 CoreGraphics 可实现较好的自定义，但是工作量也最大，尤其是对 PDF 文件的解析；使用过程中可根据需求酌情考虑，只支持部分版本及功能。\n\n模拟器（8.0,8.1）中，CGContextDrawPDFPage 方法会参生内存泄露，未找到原因，若您知道解决方法或发现我使用的不当之处，请联系我，谢谢。",
+      "action": "ESCM://GIFViewController"
+    }
+  ]
+}
