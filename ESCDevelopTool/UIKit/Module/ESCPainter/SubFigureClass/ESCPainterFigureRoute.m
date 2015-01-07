@@ -7,6 +7,7 @@
 //
 
 #import "ESCPainterFigureRoute.h"
+#import "ESCPainter+Private.h"
 
 @implementation ESCPainterFigureRoute
 
@@ -22,11 +23,13 @@
 
 - (void)beganWithTouches:(NSSet *)touches inCanvas:(ESCPainterCanvas *)canvas
 {
+    [super beganWithTouches:touches inCanvas:canvas];
     [self recieveTouches:touches inCanvas:canvas];
 }
 
 - (void)recieveTouches:(NSSet *)touches inCanvas:(ESCPainterCanvas *)canvas;
 {
+    [super recieveTouches:touches inCanvas:canvas];
     UITouch *touch = [touches anyObject];
     CGPoint point = [touch locationInView:canvas];
     // 如果与之前两点在同一条直线上，则删除上前一个点
@@ -39,6 +42,7 @@
     [self.points addObject:NSStringFromCGPoint(point)];
 }
 
+
 - (void)drawInContext:(CGContextRef)context
 {
     CGContextBeginPath(context);
@@ -48,16 +52,16 @@
     CGContextSetLineCap(context, kCGLineCapRound);
     
     CGContextBeginPath(context);
-    CGPoint startPoint = CGPointFromString([_points firstObject]);
+    CGPoint startPoint = [self deCodePoint:CGPointFromString([self.points firstObject])];
     CGContextMoveToPoint(context, startPoint.x, startPoint.y);
     
-    for (NSString *pointStr in _points) {
-        CGPoint point = CGPointFromString(pointStr);
+    for (NSString *pointStr in self.points) {
+        CGPoint point = [self deCodePoint:CGPointFromString(pointStr)];
         CGContextAddLineToPoint(context, point.x, point.y);
     }
     
-    CGContextSetStrokeColorWithColor(context, [_color CGColor]);
-    CGContextSetLineWidth(context, _width);
+    CGContextSetStrokeColorWithColor(context, [self.color CGColor]);
+    CGContextSetLineWidth(context, self.width);
     CGContextStrokePath(context);
 }
 

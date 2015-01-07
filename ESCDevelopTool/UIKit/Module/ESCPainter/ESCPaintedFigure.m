@@ -6,7 +6,7 @@
 //
 //
 
-#import "ESCPaintedFigure.h"
+#import "ESCPainter+Private.h"
 
 @implementation ESCPaintedFigure
 
@@ -18,6 +18,14 @@
     figure.previous = previous;
     
     return figure;
+}
+
+- (id)init
+{
+    if (self = [super init]) {
+        self.scale = 1.0;
+    }
+    return self;
 }
 
 - (void)drawInContext:(CGContextRef)context
@@ -35,19 +43,56 @@
     return nil;
 }
 
-- (void)beganWithTouches:(NSSet *)touches inCanvas:(ESCPainterCanvas *)canvas
+- (NSArray *)recordPoints
 {
-    
+    return [NSArray arrayWithArray:self.points];
 }
 
-- (void)recieveTouches:(NSSet *)touch inCanvas:(ESCPainterCanvas *)canvas
+- (void)beganWithTouches:(NSSet *)touches inCanvas:(ESCPainterCanvas *)canvas
 {
+    CGPoint p = [[touches anyObject] locationInView:canvas];
+    self.location = (ESCPaintedFigureLocation){
+        p.x,p.y,p.x,p.y
+    };
+}
+
+- (void)recieveTouches:(NSSet *)touches inCanvas:(ESCPainterCanvas *)canvas
+{
+    CGPoint p = [[touches anyObject] locationInView:canvas];
+    [self updateLocation:p];
+}
+
+- (void)endWithTouches:(NSSet *)touches inCanvas:(ESCPainterCanvas *)canvas
+{
+    CGPoint p = [[touches anyObject] locationInView:canvas];
+    [self updateLocation:p];
+    self.isEnd = YES;
     
+    for (int i = 0; i < self.points.count; i++) {
+        CGPoint p = CGPointFromString([self.points objectAtIndex:i]);
+        [self.points replaceObjectAtIndex:i withObject:NSStringFromCGPoint([self enCodePoint:p])];
+    }
 }
 
 - (BOOL)isValid
 {
     return YES;
+}
+
+#pragma mark- location
+- (void)setLocation:(ESCPaintedFigureLocation)location
+{
+    _location = location;
+    self.center = CGPointMake((location.sx+location.ex)/2.0, (location.sy+location.ey)/2.0);
+}
+
+- (void)updateLocation:(CGPoint)p
+{
+    CGFloat dx = self.location.sx, dy = self.location.sy;
+    self.location = (ESCPaintedFigureLocation){
+        MIN(self.location.sx, p.x),MIN(self.location.sy, p.y),
+        MAX(self.location.ex, p.x),MAX(self.location.ey, p.y)
+    };
 }
 
 @end

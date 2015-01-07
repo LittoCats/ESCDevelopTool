@@ -12,15 +12,26 @@
 #import "ESCImage.h"
 
 @interface ESCImage ()
-{
-    CGImageSourceRef imgSource;
-}
 
-@property (nonatomic) ESCImageType type;
+@property (nonatomic) CGImageSourceRef imgSource;
 
-@property (nonatomic) CGSize size;
+@property (nonatomic, strong) NSDictionary *properties;
 
-@property (nonatomic) NSInteger dpi;
+//@property (nonatomic) ESCImageType type;
+//
+//@property (nonatomic) CGSize size;
+//
+//@property (nonatomic) NSInteger fileSize;
+//
+//@property (nonatomic) NSInteger depth;
+//
+//@property (nonatomic) NSInteger dpi;
+//
+//@property (nonatomic) BOOL hasAlpha;
+//
+//@property (nonatomic) ESCImageColorModel colorModel;
+//
+//@property (nonatomic, strong) NSString *profileName;
 
 @end
 

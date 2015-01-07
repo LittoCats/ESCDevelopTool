@@ -50,7 +50,6 @@
 		A187163A1A37494600514C57 /* ESCCodeSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = A18716381A37494600514C57 /* ESCCodeSymbol.m */; };
 		A187E9E61A51980B00B4564E /* ESCPaintedFigure.m in Sources */ = {isa = PBXBuildFile; fileRef = A187E9E51A51980B00B4564E /* ESCPaintedFigure.m */; };
 		A187E9E91A519C2600B4564E /* ESCPainterCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = A187E9E81A519C2600B4564E /* ESCPainterCanvas.m */; };
-		A187E9ED1A522FD800B4564E /* ESCPainterFigureRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = A187E9EC1A522FD800B4564E /* ESCPainterFigureRoute.m */; };
 		A187E9F01A52592700B4564E /* ESCPainterFigureLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A187E9EF1A52592700B4564E /* ESCPainterFigureLine.m */; };
 		A187EA061A527E0B00B4564E /* ESCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A187EA041A527E0B00B4564E /* ESCTableView.m */; };
 		A187EA091A527E3800B4564E /* UIView+ESC_Script.m in Sources */ = {isa = PBXBuildFile; fileRef = A187EA081A527E3800B4564E /* UIView+ESC_Script.m */; };
@@ -58,6 +57,21 @@
 		A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = A187EA131A528D8300B4564E /* __esc_webview_bridge.js */; };
 		A187EA181A528DED00B4564E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A187EA171A528DED00B4564E /* WebViewController.m */; };
 		A187EA1A1A5293C100B4564E /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = A187EA191A5293C100B4564E /* webview.html */; };
+		A19C7AD11A5C392D006B3AB4 /* ESCGIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AD01A5C392D006B3AB4 /* ESCGIFImage.m */; };
+		A19C7AD21A5C392D006B3AB4 /* ESCGIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AD01A5C392D006B3AB4 /* ESCGIFImage.m */; };
+		A19C7AD51A5C3948006B3AB4 /* ESCPNGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AD41A5C3948006B3AB4 /* ESCPNGImage.m */; };
+		A19C7AD61A5C3948006B3AB4 /* ESCPNGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AD41A5C3948006B3AB4 /* ESCPNGImage.m */; };
+		A19C7AD91A5C3971006B3AB4 /* ESCJPEGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AD81A5C3971006B3AB4 /* ESCJPEGImage.m */; };
+		A19C7ADA1A5C3971006B3AB4 /* ESCJPEGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AD81A5C3971006B3AB4 /* ESCJPEGImage.m */; };
+		A19C7ADD1A5C3980006B3AB4 /* ESCBMPImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7ADC1A5C3980006B3AB4 /* ESCBMPImage.m */; };
+		A19C7ADE1A5C3980006B3AB4 /* ESCBMPImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7ADC1A5C3980006B3AB4 /* ESCBMPImage.m */; };
+		A19C7AE11A5C398F006B3AB4 /* ESCICOImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AE01A5C398F006B3AB4 /* ESCICOImage.m */; };
+		A19C7AE21A5C398F006B3AB4 /* ESCICOImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AE01A5C398F006B3AB4 /* ESCICOImage.m */; };
+		A19C7AE51A5C399C006B3AB4 /* ESCCURImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AE41A5C399C006B3AB4 /* ESCCURImage.m */; };
+		A19C7AE61A5C399C006B3AB4 /* ESCCURImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AE41A5C399C006B3AB4 /* ESCCURImage.m */; };
+		A19C7AE91A5C39AB006B3AB4 /* ESCJPEG2000Image.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AE81A5C39AB006B3AB4 /* ESCJPEG2000Image.m */; };
+		A19C7AEA1A5C39AB006B3AB4 /* ESCJPEG2000Image.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AE81A5C39AB006B3AB4 /* ESCJPEG2000Image.m */; };
+		A19C7AEC1A5D028A006B3AB4 /* ESCPainterFigureRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C7AEB1A5D028A006B3AB4 /* ESCPainterFigureRoute.m */; };
 		A1A7B4951A56632F00311081 /* ESCPDFGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7B4941A56632F00311081 /* ESCPDFGallery.m */; };
 		A1A7B4981A5667A500311081 /* ESCPDFGallery+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7B4971A5667A500311081 /* ESCPDFGallery+Private.m */; };
 		A1A7B49B1A56692400311081 /* ESCPDFPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7B49A1A56692400311081 /* ESCPDFPageView.m */; };
@@ -256,7 +270,6 @@
 		A187E9E71A519C2600B4564E /* ESCPainterCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCPainterCanvas.h; sourceTree = "<group>"; };
 		A187E9E81A519C2600B4564E /* ESCPainterCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPainterCanvas.m; sourceTree = "<group>"; };
 		A187E9EB1A522FD800B4564E /* ESCPainterFigureRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCPainterFigureRoute.h; sourceTree = "<group>"; };
-		A187E9EC1A522FD800B4564E /* ESCPainterFigureRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPainterFigureRoute.m; sourceTree = "<group>"; };
 		A187E9EE1A52592700B4564E /* ESCPainterFigureLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCPainterFigureLine.h; sourceTree = "<group>"; };
 		A187E9EF1A52592700B4564E /* ESCPainterFigureLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPainterFigureLine.m; sourceTree = "<group>"; };
 		A187E9F31A5261C400B4564E /* NodeHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NodeHelper; sourceTree = "<group>"; };
@@ -270,6 +283,14 @@
 		A187EA161A528DED00B4564E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		A187EA171A528DED00B4564E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		A187EA191A5293C100B4564E /* webview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
+		A19C7AD01A5C392D006B3AB4 /* ESCGIFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCGIFImage.m; sourceTree = "<group>"; };
+		A19C7AD41A5C3948006B3AB4 /* ESCPNGImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPNGImage.m; sourceTree = "<group>"; };
+		A19C7AD81A5C3971006B3AB4 /* ESCJPEGImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCJPEGImage.m; sourceTree = "<group>"; };
+		A19C7ADC1A5C3980006B3AB4 /* ESCBMPImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCBMPImage.m; sourceTree = "<group>"; };
+		A19C7AE01A5C398F006B3AB4 /* ESCICOImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCICOImage.m; sourceTree = "<group>"; };
+		A19C7AE41A5C399C006B3AB4 /* ESCCURImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCCURImage.m; sourceTree = "<group>"; };
+		A19C7AE81A5C39AB006B3AB4 /* ESCJPEG2000Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCJPEG2000Image.m; sourceTree = "<group>"; };
+		A19C7AEB1A5D028A006B3AB4 /* ESCPainterFigureRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPainterFigureRoute.m; sourceTree = "<group>"; };
 		A1A7B4931A56632F00311081 /* ESCPDFGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCPDFGallery.h; sourceTree = "<group>"; };
 		A1A7B4941A56632F00311081 /* ESCPDFGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPDFGallery.m; sourceTree = "<group>"; };
 		A1A7B4961A5667A500311081 /* ESCPDFGallery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCPDFGallery+Private.h"; sourceTree = "<group>"; };
@@ -474,8 +495,15 @@
 			isa = PBXGroup;
 			children = (
 				A1482E0B1A5BBF2800DEC90F /* ESCImage.h */,
-				A1482E0C1A5BBF2800DEC90F /* ESCImage.m */,
 				A1482E0F1A5BC18000DEC90F /* ESCImage+Private.h */,
+				A19C7ADC1A5C3980006B3AB4 /* ESCBMPImage.m */,
+				A19C7AE41A5C399C006B3AB4 /* ESCCURImage.m */,
+				A19C7AD01A5C392D006B3AB4 /* ESCGIFImage.m */,
+				A19C7AE01A5C398F006B3AB4 /* ESCICOImage.m */,
+				A1482E0C1A5BBF2800DEC90F /* ESCImage.m */,
+				A19C7AE81A5C39AB006B3AB4 /* ESCJPEG2000Image.m */,
+				A19C7AD81A5C3971006B3AB4 /* ESCJPEGImage.m */,
+				A19C7AD41A5C3948006B3AB4 /* ESCPNGImage.m */,
 			);
 			path = ESCImage;
 			sourceTree = "<group>";
@@ -632,7 +660,7 @@
 			isa = PBXGroup;
 			children = (
 				A187E9EB1A522FD800B4564E /* ESCPainterFigureRoute.h */,
-				A187E9EC1A522FD800B4564E /* ESCPainterFigureRoute.m */,
+				A19C7AEB1A5D028A006B3AB4 /* ESCPainterFigureRoute.m */,
 				A187E9EE1A52592700B4564E /* ESCPainterFigureLine.h */,
 				A187E9EF1A52592700B4564E /* ESCPainterFigureLine.m */,
 			);
@@ -1360,6 +1388,7 @@
 				A1B3A4D71A399115009F8E9E /* code128.c in Sources */,
 				A1B3A4D91A399115009F8E9E /* code39.c in Sources */,
 				A1D4FF6B1A2771C6001EF98C /* ESCRuntime.m in Sources */,
+				A19C7AD61A5C3948006B3AB4 /* ESCPNGImage.m in Sources */,
 				A1D4FF5B1A2771C6001EF98C /* NSData+ESC.m in Sources */,
 				A1D637001A55740C006B8205 /* ESCInternationalManager.m in Sources */,
 				A1B3A5101A3ADA79009F8E9E /* ESCImageGallery+Private.m in Sources */,
@@ -1371,7 +1400,9 @@
 				A16875BB1A3D7844004B873E /* ESCCoreData+Private.m in Sources */,
 				A1B3A4D51A399115009F8E9E /* codabar.c in Sources */,
 				A1B3A4F31A399115009F8E9E /* qrdec.c in Sources */,
+				A19C7ADE1A5C3980006B3AB4 /* ESCBMPImage.m in Sources */,
 				A1A7B4981A5667A500311081 /* ESCPDFGallery+Private.m in Sources */,
+				A19C7ADA1A5C3971006B3AB4 /* ESCJPEGImage.m in Sources */,
 				A1B3A5151A3B2C76009F8E9E /* ESCImageGallery+ScrollView.m in Sources */,
 				A131DEB21A2C1FBC0060E74E /* UIControl+ESC.m in Sources */,
 				A1450C871A4857F4003B8988 /* ESCWebView.m in Sources */,
@@ -1395,7 +1426,6 @@
 				A18716341A354FF900514C57 /* unzip.c in Sources */,
 				A1B3A4F11A399115009F8E9E /* isaac.c in Sources */,
 				A16A03751A5A42A100D2ACF1 /* WebViewPDFGalleryController.m in Sources */,
-				A187E9ED1A522FD800B4564E /* ESCPainterFigureRoute.m in Sources */,
 				A1D4FF5A1A2771C6001EF98C /* NSArray+ESC.m in Sources */,
 				A1D4FF601A2771C6001EF98C /* NSTimer+ESC.m in Sources */,
 				A1F1D1C81A34347E007FD09E /* IOS.xcdatamodeld in Sources */,
@@ -1418,19 +1448,24 @@
 				A16A036A1A5A33C000D2ACF1 /* PDFGalleryViewController.m in Sources */,
 				A1B3A4DB1A399115009F8E9E /* code93.c in Sources */,
 				A1D4FF5F1A2771C6001EF98C /* NSString+ESC.m in Sources */,
+				A19C7AEC1A5D028A006B3AB4 /* ESCPainterFigureRoute.m in Sources */,
 				A1B3A4E31A399115009F8E9E /* qr_finder.c in Sources */,
 				A16A03711A5A40CE00D2ACF1 /* CustomPDFViewController.m in Sources */,
+				A19C7AE21A5C398F006B3AB4 /* ESCICOImage.m in Sources */,
 				A187163A1A37494600514C57 /* ESCCodeSymbol.m in Sources */,
 				A16875C81A3DD74F004B873E /* ESCAlertControl.m in Sources */,
 				A131DEA81A2B48C30060E74E /* ESCPDFDocument+Private.m in Sources */,
+				A19C7AE61A5C399C006B3AB4 /* ESCCURImage.m in Sources */,
 				A1D4FF821A2771DF001EF98C /* __ESCToastView.m in Sources */,
 				A18716301A354FF900514C57 /* ESCArchiver.m in Sources */,
+				A19C7AD21A5C392D006B3AB4 /* ESCGIFImage.m in Sources */,
 				A187E9F01A52592700B4564E /* ESCPainterFigureLine.m in Sources */,
 				A14398D11A52DE70001B4255 /* PainterFigureList.m in Sources */,
 				A1B3A4F51A399115009F8E9E /* qrdectxt.c in Sources */,
 				A1B3A4EF1A399115009F8E9E /* binarize.c in Sources */,
 				A1D4FF001A2770BE001EF98C /* main.m in Sources */,
 				A1B3A4EB1A399115009F8E9E /* img_scanner.c in Sources */,
+				A19C7AEA1A5C39AB006B3AB4 /* ESCJPEG2000Image.m in Sources */,
 				A1F1D1BA1A31F560007FD09E /* ESCJSContext.m in Sources */,
 				A1D4FF5E1A2771C6001EF98C /* NSObject+ESC.m in Sources */,
 				A1B3A4DF1A399115009F8E9E /* ean.c in Sources */,
@@ -1469,9 +1504,11 @@
 				A1B3A5021A39F197009F8E9E /* ESCPDFPage+Private.m in Sources */,
 				A1B3A4EE1A399115009F8E9E /* binarize.c in Sources */,
 				A1B3A4D61A399115009F8E9E /* code128.c in Sources */,
+				A19C7AE11A5C398F006B3AB4 /* ESCICOImage.m in Sources */,
 				A1B3A4FE1A399115009F8E9E /* symbol.c in Sources */,
 				A1B3A4D41A399115009F8E9E /* codabar.c in Sources */,
 				A1B3A4DC1A399115009F8E9E /* databar.c in Sources */,
+				A19C7AE91A5C39AB006B3AB4 /* ESCJPEG2000Image.m in Sources */,
 				A1B3A4361A397BE7009F8E9E /* qr_encode.cpp in Sources */,
 				A1B3A4E41A399115009F8E9E /* decoder.c in Sources */,
 				A1B3A4F41A399115009F8E9E /* qrdectxt.c in Sources */,
@@ -1481,16 +1518,21 @@
 				A1B3A4EC1A399115009F8E9E /* bch15_5.c in Sources */,
 				A1B3A4E21A399115009F8E9E /* qr_finder.c in Sources */,
 				A1D694701A26272A008D027D /* AppDelegate.m in Sources */,
+				A19C7AD51A5C3948006B3AB4 /* ESCPNGImage.m in Sources */,
 				A1B3A4D81A399115009F8E9E /* code39.c in Sources */,
 				A1B3A3CB1A397663009F8E9E /* ESCCodeSymbol+Generator.mm in Sources */,
 				A16875BA1A3D7844004B873E /* ESCCoreData+Private.m in Sources */,
+				A19C7AE51A5C399C006B3AB4 /* ESCCURImage.m in Sources */,
+				A19C7ADD1A5C3980006B3AB4 /* ESCBMPImage.m in Sources */,
 				A1B3A4F21A399115009F8E9E /* qrdec.c in Sources */,
 				A1B3A4E01A399115009F8E9E /* i25.c in Sources */,
+				A19C7AD11A5C392D006B3AB4 /* ESCGIFImage.m in Sources */,
 				A1B3A4E61A399115009F8E9E /* error.c in Sources */,
 				A18716391A37494600514C57 /* ESCCodeSymbol.m in Sources */,
 				A1B3A4DA1A399115009F8E9E /* code93.c in Sources */,
 				A1F1D1B91A31F560007FD09E /* ESCJSContext.m in Sources */,
 				A1D6946D1A26272A008D027D /* main.m in Sources */,
+				A19C7AD91A5C3971006B3AB4 /* ESCJPEGImage.m in Sources */,
 				A1B3A4F01A399115009F8E9E /* isaac.c in Sources */,
 				A1B3A4D21A399115009F8E9E /* config.c in Sources */,
 				A1B3A4F81A399115009F8E9E /* util.c in Sources */,

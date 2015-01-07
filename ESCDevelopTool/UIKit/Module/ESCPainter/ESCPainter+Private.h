@@ -29,3 +29,28 @@
 - (void)privateInit;
 
 @end
+
+@interface ESCPaintedFigure ()
+
+@property (nonatomic) CGPoint center;
+
+@property (nonatomic, strong) NSMutableArray *points;
+
+@property (nonatomic) BOOL isEnd;
+
+- (void)updateLocation:(CGPoint)p;
+
+@end
+
+@interface ESCPaintedFigure (Private)
+
+/**
+ *  计算出点的绘制坐标
+ */
+- (CGPoint)deCodePoint:(CGPoint)sp;
+
+/**
+ *  计算 当前点在 figure 中的坐标
+ */
+- (CGPoint)enCodePoint:(CGPoint)sp;
+@end

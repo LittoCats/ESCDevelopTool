@@ -10,10 +10,6 @@
 
 @interface ESCPainterFigureLine : ESCPaintedFigure
 
-@property (nonatomic, strong) UIColor *color;
-@property (nonatomic) CGFloat width;
+@property (nonatomic) BOOL isValid;
 
-@property (nonatomic) NSString *startPoint;
-
-@property (nonatomic) NSString *endPoint;
 @end

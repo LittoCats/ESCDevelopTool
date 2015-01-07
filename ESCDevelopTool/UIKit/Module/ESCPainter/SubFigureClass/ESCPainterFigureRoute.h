@@ -10,8 +10,5 @@
 
 @interface ESCPainterFigureRoute : ESCPaintedFigure
 
-@property (nonatomic, strong) UIColor *color;
-@property (nonatomic) CGFloat width;
-@property (nonatomic, strong) NSMutableArray *points;
 
 @end

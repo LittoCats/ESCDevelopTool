@@ -38,6 +38,8 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [_figure endWithTouches:touches inCanvas:self];
+    
     [self.delegate canvas:self DidCreateFigure:_figure];
     
     self.figure = nil;
