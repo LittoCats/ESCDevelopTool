@@ -7,11 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A131DE8F1A28AF580060E74E /* ESCPDFDocument+Annotations.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DE891A28AF580060E74E /* ESCPDFDocument+Annotations.m */; };
-		A131DE911A28AF580060E74E /* ESCPDFDocument+Catalog.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DE8B1A28AF580060E74E /* ESCPDFDocument+Catalog.m */; };
-		A131DE931A28AF580060E74E /* ESCPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DE8E1A28AF580060E74E /* ESCPDFDocument.m */; };
 		A131DE971A28C6870060E74E /* ESCCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DE961A28C6870060E74E /* ESCCoreData.m */; };
-		A131DEA81A2B48C30060E74E /* ESCPDFDocument+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DEA71A2B48C30060E74E /* ESCPDFDocument+Private.m */; };
 		A131DEB21A2C1FBC0060E74E /* UIControl+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DEB11A2C1FBC0060E74E /* UIControl+ESC.m */; };
 		A14388C41A308E3800782998 /* UIColor+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A14388C31A308E3800782998 /* UIColor+ESC.m */; };
 		A14398BE1A52CC69001B4255 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14398BC1A52CC69001B4255 /* PopoverViewController.m */; };
@@ -127,8 +123,6 @@
 		A1B3A4FD1A399115009F8E9E /* scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A4CC1A399115009F8E9E /* scanner.c */; };
 		A1B3A4FE1A399115009F8E9E /* symbol.c in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A4CE1A399115009F8E9E /* symbol.c */; };
 		A1B3A4FF1A399115009F8E9E /* symbol.c in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A4CE1A399115009F8E9E /* symbol.c */; };
-		A1B3A5021A39F197009F8E9E /* ESCPDFPage+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A5011A39F197009F8E9E /* ESCPDFPage+Private.m */; };
-		A1B3A5031A39F197009F8E9E /* ESCPDFPage+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A5011A39F197009F8E9E /* ESCPDFPage+Private.m */; };
 		A1B3A50D1A3ADA5C009F8E9E /* ESCImageGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A50C1A3ADA5C009F8E9E /* ESCImageGallery.m */; };
 		A1B3A5101A3ADA79009F8E9E /* ESCImageGallery+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A50F1A3ADA79009F8E9E /* ESCImageGallery+Private.m */; };
 		A1B3A5131A3AF4F4009F8E9E /* __ESCImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B3A5121A3AF4F4009F8E9E /* __ESCImageView.m */; };
@@ -156,7 +150,6 @@
 		A1D4FF5E1A2771C6001EF98C /* NSObject+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF2C1A2771C6001EF98C /* NSObject+ESC.m */; };
 		A1D4FF5F1A2771C6001EF98C /* NSString+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF2E1A2771C6001EF98C /* NSString+ESC.m */; };
 		A1D4FF601A2771C6001EF98C /* NSTimer+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF301A2771C6001EF98C /* NSTimer+ESC.m */; };
-		A1D4FF681A2771C6001EF98C /* ESCCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF471A2771C6001EF98C /* ESCCrypt.m */; };
 		A1D4FF6A1A2771C6001EF98C /* ESCPersistenceCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF4C1A2771C6001EF98C /* ESCPersistenceCache.m */; };
 		A1D4FF6B1A2771C6001EF98C /* ESCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF4D1A2771C6001EF98C /* ESCRuntime.m */; };
 		A1D4FF801A2771DF001EF98C /* UIView+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D4FF761A2771DF001EF98C /* UIView+ESC.m */; };
@@ -170,6 +163,27 @@
 		A1D694701A26272A008D027D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6946F1A26272A008D027D /* AppDelegate.m */; };
 		A1D694751A26272A008D027D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1D694731A26272A008D027D /* MainMenu.xib */; };
 		A1D694811A26272A008D027D /* OSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D694801A26272A008D027D /* OSXTests.m */; };
+		A1E75C491A5E125D008802CE /* CoffeeScript.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C481A5E125D008802CE /* CoffeeScript.m */; };
+		A1E75C4A1A5E125D008802CE /* CoffeeScript.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C481A5E125D008802CE /* CoffeeScript.m */; };
+		A1E75C4E1A5E1F99008802CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E75C4B1A5E1F6E008802CE /* QuartzCore.framework */; };
+		A1E75C501A5E2088008802CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E75C4F1A5E2088008802CE /* CoreData.framework */; };
+		A1E75C511A5E20AE008802CE /* ESCCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DE961A28C6870060E74E /* ESCCoreData.m */; };
+		A1E75C561A5E2134008802CE /* libiconv.2.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E75C551A5E2134008802CE /* libiconv.2.4.0.dylib */; };
+		A1E75C601A5E21C0008802CE /* ESCPDFDocument+Annotations.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C591A5E21C0008802CE /* ESCPDFDocument+Annotations.m */; };
+		A1E75C611A5E21C0008802CE /* ESCPDFDocument+Annotations.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C591A5E21C0008802CE /* ESCPDFDocument+Annotations.m */; };
+		A1E75C621A5E21C0008802CE /* ESCPDFDocument+Catalog.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C5A1A5E21C0008802CE /* ESCPDFDocument+Catalog.m */; };
+		A1E75C631A5E21C0008802CE /* ESCPDFDocument+Catalog.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C5A1A5E21C0008802CE /* ESCPDFDocument+Catalog.m */; };
+		A1E75C641A5E21C0008802CE /* ESCPDFDocument+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C5C1A5E21C0008802CE /* ESCPDFDocument+Private.m */; };
+		A1E75C651A5E21C0008802CE /* ESCPDFDocument+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C5C1A5E21C0008802CE /* ESCPDFDocument+Private.m */; };
+		A1E75C661A5E21C0008802CE /* ESCPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C5E1A5E21C0008802CE /* ESCPDFDocument.m */; };
+		A1E75C671A5E21C0008802CE /* ESCPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C5E1A5E21C0008802CE /* ESCPDFDocument.m */; };
+		A1E75C681A5E21C0008802CE /* ESCPDFPage+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C5F1A5E21C0008802CE /* ESCPDFPage+Private.m */; };
+		A1E75C691A5E21C0008802CE /* ESCPDFPage+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C5F1A5E21C0008802CE /* ESCPDFPage+Private.m */; };
+		A1E75C6C1A5E21E9008802CE /* ESCCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C6B1A5E21E9008802CE /* ESCCrypt.m */; };
+		A1E75C6D1A5E21E9008802CE /* ESCCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C6B1A5E21E9008802CE /* ESCCrypt.m */; };
+		A1E75C711A5E2B0B008802CE /* CoffeeScriptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C701A5E2B0B008802CE /* CoffeeScriptViewController.m */; };
+		A1E75C741A5E2B1C008802CE /* CoffeeScriptView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C731A5E2B1C008802CE /* CoffeeScriptView.m */; };
+		A1E75C761A5E2EBE008802CE /* CoffeeScriptViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A1E75C751A5E2EBE008802CE /* CoffeeScriptViewController.json */; };
 		A1EDAEED1A4D1E36000E2CE3 /* NSTextView+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EDAEEC1A4D1E36000E2CE3 /* NSTextView+ESC.m */; };
 		A1EDAEFA1A4D2FA8000E2CE3 /* IOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6945C1A262702008D027D /* IOSTests.m */; };
 		A1F1D1B91A31F560007FD09E /* ESCJSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F1D1B81A31F560007FD09E /* ESCJSContext.m */; };
@@ -196,14 +210,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A131DE891A28AF580060E74E /* ESCPDFDocument+Annotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPDFDocument+Annotations.m"; sourceTree = "<group>"; };
-		A131DE8B1A28AF580060E74E /* ESCPDFDocument+Catalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPDFDocument+Catalog.m"; sourceTree = "<group>"; };
-		A131DE8D1A28AF580060E74E /* ESCPDFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCPDFDocument.h; sourceTree = "<group>"; };
-		A131DE8E1A28AF580060E74E /* ESCPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPDFDocument.m; sourceTree = "<group>"; };
 		A131DE951A28C6870060E74E /* ESCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCCoreData.h; sourceTree = "<group>"; };
 		A131DE961A28C6870060E74E /* ESCCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCCoreData.m; sourceTree = "<group>"; };
-		A131DEA61A2B48C30060E74E /* ESCPDFDocument+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCPDFDocument+Private.h"; sourceTree = "<group>"; };
-		A131DEA71A2B48C30060E74E /* ESCPDFDocument+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPDFDocument+Private.m"; sourceTree = "<group>"; };
 		A131DEB01A2C1FBC0060E74E /* UIControl+ESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ESC.h"; sourceTree = "<group>"; };
 		A131DEB11A2C1FBC0060E74E /* UIControl+ESC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ESC.m"; sourceTree = "<group>"; };
 		A14388C21A308E3800782998 /* UIColor+ESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ESC.h"; sourceTree = "<group>"; };
@@ -291,6 +299,7 @@
 		A19C7AE41A5C399C006B3AB4 /* ESCCURImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCCURImage.m; sourceTree = "<group>"; };
 		A19C7AE81A5C39AB006B3AB4 /* ESCJPEG2000Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCJPEG2000Image.m; sourceTree = "<group>"; };
 		A19C7AEB1A5D028A006B3AB4 /* ESCPainterFigureRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPainterFigureRoute.m; sourceTree = "<group>"; };
+		A19C7AED1A5D6537006B3AB4 /* CoffeeScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeScript.h; sourceTree = "<group>"; };
 		A1A7B4931A56632F00311081 /* ESCPDFGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCPDFGallery.h; sourceTree = "<group>"; };
 		A1A7B4941A56632F00311081 /* ESCPDFGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPDFGallery.m; sourceTree = "<group>"; };
 		A1A7B4961A5667A500311081 /* ESCPDFGallery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCPDFGallery+Private.h"; sourceTree = "<group>"; };
@@ -351,7 +360,6 @@
 		A1B3A4CF1A399115009F8E9E /* symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symbol.h; sourceTree = "<group>"; };
 		A1B3A4D01A399115009F8E9E /* timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timer.h; sourceTree = "<group>"; };
 		A1B3A4D11A399115009F8E9E /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
-		A1B3A5011A39F197009F8E9E /* ESCPDFPage+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPDFPage+Private.m"; sourceTree = "<group>"; };
 		A1B3A50B1A3ADA5C009F8E9E /* ESCImageGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCImageGallery.h; sourceTree = "<group>"; };
 		A1B3A50C1A3ADA5C009F8E9E /* ESCImageGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCImageGallery.m; sourceTree = "<group>"; };
 		A1B3A50E1A3ADA79009F8E9E /* ESCImageGallery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCImageGallery+Private.h"; sourceTree = "<group>"; };
@@ -400,8 +408,6 @@
 		A1D4FF301A2771C6001EF98C /* NSTimer+ESC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+ESC.m"; sourceTree = "<group>"; };
 		A1D4FF311A2771C6001EF98C /* Foundation+ESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+ESC.h"; sourceTree = "<group>"; };
 		A1D4FF321A2771C6001EF98C /* Foundation+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Utils.h"; sourceTree = "<group>"; };
-		A1D4FF461A2771C6001EF98C /* ESCCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCCrypt.h; sourceTree = "<group>"; };
-		A1D4FF471A2771C6001EF98C /* ESCCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCCrypt.m; sourceTree = "<group>"; };
 		A1D4FF4B1A2771C6001EF98C /* ESCPersistenceCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCPersistenceCache.h; sourceTree = "<group>"; };
 		A1D4FF4C1A2771C6001EF98C /* ESCPersistenceCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPersistenceCache.m; sourceTree = "<group>"; };
 		A1D4FF4D1A2771C6001EF98C /* ESCRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCRuntime.m; sourceTree = "<group>"; };
@@ -431,6 +437,24 @@
 		A1D6947A1A26272A008D027D /* OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D6947F1A26272A008D027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1D694801A26272A008D027D /* OSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSXTests.m; sourceTree = "<group>"; };
+		A1E75C481A5E125D008802CE /* CoffeeScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeScript.m; sourceTree = "<group>"; };
+		A1E75C4B1A5E1F6E008802CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A1E75C4F1A5E2088008802CE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A1E75C551A5E2134008802CE /* libiconv.2.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.4.0.dylib; path = usr/lib/libiconv.2.4.0.dylib; sourceTree = SDKROOT; };
+		A1E75C591A5E21C0008802CE /* ESCPDFDocument+Annotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPDFDocument+Annotations.m"; sourceTree = "<group>"; };
+		A1E75C5A1A5E21C0008802CE /* ESCPDFDocument+Catalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPDFDocument+Catalog.m"; sourceTree = "<group>"; };
+		A1E75C5B1A5E21C0008802CE /* ESCPDFDocument+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCPDFDocument+Private.h"; sourceTree = "<group>"; };
+		A1E75C5C1A5E21C0008802CE /* ESCPDFDocument+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPDFDocument+Private.m"; sourceTree = "<group>"; };
+		A1E75C5D1A5E21C0008802CE /* ESCPDFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCPDFDocument.h; sourceTree = "<group>"; };
+		A1E75C5E1A5E21C0008802CE /* ESCPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCPDFDocument.m; sourceTree = "<group>"; };
+		A1E75C5F1A5E21C0008802CE /* ESCPDFPage+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESCPDFPage+Private.m"; sourceTree = "<group>"; };
+		A1E75C6A1A5E21E9008802CE /* ESCCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCCrypt.h; sourceTree = "<group>"; };
+		A1E75C6B1A5E21E9008802CE /* ESCCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCCrypt.m; sourceTree = "<group>"; };
+		A1E75C6F1A5E2B0B008802CE /* CoffeeScriptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeScriptViewController.h; sourceTree = "<group>"; };
+		A1E75C701A5E2B0B008802CE /* CoffeeScriptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeScriptViewController.m; sourceTree = "<group>"; };
+		A1E75C721A5E2B1C008802CE /* CoffeeScriptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeScriptView.h; sourceTree = "<group>"; };
+		A1E75C731A5E2B1C008802CE /* CoffeeScriptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeScriptView.m; sourceTree = "<group>"; };
+		A1E75C751A5E2EBE008802CE /* CoffeeScriptViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CoffeeScriptViewController.json; sourceTree = "<group>"; };
 		A1EDAEEB1A4D1E36000E2CE3 /* NSTextView+ESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+ESC.h"; sourceTree = "<group>"; };
 		A1EDAEEC1A4D1E36000E2CE3 /* NSTextView+ESC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+ESC.m"; sourceTree = "<group>"; };
 		A1F1D1B71A31F560007FD09E /* ESCJSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCJSContext.h; sourceTree = "<group>"; };
@@ -470,6 +494,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E75C561A5E2134008802CE /* libiconv.2.4.0.dylib in Frameworks */,
+				A1E75C501A5E2088008802CE /* CoreData.framework in Frameworks */,
+				A1E75C4E1A5E1F99008802CE /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,20 +533,6 @@
 				A19C7AD41A5C3948006B3AB4 /* ESCPNGImage.m */,
 			);
 			path = ESCImage;
-			sourceTree = "<group>";
-		};
-		A131DE881A28AF580060E74E /* ESCPDFDocument */ = {
-			isa = PBXGroup;
-			children = (
-				A131DE8D1A28AF580060E74E /* ESCPDFDocument.h */,
-				A131DE8E1A28AF580060E74E /* ESCPDFDocument.m */,
-				A131DE891A28AF580060E74E /* ESCPDFDocument+Annotations.m */,
-				A131DE8B1A28AF580060E74E /* ESCPDFDocument+Catalog.m */,
-				A131DEA61A2B48C30060E74E /* ESCPDFDocument+Private.h */,
-				A131DEA71A2B48C30060E74E /* ESCPDFDocument+Private.m */,
-				A1B3A5011A39F197009F8E9E /* ESCPDFPage+Private.m */,
-			);
-			path = ESCPDFDocument;
 			sourceTree = "<group>";
 		};
 		A131DE941A28C6870060E74E /* CoreData */ = {
@@ -943,6 +956,7 @@
 				A1D4FF041A2770BE001EF98C /* ViewController.h */,
 				A1D4FF051A2770BE001EF98C /* ViewController.m */,
 				A187EA0A1A52892900B4564E /* ViewController.json */,
+				A1E75C6E1A5E2A90008802CE /* CoffeeScript */,
 				A17AC0C31A5B6F5900C02DF3 /* ImageTool */,
 				A1A7B49C1A56753700311081 /* PDFGallery */,
 				A14398CC1A52DE70001B4255 /* ESCPainter */,
@@ -1015,18 +1029,20 @@
 		A1D4FF351A2771C6001EF98C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A1E75C6A1A5E21E9008802CE /* ESCCrypt.h */,
+				A1E75C6B1A5E21E9008802CE /* ESCCrypt.m */,
+				A1E75C581A5E21C0008802CE /* ESCPDFDocument */,
 				A1D636FE1A55740C006B8205 /* ESCInternationalManager.h */,
 				A1D636FF1A55740C006B8205 /* ESCInternationalManager.m */,
 				A18716361A3748CA00514C57 /* ESCBarCoder */,
 				A131DE941A28C6870060E74E /* CoreData */,
 				A18716221A354FF900514C57 /* ESCArchiver */,
-				A1D4FF461A2771C6001EF98C /* ESCCrypt.h */,
-				A1D4FF471A2771C6001EF98C /* ESCCrypt.m */,
 				A1F1D1B21A31F4E6007FD09E /* ESCJSContext */,
-				A131DE881A28AF580060E74E /* ESCPDFDocument */,
 				A1D4FF4B1A2771C6001EF98C /* ESCPersistenceCache.h */,
 				A1D4FF4C1A2771C6001EF98C /* ESCPersistenceCache.m */,
 				A1D4FF4D1A2771C6001EF98C /* ESCRuntime.m */,
+				A19C7AED1A5D6537006B3AB4 /* CoffeeScript.h */,
+				A1E75C481A5E125D008802CE /* CoffeeScript.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1161,6 +1177,7 @@
 		A1D694691A26272A008D027D /* OSX */ = {
 			isa = PBXGroup;
 			children = (
+				A1E75C4D1A5E1F85008802CE /* Framework */,
 				A1D6946E1A26272A008D027D /* AppDelegate.h */,
 				A1D6946F1A26272A008D027D /* AppDelegate.m */,
 				A1D694731A26272A008D027D /* MainMenu.xib */,
@@ -1193,6 +1210,42 @@
 				A1D6947F1A26272A008D027D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1E75C4D1A5E1F85008802CE /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				A1E75C551A5E2134008802CE /* libiconv.2.4.0.dylib */,
+				A1E75C4F1A5E2088008802CE /* CoreData.framework */,
+				A1E75C4B1A5E1F6E008802CE /* QuartzCore.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		A1E75C581A5E21C0008802CE /* ESCPDFDocument */ = {
+			isa = PBXGroup;
+			children = (
+				A1E75C591A5E21C0008802CE /* ESCPDFDocument+Annotations.m */,
+				A1E75C5A1A5E21C0008802CE /* ESCPDFDocument+Catalog.m */,
+				A1E75C5B1A5E21C0008802CE /* ESCPDFDocument+Private.h */,
+				A1E75C5C1A5E21C0008802CE /* ESCPDFDocument+Private.m */,
+				A1E75C5D1A5E21C0008802CE /* ESCPDFDocument.h */,
+				A1E75C5E1A5E21C0008802CE /* ESCPDFDocument.m */,
+				A1E75C5F1A5E21C0008802CE /* ESCPDFPage+Private.m */,
+			);
+			path = ESCPDFDocument;
+			sourceTree = "<group>";
+		};
+		A1E75C6E1A5E2A90008802CE /* CoffeeScript */ = {
+			isa = PBXGroup;
+			children = (
+				A1E75C6F1A5E2B0B008802CE /* CoffeeScriptViewController.h */,
+				A1E75C701A5E2B0B008802CE /* CoffeeScriptViewController.m */,
+				A1E75C721A5E2B1C008802CE /* CoffeeScriptView.h */,
+				A1E75C731A5E2B1C008802CE /* CoffeeScriptView.m */,
+				A1E75C751A5E2EBE008802CE /* CoffeeScriptViewController.json */,
+			);
+			path = CoffeeScript;
 			sourceTree = "<group>";
 		};
 		A1F1D1B21A31F4E6007FD09E /* ESCJSContext */ = {
@@ -1342,6 +1395,7 @@
 				A187EA1A1A5293C100B4564E /* webview.html in Resources */,
 				A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */,
 				A1D4FF0B1A2770BE001EF98C /* Images.xcassets in Resources */,
+				A1E75C761A5E2EBE008802CE /* CoffeeScriptViewController.json in Resources */,
 				A16A03721A5A40CE00D2ACF1 /* CustomPDFViewController.xib in Resources */,
 				A17AC0C81A5B6F5900C02DF3 /* ImageGalleryViewController.json in Resources */,
 				A17AC0CF1A5B718200C02DF3 /* gif.gif in Resources */,
@@ -1382,9 +1436,9 @@
 				A1D4FF061A2770BE001EF98C /* ViewController.m in Sources */,
 				A1512D931A59987300EAE92C /* QuickLookViewController.m in Sources */,
 				A1B3A4FB1A399115009F8E9E /* refcnt.c in Sources */,
+				A1E75C631A5E21C0008802CE /* ESCPDFDocument+Catalog.m in Sources */,
 				A1B3A4DD1A399115009F8E9E /* databar.c in Sources */,
 				A1D636FA1A557253006B8205 /* ESCBaseViewController.m in Sources */,
-				A1B3A5031A39F197009F8E9E /* ESCPDFPage+Private.m in Sources */,
 				A1B3A4D71A399115009F8E9E /* code128.c in Sources */,
 				A1B3A4D91A399115009F8E9E /* code39.c in Sources */,
 				A1D4FF6B1A2771C6001EF98C /* ESCRuntime.m in Sources */,
@@ -1392,7 +1446,6 @@
 				A1D4FF5B1A2771C6001EF98C /* NSData+ESC.m in Sources */,
 				A1D637001A55740C006B8205 /* ESCInternationalManager.m in Sources */,
 				A1B3A5101A3ADA79009F8E9E /* ESCImageGallery+Private.m in Sources */,
-				A131DE8F1A28AF580060E74E /* ESCPDFDocument+Annotations.m in Sources */,
 				A1D4FF5D1A2771C6001EF98C /* NSDictionary+ESC.m in Sources */,
 				A187EA181A528DED00B4564E /* WebViewController.m in Sources */,
 				A187EA061A527E0B00B4564E /* ESCTableView.m in Sources */,
@@ -1400,17 +1453,20 @@
 				A16875BB1A3D7844004B873E /* ESCCoreData+Private.m in Sources */,
 				A1B3A4D51A399115009F8E9E /* codabar.c in Sources */,
 				A1B3A4F31A399115009F8E9E /* qrdec.c in Sources */,
+				A1E75C671A5E21C0008802CE /* ESCPDFDocument.m in Sources */,
 				A19C7ADE1A5C3980006B3AB4 /* ESCBMPImage.m in Sources */,
 				A1A7B4981A5667A500311081 /* ESCPDFGallery+Private.m in Sources */,
+				A1E75C691A5E21C0008802CE /* ESCPDFPage+Private.m in Sources */,
 				A19C7ADA1A5C3971006B3AB4 /* ESCJPEGImage.m in Sources */,
 				A1B3A5151A3B2C76009F8E9E /* ESCImageGallery+ScrollView.m in Sources */,
+				A1E75C6D1A5E21E9008802CE /* ESCCrypt.m in Sources */,
 				A131DEB21A2C1FBC0060E74E /* UIControl+ESC.m in Sources */,
 				A1450C871A4857F4003B8988 /* ESCWebView.m in Sources */,
 				A1B3A4F71A399115009F8E9E /* rs.c in Sources */,
 				A1B3A4E91A399115009F8E9E /* image.c in Sources */,
 				A1D4FF5C1A2771C6001EF98C /* NSDate+ESC.m in Sources */,
+				A1E75C4A1A5E125D008802CE /* CoffeeScript.m in Sources */,
 				A1D4FF801A2771DF001EF98C /* UIView+ESC.m in Sources */,
-				A131DE911A28AF580060E74E /* ESCPDFDocument+Catalog.m in Sources */,
 				A1B3A4FF1A399115009F8E9E /* symbol.c in Sources */,
 				A1D4FF031A2770BE001EF98C /* AppDelegate.m in Sources */,
 				A1B94D061A511CBF004CFBD2 /* ESCPainter+Private.m in Sources */,
@@ -1433,6 +1489,7 @@
 				A14388C41A308E3800782998 /* UIColor+ESC.m in Sources */,
 				A18716321A354FF900514C57 /* ioapi.c in Sources */,
 				A1B94D021A510BF9004CFBD2 /* ESCPainter.m in Sources */,
+				A1E75C611A5E21C0008802CE /* ESCPDFDocument+Annotations.m in Sources */,
 				A18716331A354FF900514C57 /* mztools.c in Sources */,
 				A16AA6B51A47A25E00AC00DB /* ESCAnimation.m in Sources */,
 				A1F1D1CB1A3434C2007FD09E /* Entity.m in Sources */,
@@ -1443,6 +1500,7 @@
 				A18716351A354FF900514C57 /* zip.c in Sources */,
 				A17AC0C91A5B6F5900C02DF3 /* ImageGalleryViewController.m in Sources */,
 				A1B3A5131A3AF4F4009F8E9E /* __ESCImageView.m in Sources */,
+				A1E75C711A5E2B0B008802CE /* CoffeeScriptViewController.m in Sources */,
 				A1B3A4371A397BE7009F8E9E /* qr_encode.cpp in Sources */,
 				A1450C841A485273003B8988 /* ESCWebView+URLProtocol.m in Sources */,
 				A16A036A1A5A33C000D2ACF1 /* PDFGalleryViewController.m in Sources */,
@@ -1450,11 +1508,11 @@
 				A1D4FF5F1A2771C6001EF98C /* NSString+ESC.m in Sources */,
 				A19C7AEC1A5D028A006B3AB4 /* ESCPainterFigureRoute.m in Sources */,
 				A1B3A4E31A399115009F8E9E /* qr_finder.c in Sources */,
+				A1E75C741A5E2B1C008802CE /* CoffeeScriptView.m in Sources */,
 				A16A03711A5A40CE00D2ACF1 /* CustomPDFViewController.m in Sources */,
 				A19C7AE21A5C398F006B3AB4 /* ESCICOImage.m in Sources */,
 				A187163A1A37494600514C57 /* ESCCodeSymbol.m in Sources */,
 				A16875C81A3DD74F004B873E /* ESCAlertControl.m in Sources */,
-				A131DEA81A2B48C30060E74E /* ESCPDFDocument+Private.m in Sources */,
 				A19C7AE61A5C399C006B3AB4 /* ESCCURImage.m in Sources */,
 				A1D4FF821A2771DF001EF98C /* __ESCToastView.m in Sources */,
 				A18716301A354FF900514C57 /* ESCArchiver.m in Sources */,
@@ -1471,8 +1529,8 @@
 				A1B3A4DF1A399115009F8E9E /* ean.c in Sources */,
 				A1B3A4FD1A399115009F8E9E /* scanner.c in Sources */,
 				A1B3A4E11A399115009F8E9E /* i25.c in Sources */,
-				A1D4FF681A2771C6001EF98C /* ESCCrypt.m in Sources */,
 				A1B3A50D1A3ADA5C009F8E9E /* ESCImageGallery.m in Sources */,
+				A1E75C651A5E21C0008802CE /* ESCPDFDocument+Private.m in Sources */,
 				A17AC0CD1A5B715B00C02DF3 /* GIFViewController.m in Sources */,
 				A187160C1A352E7D00514C57 /* UIImage+ESC.m in Sources */,
 				A14398BE1A52CC69001B4255 /* PopoverViewController.m in Sources */,
@@ -1480,7 +1538,6 @@
 				A1B3A4ED1A399115009F8E9E /* bch15_5.c in Sources */,
 				A1B3A4D31A399115009F8E9E /* config.c in Sources */,
 				A187E9E91A519C2600B4564E /* ESCPainterCanvas.m in Sources */,
-				A131DE931A28AF580060E74E /* ESCPDFDocument.m in Sources */,
 				A1A7B4951A56632F00311081 /* ESCPDFGallery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1497,15 +1554,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E75C511A5E20AE008802CE /* ESCCoreData.m in Sources */,
 				A1B3A4F61A399115009F8E9E /* rs.c in Sources */,
 				A1B3A4EA1A399115009F8E9E /* img_scanner.c in Sources */,
 				A1B3A4FC1A399115009F8E9E /* scanner.c in Sources */,
 				A1EDAEED1A4D1E36000E2CE3 /* NSTextView+ESC.m in Sources */,
-				A1B3A5021A39F197009F8E9E /* ESCPDFPage+Private.m in Sources */,
 				A1B3A4EE1A399115009F8E9E /* binarize.c in Sources */,
 				A1B3A4D61A399115009F8E9E /* code128.c in Sources */,
 				A19C7AE11A5C398F006B3AB4 /* ESCICOImage.m in Sources */,
 				A1B3A4FE1A399115009F8E9E /* symbol.c in Sources */,
+				A1E75C641A5E21C0008802CE /* ESCPDFDocument+Private.m in Sources */,
 				A1B3A4D41A399115009F8E9E /* codabar.c in Sources */,
 				A1B3A4DC1A399115009F8E9E /* databar.c in Sources */,
 				A19C7AE91A5C39AB006B3AB4 /* ESCJPEG2000Image.m in Sources */,
@@ -1513,13 +1571,16 @@
 				A1B3A4E41A399115009F8E9E /* decoder.c in Sources */,
 				A1B3A4F41A399115009F8E9E /* qrdectxt.c in Sources */,
 				A1B3A4E81A399115009F8E9E /* image.c in Sources */,
+				A1E75C681A5E21C0008802CE /* ESCPDFPage+Private.m in Sources */,
 				A1B3A4DE1A399115009F8E9E /* ean.c in Sources */,
+				A1E75C621A5E21C0008802CE /* ESCPDFDocument+Catalog.m in Sources */,
 				A1B3A43A1A3981FB009F8E9E /* ESCCodeSymbol+Scanner.m in Sources */,
 				A1B3A4EC1A399115009F8E9E /* bch15_5.c in Sources */,
 				A1B3A4E21A399115009F8E9E /* qr_finder.c in Sources */,
 				A1D694701A26272A008D027D /* AppDelegate.m in Sources */,
 				A19C7AD51A5C3948006B3AB4 /* ESCPNGImage.m in Sources */,
 				A1B3A4D81A399115009F8E9E /* code39.c in Sources */,
+				A1E75C601A5E21C0008802CE /* ESCPDFDocument+Annotations.m in Sources */,
 				A1B3A3CB1A397663009F8E9E /* ESCCodeSymbol+Generator.mm in Sources */,
 				A16875BA1A3D7844004B873E /* ESCCoreData+Private.m in Sources */,
 				A19C7AE51A5C399C006B3AB4 /* ESCCURImage.m in Sources */,
@@ -1527,8 +1588,11 @@
 				A1B3A4F21A399115009F8E9E /* qrdec.c in Sources */,
 				A1B3A4E01A399115009F8E9E /* i25.c in Sources */,
 				A19C7AD11A5C392D006B3AB4 /* ESCGIFImage.m in Sources */,
+				A1E75C6C1A5E21E9008802CE /* ESCCrypt.m in Sources */,
+				A1E75C661A5E21C0008802CE /* ESCPDFDocument.m in Sources */,
 				A1B3A4E61A399115009F8E9E /* error.c in Sources */,
 				A18716391A37494600514C57 /* ESCCodeSymbol.m in Sources */,
+				A1E75C491A5E125D008802CE /* CoffeeScript.m in Sources */,
 				A1B3A4DA1A399115009F8E9E /* code93.c in Sources */,
 				A1F1D1B91A31F560007FD09E /* ESCJSContext.m in Sources */,
 				A1D6946D1A26272A008D027D /* main.m in Sources */,

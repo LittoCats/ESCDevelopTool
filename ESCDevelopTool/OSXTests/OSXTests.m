@@ -27,7 +27,10 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+    NSString *versionStr = [[NSProcessInfo processInfo] operatingSystemVersionString];
+    NSRange range = [versionStr rangeOfString:@"[0-9]+\\.[0-9]+" options:NSRegularExpressionSearch];
+    
+    NSLog(@"%@",[versionStr substringWithRange:range]);
 }
 
 - (void)testPerformanceExample {

@@ -10,6 +10,8 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
+#import <JavaScriptCore/JavaScriptCore.h>
+
 
 void __ESCExchangeMethodImplementation(Class class,SEL selector1, BOOL isClassMethod1,SEL selector2, BOOL isClassMethod2)
 {
@@ -18,3 +20,4 @@ void __ESCExchangeMethodImplementation(Class class,SEL selector1, BOOL isClassMe
     
     method_exchangeImplementations(methodSrc, methodDes);
 }
+

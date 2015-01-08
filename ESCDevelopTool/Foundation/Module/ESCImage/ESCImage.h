@@ -9,7 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <ImageIO/ImageIO.h>
+
+#if TARGET_OS_IPHONE
 #import <CoreImage/CoreImage.h>
+#else
+#if TARGET_OS_MAC
+#import <QuartzCore/CoreImage.h>
+#endif
+#endif
 
 typedef enum {
     ESCImageTypeUnknown,

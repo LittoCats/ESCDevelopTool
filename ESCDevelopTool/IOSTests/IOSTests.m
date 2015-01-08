@@ -13,6 +13,7 @@
 #import "ESCJSContext.h"
 
 #import "ESCWebView.h"
+#import "CoffeeScript.h"
 
 @interface IOSTests : XCTestCase
 
@@ -32,10 +33,12 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
-    char *asi = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-    for (int i = 0; i < strlen(asi); i ++) {
-        printf("[keyMap setObject:@(kVK_ANSI_%c) forKey:@\"%c\"];\n",asi[i],asi[i]);
-    }
+//    char *asi = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+//    for (int i = 0; i < strlen(asi); i ++) {
+//        printf("[keyMap setObject:@(kVK_ANSI_%c) forKey:@\"%c\"];\n",asi[i],asi[i]);
+//    }
+    NSLog(@"%@",CoffeeScript.compile(@"alert 'alert'"));
+    [[UIDevice currentDevice] systemVersion];
 }
 
 - (void)testPerformanceExample {
