@@ -62,7 +62,7 @@
     
     if (ver) {
         _eScro.frame = CGRectMake(0, 0, frame.size.width, frame.size.height/3*2);
-        _oScro.frame = CGRectMake(0, _editorView.frame.size.height + 10, frame.size.width, frame.size.height/3-10);
+        _oScro.frame = CGRectMake(0, frame.size.height/3*2 + 10, frame.size.width, frame.size.height/3-10);
     }else{
         _oScro.frame = CGRectMake(0, 0, frame.size.width/3, frame.size.height);
         _eScro.frame = CGRectMake(frame.size.width/3+10, 0, frame.size.width/3*2-10, frame.size.height);
@@ -76,6 +76,9 @@
     if (rect.size.width < _oScro.frame.size.width) rect.size.width = _oScro.frame.size.width;
     _outputLael.frame = rect;
     _oScro.contentSize = rect.size;
+    
+    CGRect cursorPosition = [_editorView caretRectForPosition:_editorView.selectedTextRange.start];
+    [_eScro scrollRectToVisible:cursorPosition animated:NO];
 }
 
 - (NSString *)coffee
@@ -93,11 +96,18 @@
     _oScro.contentSize = rect.size;
 }
 
+- (void)clear
+{
+    [self output:nil];
+    _editorView.text = nil;
+    _editorView.frame = (CGRect){0.0,0.0,_eScro.frame.size};
+}
 #pragma mark- UITextViewDelegate
 - (void)textViewDidChange:(UITextView *)textView
 {
     CGSize size = [textView.text sizeWithAttributes:@{NSFontAttributeName:textView.font}];
     CGRect rect = textView.frame;
+    rect.size = _eScro.frame.size;
     rect.size.width = MAX(rect.size.width, size.width+20);
     rect.size.height = MAX(rect.size.height, size.height+20);
     textView.frame = rect;

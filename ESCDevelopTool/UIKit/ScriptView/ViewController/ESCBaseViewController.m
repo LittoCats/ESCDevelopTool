@@ -28,6 +28,7 @@
 #ifdef DEBUG
         error ? NSLog(@"ESCBaseViewController load settings error : %@",error) : nil;
 #endif
+        self.reFrameForKeyboardFrameChanged = YES;
     }
     return self;
 }
@@ -55,13 +56,27 @@
     [self updateNavigationItems];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrameNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self resignFirstResponder];
+}
+
 - (void)navigationItemSelected:(NSInteger)serializedID
 {
 #ifdef DEBUG
     NSLog(@"ESCBaseViewController select custom navigationItem with serializedID %ld",serializedID);
 #endif
 }
-
 
 #pragma mark- 
 - (void)updateNavigationItems
@@ -181,5 +196,29 @@
             
         default:[self navigationItemSelected:item.tag];
     }
+}
+
+#pragma mark- UIKeyboardWillChangeFrameNotification
+- (void)keyboardWillChangeFrameNotification:(NSNotification *)noti
+{
+    if (!_reFrameForKeyboardFrameChanged) return;
+    
+    NSTimeInterval interval = [[noti.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGRect startFrame;
+    [[noti.userInfo objectForKeyedSubscript:UIKeyboardFrameBeginUserInfoKey] getValue:&startFrame];
+    CGRect endFrame;
+    [[noti.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&endFrame];
+    
+    CGRect frame = self.view.frame;
+    CGFloat dh = endFrame.origin.y - startFrame.origin.y;
+    if (!dh) return;
+    frame.size.height += dh;
+    
+    BOOL interfaceEnable = self.view.userInteractionEnabled;
+    [UIView animateWithDuration:interval
+                     animations:^{
+                         self.view.frame = frame;
+                     } completion:^(BOOL finished) {
+                     }];
 }
 @end

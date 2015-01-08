@@ -14,4 +14,5 @@
 
 - (void)output:(NSString *)output;
 
+- (void)clear;
 @end

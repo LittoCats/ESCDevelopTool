@@ -4,6 +4,9 @@
       {
         "title": "Compile",
         "serializedID":101
+      },{
+        "title": "Clear",
+        "serializedID":102
       }
     ]
   }

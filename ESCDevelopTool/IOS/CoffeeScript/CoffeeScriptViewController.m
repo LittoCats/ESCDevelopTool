@@ -43,6 +43,9 @@
             NSString *js = CoffeeScript.compile(coffee);
             [self.view output:js];
         }break;
+        case 102:{
+            [self.view clear];
+        }break;
         default:
             break;
     }

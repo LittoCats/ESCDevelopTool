@@ -21,4 +21,8 @@
  */
 - (void)navigationItemSelected:(NSInteger)serializedID;
 
+/**
+ *  当键盘发生变化时，改变 view 的大小，使其不被键盘遮挡。Default YES
+ */
+@property (nonatomic) BOOL reFrameForKeyboardFrameChanged;
 @end
