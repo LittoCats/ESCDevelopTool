@@ -18,11 +18,12 @@
 @property (nonatomic, strong) MPCView *view;
 @property (nonatomic, weak) ESCPopover *popover;
 
-@property (nonatomic, strong) NSString *serviceType; // Must be 1–15 ASCII lowercase letters, numbers, and hyphens.
+//@property (nonatomic, strong) NSString *serviceType; // Must be 1–15 ASCII lowercase letters, numbers, and hyphens.
 
 @property (nonatomic, strong) MCPeerID *peerID;
 
 @property (nonatomic, strong) MCNearbyServiceAdvertiser *advertiser;
+@property (nonatomic,getter=isAdvertiserStarted) BOOL advertiserStarted;
 
 @property (nonatomic, strong) MCNearbyServiceBrowser *browser;
 
@@ -55,7 +56,7 @@
     if (item.tag == 101) {
         // settings button
         if (self.popover) return;
-        MPCSettingsView *settingsView = [[MPCSettingsView alloc] initWithCurrentSettings:@{@"serviceType":_serviceType ? _serviceType : @"",
+        MPCSettingsView *settingsView = [[MPCSettingsView alloc] initWithCurrentSettings:@{@"serviceType":_advertiser.serviceType ? _advertiser.serviceType : @"",
                                                                                            @"displayName":_peerID.displayName ? _peerID.displayName : @""}];
         settingsView.delegate = self;
         ESCPopover *popover = [[ESCPopover alloc] init];
@@ -71,6 +72,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark- properties
+
 - (void)setCurrentPeer:(MPCPeer *)currentPeer
 {
     _currentPeer.handleHistory = nil;
@@ -82,11 +85,43 @@
     };
 }
 
+- (void)setAdvertiser:(MCNearbyServiceAdvertiser *)advertiser
+{
+    _advertiser = advertiser;
+}
+
+#pragma mark- functions (功能)
+
+
 #pragma mark- MPCActionDelegate
 - (void)settingsChanged:(NSDictionary *)newSettings
 {
-    NSLog(@"MPC settings : %@",newSettings);
     [self.popover dismiss:YES];
+    if (!newSettings) return;
+    // 如果 service 没有变，或不存在(nil or length == 0 ), 则什么都不做
+    NSString *serviceType = [newSettings objectForKey:@"serviceType"];
+    NSString *displayName = [newSettings objectForKey:@"displayName"];
+    if ([serviceType isEqualToString:_advertiser.serviceType] || serviceType.length == 0) {
+        if (![displayName isEqualToString:_peerID.displayName] && self.isAdvertiserStarted) {
+            [self.view makeToast:@"Please stop current advertiser before change display name !" position:ESCToastPositionBottomCenter interval:2.5];
+            return;
+        }
+        [self.view makeToast:@"In order to use MPC , you must create a serviceType ." position:ESCToastPositionBottomCenter interval:2.5];
+        return;
+    }
+
+    // 栓查 display name 如果不在在，则指定随机名
+    if (!displayName || displayName.length == 0) {
+        displayName = _peerID.displayName;
+        if (!displayName || displayName.length == 0){
+            displayName = [NSString stringWithFormat:@"%.7X",arc4random()];
+            [self.view makeToast:[NSString stringWithFormat:@"Use display name : %@",displayName] position:ESCToastPositionBottomCenter interval:2.5];
+        }
+    }
+    
+    // 设置
+    self.peerID = [[MCPeerID alloc] initWithDisplayName:displayName];
+    self.advertiser = [[MCNearbyServiceAdvertiser alloc] initWithPeer:_peerID discoveryInfo:nil serviceType:serviceType];
 }
 
 - (void)sendMessage:(NSString *)message

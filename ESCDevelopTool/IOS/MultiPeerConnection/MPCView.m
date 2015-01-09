@@ -321,6 +321,6 @@
 
 - (void)buttonAction:(UIButton *)sender
 {
-    [self.delegate settingsChanged:sender == _activeButton ? self.settings : @{@"serviceType":_serviceTypeField.text ? _serviceTypeField.text : @"",@"displayName":_displayNameField.text ? _displayNameField.text : @""}];
+    [self.delegate settingsChanged:sender != _activeButton ? nil : @{@"serviceType":_serviceTypeField.text ? _serviceTypeField.text : @"",@"displayName":_displayNameField.text ? _displayNameField.text : @""}];
 }
 @end
