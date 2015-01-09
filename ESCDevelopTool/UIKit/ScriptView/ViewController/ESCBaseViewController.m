@@ -68,7 +68,7 @@
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    [self resignFirstResponder];
+    [self.view resignFirstResponder];
 }
 
 - (void)navigationItemSelected:(NSInteger)serializedID

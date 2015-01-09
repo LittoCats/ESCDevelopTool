@@ -12,9 +12,11 @@
 
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 #import "UIView+ESC.h"
+#import "ESCPopover.h"
 
 @interface MPCViewController ()<MPCViewActionDelegate>
 @property (nonatomic, strong) MPCView *view;
+@property (nonatomic, weak) ESCPopover *popover;
 
 @property (nonatomic, strong) NSString *serviceType; // Must be 1–15 ASCII lowercase letters, numbers, and hyphens.
 
@@ -48,6 +50,22 @@
     self.view.delegate = self;
 }
 
+- (void)__navigationItemSelected:(UIButton *)item
+{
+    if (item.tag == 101) {
+        // settings button
+        if (self.popover) return;
+        MPCSettingsView *settingsView = [[MPCSettingsView alloc] initWithCurrentSettings:@{@"serviceType":_serviceType ? _serviceType : @"",
+                                                                                           @"displayName":_peerID.displayName ? _peerID.displayName : @""}];
+        settingsView.delegate = self;
+        ESCPopover *popover = [[ESCPopover alloc] init];
+        popover.contentView = settingsView;
+        [popover presentFromRect:(CGRect){item.frame.origin.x,0,item.frame.size.width,0} inView:self.view options:nil];
+        
+        self.popover = popover;
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -65,6 +83,12 @@
 }
 
 #pragma mark- MPCActionDelegate
+- (void)settingsChanged:(NSDictionary *)newSettings
+{
+    NSLog(@"MPC settings : %@",newSettings);
+    [self.popover dismiss:YES];
+}
+
 - (void)sendMessage:(NSString *)message
 {
     if (_currentPeer.isConnected) {

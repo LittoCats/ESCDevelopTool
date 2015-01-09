@@ -82,6 +82,11 @@
     }
 }
 
+- (BOOL)resignFirstResponder
+{
+    return [self.inputView resignFirstResponder];
+}
+
 #pragma mark- 
 - (void)setDelegate:(id<MPCViewActionDelegate>)delegate
 {
@@ -201,5 +206,121 @@
     [self.delegate sendMessage:textField.text];
     textField.text = nil;
     return NO;
+}
+@end
+
+#define kSettingsViewWidth  280.0f
+#define kSettingsViewPadding 10.0f
+
+@interface MPCSettingsView ()<UITextFieldDelegate>
+
+@property (nonatomic, strong) NSMutableDictionary *settings;
+
+@property (nonatomic, strong) NSString *serviceTypeRegex;
+@property (nonatomic, strong) NSString *displayNameRegex;
+
+@end
+
+@implementation MPCSettingsView
+
+- (id)initWithCurrentSettings:(NSDictionary *)settngs
+{
+    self.settings = [settngs mutableCopy];
+    return [self initWithFrame:CGRectZero];
+}
+
+- (id)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1.00];
+        [self defaultInit];
+        
+        self.serviceTypeRegex = @"[^a-z||0-9||-]+";
+        self.displayNameRegex = _serviceTypeRegex;
+        
+        self.serviceTypeField.text = [_settings objectForKey:@"serviceType"];
+        self.displayNameLabel.text = [_settings objectForKey:@"displayName"];
+    }
+    return self;
+}
+
+- (void)defaultInit
+{
+    CGFloat originY = kSettingsViewPadding;
+    CGFloat width = kSettingsViewWidth-2*kSettingsViewPadding;
+    self.serviceTypeField = [[UITextField alloc] initWithFrame:CGRectMake(kSettingsViewPadding, originY, width, 36)];
+    _serviceTypeField.placeholder = @"Please input service type";
+    _serviceTypeField.backgroundColor = [UIColor whiteColor];
+    _serviceTypeField.delegate = self;
+    [self addSubview:_serviceTypeField];
+    
+    originY += _serviceTypeField.frame.size.height;
+    
+    self.serviceTypeLabel = [[UILabel alloc] initWithFrame:CGRectMake(kSettingsViewPadding, originY, width, 44)];
+    _serviceTypeLabel.numberOfLines = 0;
+    _serviceTypeLabel.font = [UIFont systemFontOfSize:13];
+    _serviceTypeLabel.textColor = [UIColor lightGrayColor];
+    _serviceTypeLabel.text = @"Must be 1–15 characters long\nCan contain only ASCII lowercase letters, numbers, and hyphens.";
+    [_serviceTypeLabel sizeToFit];
+    _serviceTypeLabel.frame = (CGRect){kSettingsViewPadding,originY,width,_serviceTypeLabel.frame.size.height};
+    [self addSubview:_serviceTypeLabel];
+    
+    originY += _serviceTypeLabel.frame.size.height+kSettingsViewPadding;
+    
+    self.displayNameField = [[UITextField alloc] initWithFrame:CGRectMake(kSettingsViewPadding, originY, width, 36)];
+    _displayNameField.placeholder = @"Please input display name";
+    _displayNameField.delegate = self;
+    _displayNameField.backgroundColor = [UIColor whiteColor];
+    [self addSubview:_displayNameField];
+    
+    originY += _displayNameField.frame.size.height;
+    
+    self.displayNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(kSettingsViewPadding, originY, width, 44)];
+    _displayNameLabel.numberOfLines = 0;
+    _displayNameLabel.font = [UIFont systemFontOfSize:13];
+    _displayNameLabel.textColor = [UIColor lightGrayColor];
+    _displayNameLabel.text = @"The display name is intended for use in UI elements, and should be short and descriptive of the local peer. The maximum allowable length is 63 bytes in UTF-8 encoding. The displayName parameter may not be nil or an empty string";
+    [_displayNameLabel sizeToFit];
+    _displayNameLabel.frame = (CGRect){kSettingsViewPadding,originY,width,_displayNameLabel.frame.size.height};
+    [self addSubview:_displayNameLabel];
+    
+    originY += _displayNameLabel.frame.size.height+kSettingsViewPadding;
+    
+    // button
+    self.cancelButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    _cancelButton.frame = (CGRect){kSettingsViewPadding,originY,(kSettingsViewWidth-3*kSettingsViewPadding)/2,36};
+    [_cancelButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:_cancelButton];
+    
+    self.activeButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_activeButton setTitle:@"Active" forState:UIControlStateNormal];
+    [_activeButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    _activeButton.frame = (CGRect){kSettingsViewWidth-kSettingsViewPadding-_cancelButton.frame.size.width, originY,_cancelButton.frame.size.width, 36};
+    [self addSubview:_activeButton];
+    
+    originY += _cancelButton.frame.size.height+kSettingsViewPadding;
+    
+    self.frame = CGRectMake(0, 0, kSettingsViewWidth, originY);
+}
+
+#pragma mark- action and delegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField == _serviceTypeField) {
+        if ([string rangeOfString:_serviceTypeRegex options:NSRegularExpressionSearch].location != NSNotFound || textField.text.length >= 15) {
+            return NO;
+        }
+    }else{
+        if ([string rangeOfString:_displayNameRegex options:NSRegularExpressionSearch].location != NSNotFound || textField.text.length >= 7) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
+- (void)buttonAction:(UIButton *)sender
+{
+    [self.delegate settingsChanged:sender == _activeButton ? self.settings : @{@"serviceType":_serviceTypeField.text ? _serviceTypeField.text : @"",@"displayName":_displayNameField.text ? _displayNameField.text : @""}];
 }
 @end

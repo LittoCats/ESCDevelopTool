@@ -31,3 +31,19 @@
 @property (nonatomic, weak) id<MPCViewActionDelegate> delegate;
 
 @end
+
+@interface MPCSettingsView : UIView
+
+@property (nonatomic, weak) id<MPCViewActionDelegate> delegate;
+
+- (id)initWithCurrentSettings:(NSDictionary *)settngs;
+
+@property (nonatomic, strong) UILabel *serviceTypeLabel;
+@property (nonatomic, strong) UITextField *serviceTypeField;
+@property (nonatomic, strong) UILabel *displayNameLabel;
+@property (nonatomic, strong) UITextField *displayNameField;
+
+@property (nonatomic, strong) UIButton *cancelButton;
+@property (nonatomic, strong) UIButton *activeButton;
+
+@end

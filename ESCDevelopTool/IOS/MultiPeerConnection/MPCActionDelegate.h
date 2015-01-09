@@ -14,6 +14,9 @@
 @protocol MPCViewActionDelegate <NSObject>
 
 @required
+
+- (void)settingsChanged:(NSDictionary *)newSettings;
+
 - (void)sendMessage:(NSString *)message;
 
 - (NSArray *)peersConnected;
