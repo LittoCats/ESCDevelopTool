@@ -7,6 +7,11 @@
 //
 
 #import "MPCPeer.h"
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
+
+NSInteger MPCPeerStateConnected = MCSessionStateConnected;
+NSInteger MPCPeerStateConnecting = MCSessionStateConnecting;
+NSInteger MPCPeerStateNotConnect = MCSessionStateNotConnected;
 
 @interface MPCPeer ()
 
@@ -19,15 +24,12 @@
 
 @implementation MPCPeer
 
-- (id)init
-{
-    return nil;
-}
-
-- (instancetype)initWithPeerID:(NSString *)name detailInfo:(NSString *)detail
+- (instancetype)initWithPeerID:(MCPeerID *)peerID detailInfo:(NSString *)detail
 {
     if (self = [super init]) {
         self.detailInfo = detail;
+        self.peerID = peerID;
+        self.state = MPCPeerStateConnected;
     }
     return self;
 }
@@ -47,5 +49,8 @@
 {
     
 }
-
+- (void)sendFile:(NSString *)filePath
+{
+    
+}
 @end

@@ -33,6 +33,8 @@
 		A16A03751A5A42A100D2ACF1 /* WebViewPDFGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16A03741A5A42A100D2ACF1 /* WebViewPDFGalleryController.m */; };
 		A16AA6B51A47A25E00AC00DB /* ESCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A16AA6B41A47A25E00AC00DB /* ESCAnimation.m */; };
 		A16BCBD21A5ED74300E13234 /* MPCPeer.m in Sources */ = {isa = PBXBuildFile; fileRef = A16BCBD11A5ED74300E13234 /* MPCPeer.m */; };
+		A16BCBD71A5F99C100E13234 /* MPCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16BCBD51A5F99C100E13234 /* MPCViewController.m */; };
+		A16BCBD81A5F99C100E13234 /* MPCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16BCBD61A5F99C100E13234 /* MPCViewController.xib */; };
 		A17AC0C81A5B6F5900C02DF3 /* ImageGalleryViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A17AC0C61A5B6F5900C02DF3 /* ImageGalleryViewController.json */; };
 		A17AC0C91A5B6F5900C02DF3 /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AC0C71A5B6F5900C02DF3 /* ImageGalleryViewController.m */; };
 		A17AC0CD1A5B715B00C02DF3 /* GIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AC0CC1A5B715B00C02DF3 /* GIFViewController.m */; };
@@ -258,6 +260,9 @@
 		A16BCBCC1A5ED53200E13234 /* MPCActionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCActionDelegate.h; sourceTree = "<group>"; };
 		A16BCBD01A5ED74300E13234 /* MPCPeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCPeer.h; sourceTree = "<group>"; };
 		A16BCBD11A5ED74300E13234 /* MPCPeer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCPeer.m; sourceTree = "<group>"; };
+		A16BCBD41A5F99C100E13234 /* MPCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCViewController.h; sourceTree = "<group>"; };
+		A16BCBD51A5F99C100E13234 /* MPCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCViewController.m; sourceTree = "<group>"; };
+		A16BCBD61A5F99C100E13234 /* MPCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCViewController.xib; sourceTree = "<group>"; };
 		A17AC0C51A5B6F5900C02DF3 /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
 		A17AC0C61A5B6F5900C02DF3 /* ImageGalleryViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImageGalleryViewController.json; sourceTree = "<group>"; };
 		A17AC0C71A5B6F5900C02DF3 /* ImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryViewController.m; sourceTree = "<group>"; };
@@ -610,6 +615,16 @@
 				A16AA6B61A47AF7100AC00DB /* ESCAnimation+Private.h */,
 			);
 			path = ESCAnimation;
+			sourceTree = "<group>";
+		};
+		A16BCBD31A5F999600E13234 /* MultiPeerConnection */ = {
+			isa = PBXGroup;
+			children = (
+				A16BCBD41A5F99C100E13234 /* MPCViewController.h */,
+				A16BCBD51A5F99C100E13234 /* MPCViewController.m */,
+				A16BCBD61A5F99C100E13234 /* MPCViewController.xib */,
+			);
+			path = MultiPeerConnection;
 			sourceTree = "<group>";
 		};
 		A17AC0C31A5B6F5900C02DF3 /* ImageTool */ = {
@@ -1194,6 +1209,7 @@
 				A1D6946E1A26272A008D027D /* AppDelegate.h */,
 				A1D6946F1A26272A008D027D /* AppDelegate.m */,
 				A1D694731A26272A008D027D /* MainMenu.xib */,
+				A16BCBD31A5F999600E13234 /* MultiPeerConnection */,
 				A1D6946A1A26272A008D027D /* Supporting Files */,
 			);
 			path = OSX;
@@ -1445,6 +1461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1D694751A26272A008D027D /* MainMenu.xib in Resources */,
+				A16BCBD81A5F99C100E13234 /* MPCViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1599,6 +1616,7 @@
 				A1B3A4D41A399115009F8E9E /* codabar.c in Sources */,
 				A1B3A4DC1A399115009F8E9E /* databar.c in Sources */,
 				A19C7AE91A5C39AB006B3AB4 /* ESCJPEG2000Image.m in Sources */,
+				A16BCBD71A5F99C100E13234 /* MPCViewController.m in Sources */,
 				A1B3A4361A397BE7009F8E9E /* qr_encode.cpp in Sources */,
 				A1B3A4E41A399115009F8E9E /* decoder.c in Sources */,
 				A1B3A4F41A399115009F8E9E /* qrdectxt.c in Sources */,

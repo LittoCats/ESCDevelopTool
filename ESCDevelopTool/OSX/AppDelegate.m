@@ -23,4 +23,27 @@
     // Insert code here to tear down your application
 }
 
+- (IBAction)buttonAction:(NSButton *)sender
+{
+    NSLog(@"button clicked : %@",sender.title);
+    switch (sender.tag) {
+        case 101:
+            [self startMPC];
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+#pragma mark- child windows
+- (void)startMPC
+{
+    Class class = NSClassFromString(@"MPCViewController");
+    NSViewController *vc = [[class alloc] init];
+    
+    [vc presentViewControllerAsModalWindow:vc];
+}
+
 @end

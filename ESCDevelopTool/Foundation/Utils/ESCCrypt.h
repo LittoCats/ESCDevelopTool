@@ -35,7 +35,8 @@
 + (NSData *)DES3Encrypt:(NSData *)data withPassword:(NSString *)password;
 + (NSData *)DES3Decrypt:(NSData *)encryptedData withPassword:(NSString *)password;
 
+#if TARGET_OS_IPHONE
 + (NSData *)RSAEncrypt:(NSData *)data withPrivateKey:(NSData *)keyData password:(NSString *)password;
 + (NSData *)RSADecrypt:(NSData *)encryptedData withPublickKey:(NSData *)keyData;
-
+#endif
 @end

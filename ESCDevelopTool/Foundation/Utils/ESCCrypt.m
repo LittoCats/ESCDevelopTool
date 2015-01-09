@@ -296,6 +296,7 @@ static const char deBase64_table[] =   {
 }
 
 #pragma mark- RSA
+#if TARGET_OS_IPHONE
 + (NSData *)RSAEncrypt:(NSData *)data withPrivateKey:(NSData *)keyData password:(NSString *)password
 {
     SecKeyRef secKey = [self __RSAPrivateKeyWithData:keyData password:password];
@@ -358,6 +359,7 @@ static const char deBase64_table[] =   {
     
     return CFBridgingRelease(decryptedData);
 }
+#endif
 
 #pragma mark- private method
 + (NSData *)__crypt:(NSData *)data withType:(CCAlgorithm)algorithm operation:(CCOperation)operation passowrd:(NSString *)password keySize:(NSInteger)keySize

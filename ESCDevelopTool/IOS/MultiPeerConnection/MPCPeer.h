@@ -7,20 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MultipeerConnectivity/MultipeerConnectivity.h>
+
+@class MCPeerID;
+@class MCSession;
+
+FOUNDATION_EXTERN NSInteger MPCPeerStateConnected;
+FOUNDATION_EXTERN NSInteger MPCPeerStateConnecting;
+FOUNDATION_EXTERN NSInteger MPCPeerStateNotConnect;
 
 @interface MPCPeer : NSObject
 
 @property (nonatomic, readonly) MCPeerID *peerID;
+@property (nonatomic, weak) MCSession *session;
 
 @property (nonatomic, readonly) NSString *displayName;
 @property (nonatomic, readonly) NSString *detailInfo;
 
-@property (nonatomic, getter=isConnected) BOOL connected;
+@property (nonatomic) NSInteger state;
 
 - (instancetype)initWithPeerID:(MCPeerID *)peerID detailInfo:(NSString *)detailInfo;
 
 - (void)sendMessage:(NSString *)message;
+- (void)sendFile:(NSString *)filePath;
 
 @property (nonatomic, copy) void (^handleHistory)(NSAttributedString *attrStr);
 @end
