@@ -1,0 +1,14 @@
+{
+  "navItem": {
+    "right": [
+      {
+        "title": "Start",
+        "serializedID": 101
+      },
+      {
+        "title": "Radar",
+        "serializedID": 102
+      }
+    ]
+  }
+}

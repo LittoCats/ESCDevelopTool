@@ -32,6 +32,7 @@
 		A16A03721A5A40CE00D2ACF1 /* CustomPDFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16A03701A5A40CE00D2ACF1 /* CustomPDFViewController.xib */; };
 		A16A03751A5A42A100D2ACF1 /* WebViewPDFGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16A03741A5A42A100D2ACF1 /* WebViewPDFGalleryController.m */; };
 		A16AA6B51A47A25E00AC00DB /* ESCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A16AA6B41A47A25E00AC00DB /* ESCAnimation.m */; };
+		A16BCBD21A5ED74300E13234 /* MPCPeer.m in Sources */ = {isa = PBXBuildFile; fileRef = A16BCBD11A5ED74300E13234 /* MPCPeer.m */; };
 		A17AC0C81A5B6F5900C02DF3 /* ImageGalleryViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A17AC0C61A5B6F5900C02DF3 /* ImageGalleryViewController.json */; };
 		A17AC0C91A5B6F5900C02DF3 /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AC0C71A5B6F5900C02DF3 /* ImageGalleryViewController.m */; };
 		A17AC0CD1A5B715B00C02DF3 /* GIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AC0CC1A5B715B00C02DF3 /* GIFViewController.m */; };
@@ -184,6 +185,9 @@
 		A1E75C711A5E2B0B008802CE /* CoffeeScriptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C701A5E2B0B008802CE /* CoffeeScriptViewController.m */; };
 		A1E75C741A5E2B1C008802CE /* CoffeeScriptView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C731A5E2B1C008802CE /* CoffeeScriptView.m */; };
 		A1E75C761A5E2EBE008802CE /* CoffeeScriptViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A1E75C751A5E2EBE008802CE /* CoffeeScriptViewController.json */; };
+		A1E75C7A1A5E7DB8008802CE /* MPCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C791A5E7DB8008802CE /* MPCViewController.m */; };
+		A1E75C7D1A5E7DD1008802CE /* MPCView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E75C7C1A5E7DD1008802CE /* MPCView.m */; };
+		A1E75C7F1A5E7DED008802CE /* MPCViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A1E75C7E1A5E7DED008802CE /* MPCViewController.json */; };
 		A1EDAEED1A4D1E36000E2CE3 /* NSTextView+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EDAEEC1A4D1E36000E2CE3 /* NSTextView+ESC.m */; };
 		A1EDAEFA1A4D2FA8000E2CE3 /* IOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6945C1A262702008D027D /* IOSTests.m */; };
 		A1F1D1B91A31F560007FD09E /* ESCJSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F1D1B81A31F560007FD09E /* ESCJSContext.m */; };
@@ -251,6 +255,9 @@
 		A16AA6B31A47A25E00AC00DB /* ESCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCAnimation.h; sourceTree = "<group>"; };
 		A16AA6B41A47A25E00AC00DB /* ESCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCAnimation.m; sourceTree = "<group>"; };
 		A16AA6B61A47AF7100AC00DB /* ESCAnimation+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCAnimation+Private.h"; sourceTree = "<group>"; };
+		A16BCBCC1A5ED53200E13234 /* MPCActionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCActionDelegate.h; sourceTree = "<group>"; };
+		A16BCBD01A5ED74300E13234 /* MPCPeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCPeer.h; sourceTree = "<group>"; };
+		A16BCBD11A5ED74300E13234 /* MPCPeer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCPeer.m; sourceTree = "<group>"; };
 		A17AC0C51A5B6F5900C02DF3 /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
 		A17AC0C61A5B6F5900C02DF3 /* ImageGalleryViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImageGalleryViewController.json; sourceTree = "<group>"; };
 		A17AC0C71A5B6F5900C02DF3 /* ImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryViewController.m; sourceTree = "<group>"; };
@@ -455,6 +462,11 @@
 		A1E75C721A5E2B1C008802CE /* CoffeeScriptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeScriptView.h; sourceTree = "<group>"; };
 		A1E75C731A5E2B1C008802CE /* CoffeeScriptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeScriptView.m; sourceTree = "<group>"; };
 		A1E75C751A5E2EBE008802CE /* CoffeeScriptViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CoffeeScriptViewController.json; sourceTree = "<group>"; };
+		A1E75C781A5E7DB8008802CE /* MPCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCViewController.h; sourceTree = "<group>"; };
+		A1E75C791A5E7DB8008802CE /* MPCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCViewController.m; sourceTree = "<group>"; };
+		A1E75C7B1A5E7DD1008802CE /* MPCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCView.h; sourceTree = "<group>"; };
+		A1E75C7C1A5E7DD1008802CE /* MPCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCView.m; sourceTree = "<group>"; };
+		A1E75C7E1A5E7DED008802CE /* MPCViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MPCViewController.json; sourceTree = "<group>"; };
 		A1EDAEEB1A4D1E36000E2CE3 /* NSTextView+ESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+ESC.h"; sourceTree = "<group>"; };
 		A1EDAEEC1A4D1E36000E2CE3 /* NSTextView+ESC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+ESC.m"; sourceTree = "<group>"; };
 		A1F1D1B71A31F560007FD09E /* ESCJSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCJSContext.h; sourceTree = "<group>"; };
@@ -956,6 +968,7 @@
 				A1D4FF041A2770BE001EF98C /* ViewController.h */,
 				A1D4FF051A2770BE001EF98C /* ViewController.m */,
 				A187EA0A1A52892900B4564E /* ViewController.json */,
+				A1E75C771A5E7D48008802CE /* MultiPeerConnection */,
 				A1E75C6E1A5E2A90008802CE /* CoffeeScript */,
 				A17AC0C31A5B6F5900C02DF3 /* ImageTool */,
 				A1A7B49C1A56753700311081 /* PDFGallery */,
@@ -1248,6 +1261,21 @@
 			path = CoffeeScript;
 			sourceTree = "<group>";
 		};
+		A1E75C771A5E7D48008802CE /* MultiPeerConnection */ = {
+			isa = PBXGroup;
+			children = (
+				A1E75C781A5E7DB8008802CE /* MPCViewController.h */,
+				A1E75C791A5E7DB8008802CE /* MPCViewController.m */,
+				A1E75C7B1A5E7DD1008802CE /* MPCView.h */,
+				A1E75C7C1A5E7DD1008802CE /* MPCView.m */,
+				A1E75C7E1A5E7DED008802CE /* MPCViewController.json */,
+				A16BCBCC1A5ED53200E13234 /* MPCActionDelegate.h */,
+				A16BCBD01A5ED74300E13234 /* MPCPeer.h */,
+				A16BCBD11A5ED74300E13234 /* MPCPeer.m */,
+			);
+			path = MultiPeerConnection;
+			sourceTree = "<group>";
+		};
 		A1F1D1B21A31F4E6007FD09E /* ESCJSContext */ = {
 			isa = PBXGroup;
 			children = (
@@ -1393,6 +1421,7 @@
 				A16A036B1A5A33C000D2ACF1 /* PDFGalleryViewController.xib in Resources */,
 				A16A036D1A5A364500D2ACF1 /* PDFGalleryViewController.json in Resources */,
 				A187EA1A1A5293C100B4564E /* webview.html in Resources */,
+				A1E75C7F1A5E7DED008802CE /* MPCViewController.json in Resources */,
 				A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */,
 				A1D4FF0B1A2770BE001EF98C /* Images.xcassets in Resources */,
 				A1E75C761A5E2EBE008802CE /* CoffeeScriptViewController.json in Resources */,
@@ -1470,11 +1499,13 @@
 				A1B3A4FF1A399115009F8E9E /* symbol.c in Sources */,
 				A1D4FF031A2770BE001EF98C /* AppDelegate.m in Sources */,
 				A1B94D061A511CBF004CFBD2 /* ESCPainter+Private.m in Sources */,
+				A1E75C7A1A5E7DB8008802CE /* MPCViewController.m in Sources */,
 				A131DE971A28C6870060E74E /* ESCCoreData.m in Sources */,
 				A1B3A4E51A399115009F8E9E /* decoder.c in Sources */,
 				A1A7B49B1A56692400311081 /* ESCPDFPageView.m in Sources */,
 				A1482E0E1A5BBF2800DEC90F /* ESCImage.m in Sources */,
 				A1B3A4E71A399115009F8E9E /* error.c in Sources */,
+				A1E75C7D1A5E7DD1008802CE /* MPCView.m in Sources */,
 				A1D637031A557477006B8205 /* ESCInternationalManager+UIKit.m in Sources */,
 				A1450C8A1A485A91003B8988 /* ESCWebView+CMethod.m in Sources */,
 				A1B3A4F91A399115009F8E9E /* util.c in Sources */,
@@ -1519,6 +1550,7 @@
 				A19C7AD21A5C392D006B3AB4 /* ESCGIFImage.m in Sources */,
 				A187E9F01A52592700B4564E /* ESCPainterFigureLine.m in Sources */,
 				A14398D11A52DE70001B4255 /* PainterFigureList.m in Sources */,
+				A16BCBD21A5ED74300E13234 /* MPCPeer.m in Sources */,
 				A1B3A4F51A399115009F8E9E /* qrdectxt.c in Sources */,
 				A1B3A4EF1A399115009F8E9E /* binarize.c in Sources */,
 				A1D4FF001A2770BE001EF98C /* main.m in Sources */,
