@@ -7,17 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
 
 @interface MPCPeer : NSObject
 
-@property (nonatomic) NSInteger peerID;
+@property (nonatomic, readonly) MCPeerID *peerID;
 
 @property (nonatomic, readonly) NSString *displayName;
 @property (nonatomic, readonly) NSString *detailInfo;
 
 @property (nonatomic, getter=isConnected) BOOL connected;
 
-- (instancetype)initWithDisplayName:(NSString *)name detailInfo:(NSString *)detail;
+- (instancetype)initWithPeerID:(MCPeerID *)peerID detailInfo:(NSString *)detailInfo;
 
 - (void)sendMessage:(NSString *)message;
 

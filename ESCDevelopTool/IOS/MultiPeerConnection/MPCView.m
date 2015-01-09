@@ -139,7 +139,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    indexPath.section ? [self.delegate connectSession:[[self.delegate peersNearby] objectAtIndex:indexPath.row]] : [self.delegate checkoutComunication:[[self.delegate peersConnected] objectAtIndex:indexPath.row]];
+    indexPath.section ? [self.delegate connectToPeer:[[self.delegate peersNearby] objectAtIndex:indexPath.row]] : [self.delegate checkoutComunication:[[self.delegate peersConnected] objectAtIndex:indexPath.row]];
 }
 @end
 
@@ -239,7 +239,7 @@
         self.displayNameRegex = _serviceTypeRegex;
         
         self.serviceTypeField.text = [_settings objectForKey:@"serviceType"];
-        self.displayNameLabel.text = [_settings objectForKey:@"displayName"];
+        self.displayNameField.text = [_settings objectForKey:@"displayName"];
     }
     return self;
 }
@@ -307,6 +307,7 @@
 #pragma mark- action and delegate
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
+    if (string.length == 0) return YES;
     if (textField == _serviceTypeField) {
         if ([string rangeOfString:_serviceTypeRegex options:NSRegularExpressionSearch].location != NSNotFound || textField.text.length >= 15) {
             return NO;

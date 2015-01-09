@@ -2,8 +2,11 @@
   "navItem": {
     "right": [
       {
-        "title": "Start",
+        "title": "Settings",
         "serializedID": 101
+      },{
+        "title":"Start",
+        "serializedID":102
       }
     ]
   }

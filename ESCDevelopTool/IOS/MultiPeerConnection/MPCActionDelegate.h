@@ -25,7 +25,7 @@
 
 - (void)checkoutComunication:(MPCPeer *)peer;
 
-- (void)connectSession:(MPCPeer *)peer;
+- (void)connectToPeer:(MPCPeer *)peer;
 
 @end
 

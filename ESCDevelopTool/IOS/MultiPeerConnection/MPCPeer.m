@@ -10,8 +10,8 @@
 
 @interface MPCPeer ()
 
-@property (nonatomic, strong) NSString *displayName;
 @property (nonatomic, strong) NSString *detailInfo;
+@property (nonatomic, strong) MCPeerID *peerID;
 
 @property (nonatomic, strong) NSMutableAttributedString *history;
 
@@ -21,13 +21,12 @@
 
 - (id)init
 {
-    return [self initWithDisplayName:[NSString stringWithFormat:@"%.8X",arc4random()] detailInfo:nil];
+    return nil;
 }
 
-- (instancetype)initWithDisplayName:(NSString *)name detailInfo:(NSString *)detail
+- (instancetype)initWithPeerID:(NSString *)name detailInfo:(NSString *)detail
 {
     if (self = [super init]) {
-        self.displayName = name;
         self.detailInfo = detail;
     }
     return self;
@@ -39,6 +38,10 @@
     if (handleHistory) handleHistory(self.history);
 }
 
+- (NSString *)displayName
+{
+    return self.peerID.displayName;
+}
 #pragma mark- action
 - (void)sendMessage:(NSString *)message
 {
