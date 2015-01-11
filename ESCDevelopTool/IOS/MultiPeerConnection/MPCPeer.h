@@ -30,5 +30,7 @@ FOUNDATION_EXTERN NSInteger MPCPeerStateNotConnect;
 - (void)sendMessage:(NSString *)message;
 - (void)sendFile:(NSString *)filePath;
 
+- (void)recieveMessage:(NSString *)message;
+
 @property (nonatomic, copy) void (^handleHistory)(NSAttributedString *attrStr);
 @end

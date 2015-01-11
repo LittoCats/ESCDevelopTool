@@ -90,11 +90,11 @@
 {
     _currentPeer.handleHistory = nil;
     _currentPeer = currentPeer;
-//    __weak typeof(self) wself = self;
-//    _currentPeer.handleHistory = ^(NSAttributedString *attrStr){
-//        __strong typeof(wself) sself = wself;
-//        [sself.view reloadHistory:attrStr];
-//    };
+    __weak typeof(self) wself = self;
+    _currentPeer.handleHistory = ^(NSAttributedString *attrStr){
+        __strong typeof(wself) sself = wself;
+        [sself.view reloadHistory:attrStr];
+    };
 }
 - (void)setPeerID:(MCPeerID *)peerID
 {
@@ -261,6 +261,8 @@
 }
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
 {
+    MPCPeer *peer = [self.nearbyPeers objectForKey:peerID];
+    [peer recieveMessage:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
     NSLog(@"Recive data from < %@ > : %@",peerID.displayName, [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 }
 - (void)session:(MCSession *)session didReceiveStream:(NSInputStream *)stream withName:(NSString *)streamName fromPeer:(MCPeerID *)peerID

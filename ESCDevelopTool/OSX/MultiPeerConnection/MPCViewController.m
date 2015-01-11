@@ -20,6 +20,7 @@
 
 @property (unsafe_unretained) IBOutlet NSTextView *historyTextView;
 @property (unsafe_unretained) IBOutlet NSTextView *inputTextView;
+@property (weak) IBOutlet NSTextField *currentPeerLabel;
 
 - (IBAction)startOrStop:(NSButton *)sender;
 
@@ -30,6 +31,8 @@
 @property (nonatomic, strong) MCNearbyServiceAdvertiser *advertiser;
 @property (nonatomic, strong) MCNearbyServiceBrowser *browser;
 @property (nonatomic, strong) MCSession *session;
+
+@property (nonatomic, strong) MCPeerID *currentPeerID;
 
 @end
 
@@ -95,6 +98,11 @@
 - (IBAction)sendMessage:(NSButton *)sender
 {
     NSLog(@"send message");
+    NSError *error;
+    NSString *message = self.inputTextView.string;
+    [self.session sendData:[message dataUsingEncoding:NSUTF8StringEncoding] toPeers:@[self.currentPeerID] withMode:MCSessionSendDataUnreliable error:&error];
+    NSString *string = [self.historyTextView.string stringByAppendingString:[NSString stringWithFormat:@"\n%@",message]];
+    self.historyTextView.string = string;
 }
 
 #pragma mark- MCNearbyServiceAdvertiserDelegate
@@ -102,6 +110,8 @@
 {
     NSLog(@"did receive invitation from peer : %@",peerID);
     invitationHandler(YES, self.session);
+    self.currentPeerID = peerID;
+    self.currentPeerLabel.stringValue = peerID.displayName;
 }
 - (void)advertiser:(MCNearbyServiceAdvertiser *)advertiser didNotStartAdvertisingPeer:(NSError *)error
 {
@@ -128,10 +138,6 @@
 - (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state
 {
     NSLog(@"%@ %@",peerID.displayName, state == MCSessionStateConnected ? @"connected ." : state == MCSessionStateConnecting ? @"connecting ..." : @"disconnect");
-    if (state == MCSessionStateConnected) {
-        NSError *error;
-        [session sendData:[@"Hello phone !" dataUsingEncoding:NSUTF8StringEncoding] toPeers:@[peerID] withMode:MCSessionSendDataUnreliable error:&error];
-    }
 }
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
 {
