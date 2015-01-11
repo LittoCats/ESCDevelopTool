@@ -36,10 +36,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     
     [self.view addJSAction:@"nRandomString" withCallback:^(ESCWebView *webView, NSString *action, NSArray *arguments, __autoreleasing id *returnValue) {
-        NSLog(@"action from webview");
-        NSLog(@"action from webview");
-        NSLog(@"action from webview");
-        NSLog(@"action from webview");
+        NSLog(@"action from webview : %@",arguments);
         
         NSString *randomStr = [NSString stringWithFormat:@"%X",arc4random()];
         *returnValue = [randomStr dataUsingEncoding:NSUTF8StringEncoding];

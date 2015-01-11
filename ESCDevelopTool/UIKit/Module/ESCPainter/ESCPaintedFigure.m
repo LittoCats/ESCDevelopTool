@@ -88,7 +88,6 @@
 
 - (void)updateLocation:(CGPoint)p
 {
-    CGFloat dx = self.location.sx, dy = self.location.sy;
     self.location = (ESCPaintedFigureLocation){
         MIN(self.location.sx, p.x),MIN(self.location.sy, p.y),
         MAX(self.location.ex, p.x),MAX(self.location.ey, p.y)
