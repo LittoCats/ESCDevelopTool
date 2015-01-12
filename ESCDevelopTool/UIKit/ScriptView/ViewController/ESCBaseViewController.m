@@ -52,6 +52,7 @@
 {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = [UIColor whiteColor];
     // 配制 navigationItem
     [self updateNavigationItems];
 }

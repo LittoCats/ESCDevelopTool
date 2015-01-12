@@ -116,4 +116,10 @@
     CGRect cursorPosition = [textView caretRectForPosition:textView.selectedTextRange.start];
     [_eScro scrollRectToVisible:cursorPosition animated:NO];
 }
+
+#pragma mark- override
+- (BOOL)resignFirstResponder
+{
+    return [self.editorView resignFirstResponder];
+}
 @end
