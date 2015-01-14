@@ -14,6 +14,7 @@
 
 #import "ESCWebView.h"
 #import "CoffeeScript.h"
+#import "CSSParser.h"
 
 @interface IOSTests : XCTestCase
 
@@ -39,6 +40,10 @@
 //    }
     NSLog(@"%@",CoffeeScript.compile(@"alert 'alert'"));
     [[UIDevice currentDevice] systemVersion];
+    
+    CSSParser *parser = [CSSParser parserWithSource:@"h1 {color:red;backgroundColor:black}h2{color:blue;width:100px}" default:nil];
+    [parser appendSource:@"h1 {color:yellow;height:128px}" replace:NO ];
+    NSLog(@"CSS : \n%@",[parser source]);
 }
 
 - (void)testPerformanceExample {

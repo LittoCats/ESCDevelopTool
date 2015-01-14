@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10E64E71A66144900071671 /* CSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A10E64E61A66144900071671 /* CSSParser.m */; };
+		A10E64E81A66144900071671 /* CSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A10E64E61A66144900071671 /* CSSParser.m */; };
+		A10E64E91A66144900071671 /* CSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A10E64E61A66144900071671 /* CSSParser.m */; };
 		A131DE971A28C6870060E74E /* ESCCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DE961A28C6870060E74E /* ESCCoreData.m */; };
 		A131DEB21A2C1FBC0060E74E /* UIControl+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A131DEB11A2C1FBC0060E74E /* UIControl+ESC.m */; };
 		A14388C41A308E3800782998 /* UIColor+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A14388C31A308E3800782998 /* UIColor+ESC.m */; };
@@ -216,6 +219,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A10E64E51A66144900071671 /* CSSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSParser.h; sourceTree = "<group>"; };
+		A10E64E61A66144900071671 /* CSSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSParser.m; sourceTree = "<group>"; };
 		A131DE951A28C6870060E74E /* ESCCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCCoreData.h; sourceTree = "<group>"; };
 		A131DE961A28C6870060E74E /* ESCCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCCoreData.m; sourceTree = "<group>"; };
 		A131DEB01A2C1FBC0060E74E /* UIControl+ESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ESC.h"; sourceTree = "<group>"; };
@@ -1071,6 +1076,8 @@
 				A1D4FF4D1A2771C6001EF98C /* ESCRuntime.m */,
 				A19C7AED1A5D6537006B3AB4 /* CoffeeScript.h */,
 				A1E75C481A5E125D008802CE /* CoffeeScript.m */,
+				A10E64E51A66144900071671 /* CSSParser.h */,
+				A10E64E61A66144900071671 /* CSSParser.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1539,6 +1546,7 @@
 				A1B94D021A510BF9004CFBD2 /* ESCPainter.m in Sources */,
 				A1E75C611A5E21C0008802CE /* ESCPDFDocument+Annotations.m in Sources */,
 				A18716331A354FF900514C57 /* mztools.c in Sources */,
+				A10E64E81A66144900071671 /* CSSParser.m in Sources */,
 				A16AA6B51A47A25E00AC00DB /* ESCAnimation.m in Sources */,
 				A1F1D1CB1A3434C2007FD09E /* Entity.m in Sources */,
 				A1D4FF941A27FE59001EF98C /* __ESCIndicatorView.m in Sources */,
@@ -1595,6 +1603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10E64E91A66144900071671 /* CSSParser.m in Sources */,
 				A1EDAEFA1A4D2FA8000E2CE3 /* IOSTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1603,6 +1612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10E64E71A66144900071671 /* CSSParser.m in Sources */,
 				A1E75C511A5E20AE008802CE /* ESCCoreData.m in Sources */,
 				A1B3A4F61A399115009F8E9E /* rs.c in Sources */,
 				A1B3A4EA1A399115009F8E9E /* img_scanner.c in Sources */,
