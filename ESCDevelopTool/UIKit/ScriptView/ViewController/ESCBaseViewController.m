@@ -10,9 +10,13 @@
 #import "ESCInternationalManager+UIKit.h"
 #import "UIColor+ESC.h"
 
+#import "ESCScriptContext.h"
+
 @interface ESCBaseViewController ()
 
 @property (nonatomic, strong) NSMutableDictionary *settings;
+
+@property (nonatomic, strong) id <ESCScriptContext> scriptContext;
 
 @end
 
