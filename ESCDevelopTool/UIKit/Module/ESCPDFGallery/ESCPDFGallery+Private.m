@@ -34,7 +34,7 @@
     // page 的最大宽度缩放到 self 的宽度，总高度出需要做同比例的缩放
     // 需根据 self (UIScrollView）的 zoomScale 设置 contentView 的 transform
     CGRect lastPageRect = CGRectFromString([self.pagesRect lastObject]);
-    CGFloat pageScal = self.scrollView.frame.size.width/self.maxPageWidth;
+    CGFloat pageScal = self.scrollView.frame.size.width/(!self.maxPageWidth ? self.scrollView.frame.size.width : self.maxPageWidth) ;
     self.contentView.frame = CGRectMake(0.0, 0.0,
                                         self.scrollView.frame.size.width,
                                         (lastPageRect.origin.y+lastPageRect.size.height)*pageScal);

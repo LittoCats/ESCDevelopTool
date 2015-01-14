@@ -10,6 +10,8 @@
 #import "ESCPDFGallery.h"
 #import "ESCPDFDocument.h"
 
+#import "UIView+ESC.h"
+
 @interface CustomPDFViewController ()
 @property (nonatomic, strong) ESCPDFGallery *view;
 @end
@@ -20,10 +22,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    
+    NSURL *url = [self.nibBundle URLForResource:@"Python study" withExtension:@"pdf"];
+    if (!url) {
+        [self.view makeToast:@"PDF file not found !" position:ESCToastPositionCenter interval:5.0];
+        return;
+    }
     ESCPDFDocument *document = [ESCPDFDocument new];
-    [document loadPDF:[self.nibBundle URLForResource:@"Python study" withExtension:@"pdf"]];
+    [document loadPDF:url];
     [document unLockDocumentWithPassword:nil];
+    
     self.view.document = document;
 }
 

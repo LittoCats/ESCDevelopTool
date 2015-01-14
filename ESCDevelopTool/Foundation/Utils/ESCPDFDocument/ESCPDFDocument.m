@@ -50,11 +50,11 @@ const NSString *ESCPDFPageInfoKey_Width         = @"width";
     //开始加载
     self.document = CGPDFDocumentCreateWithURL((__bridge CFURLRef)(self.url));
     if (self.document == NULL) {
-        self.__error = kESCPDFContextError(ESCPDFContextError_LoadFaild,  @{@"url":[self.url absoluteString]});
+        self.__error = kESCPDFContextError(ESCPDFContextError_LoadFaild,  @{@"url":url ? [self.url absoluteString]:@""});
         self.url = nil;
+    }else{
+        self.MD5 = [ESCCrypt MD5EncryptWithFilePath:[self.url relativePath]];
     }
-    self.MD5 = [ESCCrypt MD5EncryptWithFilePath:[self.url relativePath]];
-    
     return self;
 }
 
