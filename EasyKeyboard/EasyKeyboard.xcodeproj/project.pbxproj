@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1EEBFC41A6E0B1100C869C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFC31A6E0B1100C869C4 /* main.m */; };
+		A1EEBFC71A6E0B1100C869C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFC61A6E0B1100C869C4 /* AppDelegate.m */; };
+		A1EEBFCA1A6E0B1100C869C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFC91A6E0B1100C869C4 /* ViewController.m */; };
+		A1EEBFCD1A6E0B1100C869C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EEBFCB1A6E0B1100C869C4 /* Main.storyboard */; };
+		A1EEBFCF1A6E0B1100C869C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EEBFCE1A6E0B1100C869C4 /* Images.xcassets */; };
+		A1EEBFD21A6E0B1100C869C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1EEBFD01A6E0B1100C869C4 /* LaunchScreen.xib */; };
+		A1EEBFDE1A6E0B1100C869C4 /* EasyKeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFDD1A6E0B1100C869C4 /* EasyKeyboardTests.m */; };
+		A1EEBFF11A6E0B2C00C869C4 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFF01A6E0B2C00C869C4 /* KeyboardViewController.m */; };
+		A1EEBFF41A6E0B2C00C869C4 /* EWubi.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A1EEBFEB1A6E0B2C00C869C4 /* EWubi.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A1EEBFFA1A6E0F4600C869C4 /* easy_keyboard_main.json in Resources */ = {isa = PBXBuildFile; fileRef = A1EEBFF91A6E0F4600C869C4 /* easy_keyboard_main.json */; };
+		A1EEBFFB1A6E0F4600C869C4 /* easy_keyboard_main.json in Resources */ = {isa = PBXBuildFile; fileRef = A1EEBFF91A6E0F4600C869C4 /* easy_keyboard_main.json */; };
+		A1EEBFFE1A6E4C5600C869C4 /* KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFFD1A6E4C5600C869C4 /* KeyboardView.m */; };
+		A1EEBFFF1A6E4C5600C869C4 /* KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFFD1A6E4C5600C869C4 /* KeyboardView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1EEBFD81A6E0B1100C869C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1EEBFB61A6E0B1000C869C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1EEBFBD1A6E0B1100C869C4;
+			remoteInfo = EasyKeyboard;
+		};
+		A1EEBFF21A6E0B2C00C869C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1EEBFB61A6E0B1000C869C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1EEBFEA1A6E0B2C00C869C4;
+			remoteInfo = EWubi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1EEBFF81A6E0B2C00C869C4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A1EEBFF41A6E0B2C00C869C4 /* EWubi.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A1EEBFBE1A6E0B1100C869C4 /* EasyKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1EEBFC21A6E0B1100C869C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1EEBFC31A6E0B1100C869C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1EEBFC51A6E0B1100C869C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A1EEBFC61A6E0B1100C869C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1EEBFC81A6E0B1100C869C4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A1EEBFC91A6E0B1100C869C4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A1EEBFCC1A6E0B1100C869C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A1EEBFCE1A6E0B1100C869C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A1EEBFD11A6E0B1100C869C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A1EEBFD71A6E0B1100C869C4 /* EasyKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1EEBFDC1A6E0B1100C869C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1EEBFDD1A6E0B1100C869C4 /* EasyKeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyKeyboardTests.m; sourceTree = "<group>"; };
+		A1EEBFEB1A6E0B2C00C869C4 /* EWubi.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EWubi.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1EEBFEE1A6E0B2C00C869C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1EEBFEF1A6E0B2C00C869C4 /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		A1EEBFF01A6E0B2C00C869C4 /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		A1EEBFF91A6E0F4600C869C4 /* easy_keyboard_main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = easy_keyboard_main.json; sourceTree = "<group>"; };
+		A1EEBFFC1A6E4C5600C869C4 /* KeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardView.h; sourceTree = "<group>"; };
+		A1EEBFFD1A6E4C5600C869C4 /* KeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1EEBFBB1A6E0B1100C869C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EEBFD41A6E0B1100C869C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EEBFE81A6E0B2C00C869C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1EEBFB51A6E0B1000C869C4 = {
+			isa = PBXGroup;
+			children = (
+				A1EEBFC01A6E0B1100C869C4 /* EasyKeyboard */,
+				A1EEBFDA1A6E0B1100C869C4 /* EasyKeyboardTests */,
+				A1EEBFEC1A6E0B2C00C869C4 /* EWubi */,
+				A1EEBFBF1A6E0B1100C869C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1EEBFBF1A6E0B1100C869C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEBFBE1A6E0B1100C869C4 /* EasyKeyboard.app */,
+				A1EEBFD71A6E0B1100C869C4 /* EasyKeyboardTests.xctest */,
+				A1EEBFEB1A6E0B2C00C869C4 /* EWubi.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1EEBFC01A6E0B1100C869C4 /* EasyKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEBFC51A6E0B1100C869C4 /* AppDelegate.h */,
+				A1EEBFC61A6E0B1100C869C4 /* AppDelegate.m */,
+				A1EEBFC81A6E0B1100C869C4 /* ViewController.h */,
+				A1EEBFC91A6E0B1100C869C4 /* ViewController.m */,
+				A1EEBFCB1A6E0B1100C869C4 /* Main.storyboard */,
+				A1EEBFF91A6E0F4600C869C4 /* easy_keyboard_main.json */,
+				A1EEBFCE1A6E0B1100C869C4 /* Images.xcassets */,
+				A1EEBFD01A6E0B1100C869C4 /* LaunchScreen.xib */,
+				A1EEBFC11A6E0B1100C869C4 /* Supporting Files */,
+			);
+			path = EasyKeyboard;
+			sourceTree = "<group>";
+		};
+		A1EEBFC11A6E0B1100C869C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEBFC21A6E0B1100C869C4 /* Info.plist */,
+				A1EEBFC31A6E0B1100C869C4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1EEBFDA1A6E0B1100C869C4 /* EasyKeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEBFDD1A6E0B1100C869C4 /* EasyKeyboardTests.m */,
+				A1EEBFDB1A6E0B1100C869C4 /* Supporting Files */,
+			);
+			path = EasyKeyboardTests;
+			sourceTree = "<group>";
+		};
+		A1EEBFDB1A6E0B1100C869C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEBFDC1A6E0B1100C869C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1EEBFEC1A6E0B2C00C869C4 /* EWubi */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEBFEF1A6E0B2C00C869C4 /* KeyboardViewController.h */,
+				A1EEBFF01A6E0B2C00C869C4 /* KeyboardViewController.m */,
+				A1EEBFED1A6E0B2C00C869C4 /* Supporting Files */,
+				A1EEBFFC1A6E4C5600C869C4 /* KeyboardView.h */,
+				A1EEBFFD1A6E4C5600C869C4 /* KeyboardView.m */,
+			);
+			path = EWubi;
+			sourceTree = "<group>";
+		};
+		A1EEBFED1A6E0B2C00C869C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEBFEE1A6E0B2C00C869C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1EEBFBD1A6E0B1100C869C4 /* EasyKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1EEBFE11A6E0B1100C869C4 /* Build configuration list for PBXNativeTarget "EasyKeyboard" */;
+			buildPhases = (
+				A1EEBFBA1A6E0B1100C869C4 /* Sources */,
+				A1EEBFBB1A6E0B1100C869C4 /* Frameworks */,
+				A1EEBFBC1A6E0B1100C869C4 /* Resources */,
+				A1EEBFF81A6E0B2C00C869C4 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1EEBFF31A6E0B2C00C869C4 /* PBXTargetDependency */,
+			);
+			name = EasyKeyboard;
+			productName = EasyKeyboard;
+			productReference = A1EEBFBE1A6E0B1100C869C4 /* EasyKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1EEBFD61A6E0B1100C869C4 /* EasyKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1EEBFE41A6E0B1100C869C4 /* Build configuration list for PBXNativeTarget "EasyKeyboardTests" */;
+			buildPhases = (
+				A1EEBFD31A6E0B1100C869C4 /* Sources */,
+				A1EEBFD41A6E0B1100C869C4 /* Frameworks */,
+				A1EEBFD51A6E0B1100C869C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1EEBFD91A6E0B1100C869C4 /* PBXTargetDependency */,
+			);
+			name = EasyKeyboardTests;
+			productName = EasyKeyboardTests;
+			productReference = A1EEBFD71A6E0B1100C869C4 /* EasyKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A1EEBFEA1A6E0B2C00C869C4 /* EWubi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1EEBFF51A6E0B2C00C869C4 /* Build configuration list for PBXNativeTarget "EWubi" */;
+			buildPhases = (
+				A1EEBFE71A6E0B2C00C869C4 /* Sources */,
+				A1EEBFE81A6E0B2C00C869C4 /* Frameworks */,
+				A1EEBFE91A6E0B2C00C869C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EWubi;
+			productName = EWubi;
+			productReference = A1EEBFEB1A6E0B2C00C869C4 /* EWubi.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1EEBFB61A6E0B1000C869C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Littocats;
+				TargetAttributes = {
+					A1EEBFBD1A6E0B1100C869C4 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					A1EEBFD61A6E0B1100C869C4 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = A1EEBFBD1A6E0B1100C869C4;
+					};
+					A1EEBFEA1A6E0B2C00C869C4 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = A1EEBFB91A6E0B1000C869C4 /* Build configuration list for PBXProject "EasyKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1EEBFB51A6E0B1000C869C4;
+			productRefGroup = A1EEBFBF1A6E0B1100C869C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1EEBFBD1A6E0B1100C869C4 /* EasyKeyboard */,
+				A1EEBFD61A6E0B1100C869C4 /* EasyKeyboardTests */,
+				A1EEBFEA1A6E0B2C00C869C4 /* EWubi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1EEBFBC1A6E0B1100C869C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EEBFCD1A6E0B1100C869C4 /* Main.storyboard in Resources */,
+				A1EEBFFA1A6E0F4600C869C4 /* easy_keyboard_main.json in Resources */,
+				A1EEBFD21A6E0B1100C869C4 /* LaunchScreen.xib in Resources */,
+				A1EEBFCF1A6E0B1100C869C4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EEBFD51A6E0B1100C869C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EEBFE91A6E0B2C00C869C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EEBFFB1A6E0F4600C869C4 /* easy_keyboard_main.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1EEBFBA1A6E0B1100C869C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EEBFCA1A6E0B1100C869C4 /* ViewController.m in Sources */,
+				A1EEBFFE1A6E4C5600C869C4 /* KeyboardView.m in Sources */,
+				A1EEBFC71A6E0B1100C869C4 /* AppDelegate.m in Sources */,
+				A1EEBFC41A6E0B1100C869C4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EEBFD31A6E0B1100C869C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EEBFDE1A6E0B1100C869C4 /* EasyKeyboardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EEBFE71A6E0B2C00C869C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EEBFF11A6E0B2C00C869C4 /* KeyboardViewController.m in Sources */,
+				A1EEBFFF1A6E4C5600C869C4 /* KeyboardView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1EEBFD91A6E0B1100C869C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1EEBFBD1A6E0B1100C869C4 /* EasyKeyboard */;
+			targetProxy = A1EEBFD81A6E0B1100C869C4 /* PBXContainerItemProxy */;
+		};
+		A1EEBFF31A6E0B2C00C869C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1EEBFEA1A6E0B2C00C869C4 /* EWubi */;
+			targetProxy = A1EEBFF21A6E0B2C00C869C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1EEBFCB1A6E0B1100C869C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1EEBFCC1A6E0B1100C869C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A1EEBFD01A6E0B1100C869C4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1EEBFD11A6E0B1100C869C4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1EEBFDF1A6E0B1100C869C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1EEBFE01A6E0B1100C869C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1EEBFE21A6E0B1100C869C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EasyKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A1EEBFE31A6E0B1100C869C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EasyKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A1EEBFE51A6E0B1100C869C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EasyKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyKeyboard.app/EasyKeyboard";
+			};
+			name = Debug;
+		};
+		A1EEBFE61A6E0B1100C869C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EasyKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyKeyboard.app/EasyKeyboard";
+			};
+			name = Release;
+		};
+		A1EEBFF61A6E0B2C00C869C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EWubi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A1EEBFF71A6E0B2C00C869C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EWubi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1EEBFB91A6E0B1000C869C4 /* Build configuration list for PBXProject "EasyKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1EEBFDF1A6E0B1100C869C4 /* Debug */,
+				A1EEBFE01A6E0B1100C869C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1EEBFE11A6E0B1100C869C4 /* Build configuration list for PBXNativeTarget "EasyKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1EEBFE21A6E0B1100C869C4 /* Debug */,
+				A1EEBFE31A6E0B1100C869C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A1EEBFE41A6E0B1100C869C4 /* Build configuration list for PBXNativeTarget "EasyKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1EEBFE51A6E0B1100C869C4 /* Debug */,
+				A1EEBFE61A6E0B1100C869C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A1EEBFF51A6E0B2C00C869C4 /* Build configuration list for PBXNativeTarget "EWubi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1EEBFF61A6E0B2C00C869C4 /* Debug */,
+				A1EEBFF71A6E0B2C00C869C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1EEBFB61A6E0B1000C869C4 /* Project object */;
+}

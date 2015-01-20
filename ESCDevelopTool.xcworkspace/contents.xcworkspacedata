@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:EasyKeyboard/EasyKeyboard.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:LittocatXcodePlugin/LittocatXcodePlugin.xcodeproj">
    </FileRef>
    <FileRef
