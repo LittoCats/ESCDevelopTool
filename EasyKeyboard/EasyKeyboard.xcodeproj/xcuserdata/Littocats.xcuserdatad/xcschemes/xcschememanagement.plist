@@ -7,16 +7,26 @@
 		<key>EWubi.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>7</integer>
 		</dict>
 		<key>EasyKeyboard.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>freeime-table.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A1C49E191A6F63BA008F697B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A1EEBFBD1A6E0B1100C869C4</key>
 		<dict>
 			<key>primary</key>

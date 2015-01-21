@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1C49E1D1A6F63BA008F697B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C49E1C1A6F63BA008F697B /* main.m */; };
+		A1C49E261A6F6AE2008F697B /* FreeImeDB.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = A1C49E251A6F6AE2008F697B /* FreeImeDB.xcdatamodel */; };
+		A1C49E291A6F6B14008F697B /* Key_Value_W.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C49E281A6F6B14008F697B /* Key_Value_W.m */; };
+		A1C49E2C1A6F6B15008F697B /* Value_Key_W.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C49E2B1A6F6B15008F697B /* Value_Key_W.m */; };
+		A1C49E2F1A6F6B78008F697B /* FreeImeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C49E2E1A6F6B78008F697B /* FreeImeContext.m */; };
 		A1EEBFC41A6E0B1100C869C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFC31A6E0B1100C869C4 /* main.m */; };
 		A1EEBFC71A6E0B1100C869C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFC61A6E0B1100C869C4 /* AppDelegate.m */; };
 		A1EEBFCA1A6E0B1100C869C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFC91A6E0B1100C869C4 /* ViewController.m */; };
@@ -40,6 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A1C49E181A6F63BA008F697B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		A1EEBFF81A6E0B2C00C869C4 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,6 +69,15 @@
 
 /* Begin PBXFileReference section */
 		A1C49E151A6F44EA008F697B /* EKeyboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKeyboardDelegate.h; sourceTree = "<group>"; };
+		A1C49E1A1A6F63BA008F697B /* freeime-table */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "freeime-table"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C49E1C1A6F63BA008F697B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1C49E251A6F6AE2008F697B /* FreeImeDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FreeImeDB.xcdatamodel; sourceTree = "<group>"; };
+		A1C49E271A6F6B14008F697B /* Key_Value_W.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key_Value_W.h; sourceTree = "<group>"; };
+		A1C49E281A6F6B14008F697B /* Key_Value_W.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Key_Value_W.m; sourceTree = "<group>"; };
+		A1C49E2A1A6F6B15008F697B /* Value_Key_W.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Value_Key_W.h; sourceTree = "<group>"; };
+		A1C49E2B1A6F6B15008F697B /* Value_Key_W.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Value_Key_W.m; sourceTree = "<group>"; };
+		A1C49E2D1A6F6B78008F697B /* FreeImeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeImeContext.h; sourceTree = "<group>"; };
+		A1C49E2E1A6F6B78008F697B /* FreeImeContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeImeContext.m; sourceTree = "<group>"; };
 		A1EEBFBE1A6E0B1100C869C4 /* EasyKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EEBFC21A6E0B1100C869C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1EEBFC31A6E0B1100C869C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +101,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A1C49E171A6F63BA008F697B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1EEBFBB1A6E0B1100C869C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -102,12 +132,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1C49E1B1A6F63BA008F697B /* freeime-table */ = {
+			isa = PBXGroup;
+			children = (
+				A1C49E1C1A6F63BA008F697B /* main.m */,
+				A1C49E251A6F6AE2008F697B /* FreeImeDB.xcdatamodel */,
+				A1C49E2A1A6F6B15008F697B /* Value_Key_W.h */,
+				A1C49E2B1A6F6B15008F697B /* Value_Key_W.m */,
+				A1C49E271A6F6B14008F697B /* Key_Value_W.h */,
+				A1C49E281A6F6B14008F697B /* Key_Value_W.m */,
+				A1C49E2D1A6F6B78008F697B /* FreeImeContext.h */,
+				A1C49E2E1A6F6B78008F697B /* FreeImeContext.m */,
+			);
+			path = "freeime-table";
+			sourceTree = "<group>";
+		};
 		A1EEBFB51A6E0B1000C869C4 = {
 			isa = PBXGroup;
 			children = (
 				A1EEBFC01A6E0B1100C869C4 /* EasyKeyboard */,
 				A1EEBFDA1A6E0B1100C869C4 /* EasyKeyboardTests */,
 				A1EEBFEC1A6E0B2C00C869C4 /* EWubi */,
+				A1C49E1B1A6F63BA008F697B /* freeime-table */,
 				A1EEBFBF1A6E0B1100C869C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +164,7 @@
 				A1EEBFBE1A6E0B1100C869C4 /* EasyKeyboard.app */,
 				A1EEBFD71A6E0B1100C869C4 /* EasyKeyboardTests.xctest */,
 				A1EEBFEB1A6E0B2C00C869C4 /* EWubi.appex */,
+				A1C49E1A1A6F63BA008F697B /* freeime-table */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +235,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A1C49E191A6F63BA008F697B /* freeime-table */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1C49E1E1A6F63BA008F697B /* Build configuration list for PBXNativeTarget "freeime-table" */;
+			buildPhases = (
+				A1C49E161A6F63BA008F697B /* Sources */,
+				A1C49E171A6F63BA008F697B /* Frameworks */,
+				A1C49E181A6F63BA008F697B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "freeime-table";
+			productName = "freeime-table";
+			productReference = A1C49E1A1A6F63BA008F697B /* freeime-table */;
+			productType = "com.apple.product-type.tool";
+		};
 		A1EEBFBD1A6E0B1100C869C4 /* EasyKeyboard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1EEBFE11A6E0B1100C869C4 /* Build configuration list for PBXNativeTarget "EasyKeyboard" */;
@@ -251,6 +315,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Littocats;
 				TargetAttributes = {
+					A1C49E191A6F63BA008F697B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					A1EEBFBD1A6E0B1100C869C4 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -279,6 +346,7 @@
 				A1EEBFBD1A6E0B1100C869C4 /* EasyKeyboard */,
 				A1EEBFD61A6E0B1100C869C4 /* EasyKeyboardTests */,
 				A1EEBFEA1A6E0B2C00C869C4 /* EWubi */,
+				A1C49E191A6F63BA008F697B /* freeime-table */,
 			);
 		};
 /* End PBXProject section */
@@ -313,6 +381,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A1C49E161A6F63BA008F697B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C49E261A6F6AE2008F697B /* FreeImeDB.xcdatamodel in Sources */,
+				A1C49E291A6F6B14008F697B /* Key_Value_W.m in Sources */,
+				A1C49E2F1A6F6B78008F697B /* FreeImeContext.m in Sources */,
+				A1C49E1D1A6F63BA008F697B /* main.m in Sources */,
+				A1C49E2C1A6F6B15008F697B /* Value_Key_W.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1EEBFBA1A6E0B1100C869C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,6 +456,29 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A1C49E1F1A6F63BA008F697B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A1C49E201A6F63BA008F697B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		A1EEBFDF1A6E0B1100C869C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -535,6 +638,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A1C49E1E1A6F63BA008F697B /* Build configuration list for PBXNativeTarget "freeime-table" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1C49E1F1A6F63BA008F697B /* Debug */,
+				A1C49E201A6F63BA008F697B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A1EEBFB91A6E0B1000C869C4 /* Build configuration list for PBXProject "EasyKeyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
