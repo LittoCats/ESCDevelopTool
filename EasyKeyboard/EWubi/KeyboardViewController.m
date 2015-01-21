@@ -8,13 +8,18 @@
 
 #import "KeyboardViewController.h"
 
+#import "EKeyboardDelegate.h"
+
 #import "KeyboardView.h"
 
-@interface KeyboardViewController ()
-@property (nonatomic, strong) UIButton *nextKeyboardButton;
+
+@interface KeyboardViewController ()<EKeyboardDelegate>
+
 @end
 
 @implementation KeyboardViewController
+{
+}
 
 - (void)loadView
 {
@@ -33,19 +38,21 @@
 
 - (void)textDidChange:(id<UITextInput>)textInput {
     // The app has just changed the document's contents, the document context has been updated.
-    
-    UIColor *textColor = nil;
-    if (self.textDocumentProxy.keyboardAppearance == UIKeyboardAppearanceDark) {
-        textColor = [UIColor whiteColor];
-    } else {
-        textColor = [UIColor blackColor];
-    }
-    [self.nextKeyboardButton setTitleColor:textColor forState:UIControlStateNormal];
 }
 
 #pragma mark- keyboard core
 - (void)insertText:(NSString *)cs
 {
     [self.textDocumentProxy insertText:cs];
+}
+
+- (void)deleteBackward
+{
+    // 删除上一下/下一个字符
+    [self.textDocumentProxy deleteBackward];
+}
+- (void)moveCursor:(BOOL)next
+{
+    [self.textDocumentProxy adjustTextPositionByCharacterOffset:next ? 1 : -1];
 }
 @end

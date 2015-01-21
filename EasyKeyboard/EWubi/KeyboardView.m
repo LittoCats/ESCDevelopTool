@@ -8,6 +8,8 @@
 
 #import "KeyboardView.h"
 
+#import "EKeyboardDelegate.h"
+
 @implementation EKeyboardView
 {
     BOOL fnOn;
@@ -94,6 +96,8 @@
         [button addTarget:self action:@selector(moveCursor:) forControlEvents:UIControlEventTouchUpInside];
     }else if ([fn isEqualToString:@"hide"]){
         [button addTarget:self action:@selector(hideKeyboard:) forControlEvents:UIControlEventTouchUpInside];
+    }else if ([fn isEqualToString:@"moveCursor"]){
+        [button addTarget:self action:@selector(moveCursor:) forControlEvents:UIControlEventTouchUpInside];
     }
 }
 
@@ -109,10 +113,9 @@
 - (void)deleteCharater:(EKeyboardButton *)sender
 {
     if (fnOn) {
-        
-    }else{
-        
+        [self.delegate moveCursor:YES];
     }
+    [self.delegate deleteBackward];
 }
 
 - (void)changeCaseMode:(EKeyboardButton *)sender
@@ -151,8 +154,9 @@
 
 - (void)moveCursor:(EKeyboardButton *)sender
 {
-
     // 当存在上一、下一 keymap 时（例如 符号界面），则切换 keymap,否则移动光标
+    const char direction = sender.keyValue.UTF8String[0];
+    [self.delegate moveCursor:(direction == '>')];
 }
 
 - (void)returnAction:(EKeyboardButton *)sender
@@ -168,7 +172,7 @@
 
 - (void)hideKeyboard:(EKeyboardButton *)sender
 {
-
+    [self.delegate dismissKeyboard];
 }
 
 - (void)clickKeyButton:(EKeyboardButton *)sender
@@ -181,6 +185,14 @@
 
 - (void)longPress:(EKeyboardButton *)sender
 {
+    __weak typeof(sender) wsender = sender;
+    __weak typeof(self) wself = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        __strong typeof(wsender) ssender = wsender; if (!ssender) return ;
+        __strong typeof(wself) sself = wself; if (!sself) return;
+        if (ssender.state != UIControlStateNormal)
+            [sself clickKeyButton:ssender];
+    });
 }
 @end
 

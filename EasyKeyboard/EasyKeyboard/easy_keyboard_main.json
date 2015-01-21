@@ -104,10 +104,16 @@
         "title": "l"
       },
       {
-        "width": 0.16,
-        "title": "Enter",
-        "value": "\r",
-        "fn": "enter"
+        "width": 0.08,
+        "title": "<",
+        "value": "<",
+        "fn": "moveCursor"
+      },
+      {
+        "width": 0.08,
+        "title": ">",
+        "value": ">",
+        "fn": "moveCursor"
       }
     ],
     [
@@ -157,13 +163,14 @@
       },
       {
         "width": 0.0775,
-        "title": "<",
-        "fn":"left"
+        "title": ":",
+        "fnTitle":"!"
       },
       {
         "width": 0.0775,
-        "title": ">",
-        "fn":"right"
+        "title": "FN",
+        "exclusive": true,
+        "fn":"fn"
       }
     ],
     [

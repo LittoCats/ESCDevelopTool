@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol EKeyboardDelegate;
+
 NS_CLASS_AVAILABLE_IOS(8_0)
 @interface EKeyboardView : UIView
 
@@ -15,7 +17,7 @@ NS_CLASS_AVAILABLE_IOS(8_0)
 @property (nonatomic, strong) NSPointerArray *keyButtons;
 @property (nonatomic,strong) NSArray *lines;
 
-@property (nonatomic, weak) id delegate;
+@property (nonatomic, weak) id<EKeyboardDelegate> delegate;
 
 @end
 

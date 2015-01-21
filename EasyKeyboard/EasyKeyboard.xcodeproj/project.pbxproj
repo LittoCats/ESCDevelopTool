@@ -54,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A1C49E151A6F44EA008F697B /* EKeyboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKeyboardDelegate.h; sourceTree = "<group>"; };
 		A1EEBFBE1A6E0B1100C869C4 /* EasyKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EEBFC21A6E0B1100C869C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1EEBFC31A6E0B1100C869C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -168,9 +169,10 @@
 			children = (
 				A1EEBFEF1A6E0B2C00C869C4 /* KeyboardViewController.h */,
 				A1EEBFF01A6E0B2C00C869C4 /* KeyboardViewController.m */,
-				A1EEBFED1A6E0B2C00C869C4 /* Supporting Files */,
+				A1C49E151A6F44EA008F697B /* EKeyboardDelegate.h */,
 				A1EEBFFC1A6E4C5600C869C4 /* KeyboardView.h */,
 				A1EEBFFD1A6E4C5600C869C4 /* KeyboardView.m */,
+				A1EEBFED1A6E0B2C00C869C4 /* Supporting Files */,
 			);
 			path = EWubi;
 			sourceTree = "<group>";
@@ -549,6 +551,7 @@
 				A1EEBFE31A6E0B1100C869C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1EEBFE41A6E0B1100C869C4 /* Build configuration list for PBXNativeTarget "EasyKeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +560,7 @@
 				A1EEBFE61A6E0B1100C869C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1EEBFF51A6E0B2C00C869C4 /* Build configuration list for PBXNativeTarget "EWubi" */ = {
 			isa = XCConfigurationList;
@@ -565,6 +569,7 @@
 				A1EEBFF71A6E0B2C00C869C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
