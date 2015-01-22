@@ -9,81 +9,128 @@
 #import <Foundation/Foundation.h>
 
 #import "FreeImeContext.h"
-#import "Key_Value_W.h"
-#import "Value_Key_W.h"
+#import "FreePinYin.h"
+#import "FreeWuBi.h"
+#import "Hans.h"
 
-static FreeImeContext *context;
+static FreeImeContext *mainContext;
+static void saveContext() {
+    [mainContext save:nil];
+}
 
-static void saveKeyValue(NSString *key, NSString *value);
+static void importHans(NSString *tablePath){
+    // 按行解析 table
+    NSString *line;
+    FILE *file = fopen([tablePath UTF8String], "r");
+    char *buffer = malloc(512);
+    
+    NSInteger progress = 0;
+    
+//    NSRegularExpression *keyRegex = [NSRegularExpression regularExpressionWithPattern:@"^[a-z]*" options:0 error:nil];
+    NSRegularExpression *hanRegex = [NSRegularExpression regularExpressionWithPattern:@"[^a-z0-9\\s]+" options:0 error:nil];
+//    NSRegularExpression *frequencyRegex = [NSRegularExpression regularExpressionWithPattern:@"[0-9]+" options:0 error:nil];
+    
+    __block NSString *han;
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:mainContext.hans.name];
+    __block Hans *hans;
+    __block BOOL isLazy;
+    while (fgets(buffer, 512, file)) {
+        line = [[NSString alloc] initWithUTF8String:buffer];
+        
+        [hanRegex enumerateMatchesInString:line options:0 range:(NSRange){0, line.length} usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+            han = [line substringWithRange:result.range];
+            isLazy = [han hasPrefix:@"~"];
+            han = [han substringFromIndex:isLazy];
+            request.predicate = [NSPredicate predicateWithFormat:@"value == %@",han];
+            hans = [[mainContext executeFetchRequest:request error:nil] firstObject];
+            if (hans) {
+                hans.frequency = @([hans.frequency integerValue]+1);
+            }else{
+                hans = [[Hans alloc] initWithEntity:mainContext.hans insertIntoManagedObjectContext:mainContext];
+                hans.value = han;
+                hans.type = @(isLazy);
+            }
+        }];
+        
+        
+        if (progress%1000 == 0) {
+            [mainContext save:nil];
+            NSLog(@"... : %li",(long)progress);
+        }
+        progress ++;
+    }
+    [mainContext save:nil];
+    NSLog(@"total hans : %li",(long)progress);
+    free(buffer);
+}
+
+static void importWubi(NSString *tablePath){
+    // 按行解析 table
+    NSString *line;
+    FILE *file = fopen([tablePath UTF8String], "r");
+    char *buffer = malloc(512);
+    
+    __block NSInteger progress = 0;
+    
+    
+    NSRegularExpression *wubiRegex = [NSRegularExpression regularExpressionWithPattern:@"^[a-z]{1,4}" options:0 error:nil];
+    NSRegularExpression *hanRegex = [NSRegularExpression regularExpressionWithPattern:@"[^a-z0-9\\s]+" options:0 error:nil];
+    //    NSRegularExpression *frequencyRegex = [NSRegularExpression regularExpressionWithPattern:@"[0-9]+" options:0 error:nil];
+    
+    __block NSString *han;
+    __block NSString *wubi;
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:mainContext.hans.name];
+    __block Hans *hans;
+    __block BOOL isLazy;
+    while (fgets(buffer, 512, file)) {
+        line = [[NSString alloc] initWithUTF8String:buffer];
+        
+        [wubiRegex enumerateMatchesInString:line options:0 range:(NSRange){0, line.length} usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+            wubi = [line substringWithRange:result.range];
+            [hanRegex enumerateMatchesInString:line options:0 range:(NSRange){0, line.length} usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+                han = [line substringWithRange:result.range];
+                isLazy = [han hasPrefix:@"~"];
+                han = [han substringFromIndex:isLazy];
+                request.predicate = [NSPredicate predicateWithFormat:@"value == %@",han];
+                hans = [[mainContext executeFetchRequest:request error:nil] firstObject];
+                if (!hans) {
+                    hans = [[Hans alloc] initWithEntity:mainContext.hans insertIntoManagedObjectContext:mainContext];
+                    hans.value = han;
+                };
+                
+                FreeWuBi *fwb = [[FreeWuBi alloc] initWithEntity:mainContext.freeWuBi insertIntoManagedObjectContext:mainContext];
+                fwb.key = wubi;
+                fwb.value = hans;
+                
+                if (progress%100 == 0) {
+                    saveContext();
+                    NSLog(@"... : %li",(long)progress);
+                }
+                progress ++;
+            }];
+        }];
+        
+    }
+    saveContext();
+    NSLog(@"total wubi  : %li",(long)progress);
+    free(buffer);
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"load table ...");
-        NSString *tablePath = [[[[NSString stringWithFormat:@"%s",argv[0]] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"freeime.txt"] stringByResolvingSymlinksInPath];
-        if ([[NSFileManager defaultManager] fileExistsAtPath:tablePath isDirectory:NULL]){
-            NSLog(@"file exist");
-        }
+        NSString *tablePath = [[[NSString stringWithFormat:@"%s",argv[0]] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"freeime.txt"];;
         
-        context = [FreeImeContext main];
+        mainContext = [FreeImeContext main];
         NSString *momPath = [[tablePath stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"FreeImeDB.mom"];
-        context.persistentStoreCoordinator = [context kPersistentStoreCoordinator:[NSURL fileURLWithPath:momPath]];
+        mainContext.persistentStoreCoordinator = [mainContext kPersistentStoreCoordinator:[NSURL fileURLWithPath:momPath]];
         
-        NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:context.value_key_w.name];
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"f_key == NULL"];
-        request.predicate = predicate;
-        request.fetchLimit = 1;
+//        importHans(tablePath);
+        importWubi(tablePath);
         
-        NSString *table = [NSString stringWithContentsOfFile:tablePath encoding:NSUTF8StringEncoding error:nil];
-        
-        NSInteger progress = 0;
-        
-        Value_Key_W *vk;
-        while ((vk = [[context executeFetchRequest:request error:nil] firstObject])) {
-            NSArray *keys = [[vk.key allObjects] sortedArrayWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(Key_Value_W *obj1, Key_Value_W *obj2) {
-                return obj1.key.length < obj2.key.length;
-            }];
-            if (keys.count == 0) continue;
-            vk.f_key = [keys[0] key];
-        }
-        [context save:nil];
-//        // 按行解析 table
-//        NSString *line;
-//        FILE *file = fopen([tablePath UTF8String], "r");
-//        char *buffer = malloc(512);
-//        
-
-//
-//        NSRegularExpression *keyRegex = [NSRegularExpression regularExpressionWithPattern:@"^[a-z]*" options:0 error:nil];
-//        NSRegularExpression *valueRegex = [NSRegularExpression regularExpressionWithPattern:@"[^a-z\\s]+" options:0 error:nil];
-//        
-//        while (fgets(buffer, 512, file)) {
-//            line = [[NSString alloc] initWithUTF8String:buffer];
-//            __block NSString *key,*value;
-//            [keyRegex enumerateMatchesInString:line options:0 range:NSMakeRange(0, line.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-//                key = [line substringWithRange:result.range];
-//                [valueRegex enumerateMatchesInString:line options:0 range:NSMakeRange(0, line.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-//                    value = [line substringWithRange:result.range];
-//                    saveKeyValue(key, value);
-//                }];
-//            }];
-//            [context save:nil];
-//            if (progress%1000 == 0) {
-//                NSLog(@"progress : %li",(long)progress);
-//            }
-//            progress ++;
-//            if (progress%10000 == 0) {
-//                char c = getchar();
-//            }
-//        }
-//        NSLog(@"done");
-//        free(buffer);
     }
     return 0;
 }
 
-static void saveKeyValue(NSString *key, NSString *value)
-{
-    Value_Key_W *vk = [context wValue:value key:key];
-    [[context wKey:key] addValueObject:vk];
-}
+

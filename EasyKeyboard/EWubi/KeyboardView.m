@@ -16,9 +16,9 @@
     BOOL upCaseOn;
 }
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame inputViewStyle:(UIInputViewStyle)inputViewStyle
 {
-    if (self = [super initWithFrame:frame]) {
+    if (self = [super initWithFrame:frame inputViewStyle:inputViewStyle]) {
         self.backgroundColor = [UIColor lightGrayColor];
         
         NSData *settingData = [[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"easy_keyboard_main" ofType:@"json"]];
@@ -50,6 +50,13 @@
     self.lines = [NSArray arrayWithArray:lineArray];
 }
 
+- (void)setCandidateView:(CandidateView *)candidateView
+{
+    [self.candidateView removeFromSuperview];
+    _candidateView = candidateView;
+    [self addSubview:_candidateView];
+}
+
 - (void)setFrame:(CGRect)frame
 {
     BOOL needLayoutSubview = fabsf(frame.size.width-self.frame.size.width) > 1.0 || fabsf(frame.size.height-self.frame.size.height) > 1.0;
@@ -59,11 +66,14 @@
 
 - (void)layoutSubviews
 {
+    // 候选框
+    self.candidateView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height/6);
+    
     CGRect rect = CGRectZero;
     CGFloat iWidth = self.frame.size.width;
-    CGFloat iHeight = self.frame.size.height;
+    CGFloat iHeight = self.frame.size.height - _candidateView.frame.size.height;
     rect.size.height = iHeight/_lines.count - 5.0;
-    rect.origin.y = 2.5;
+    rect.origin.y = 2.5+_candidateView.frame.size.height;
     for (NSArray *line in _lines) {
         rect.origin.x = 2.5;
         for (EKeyboardButton *button in line) {

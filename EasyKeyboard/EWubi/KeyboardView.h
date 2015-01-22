@@ -8,16 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CandidateView.h"
+
 @protocol EKeyboardDelegate;
 
 NS_CLASS_AVAILABLE_IOS(8_0)
-@interface EKeyboardView : UIView
+@interface EKeyboardView : UIInputView
 
 @property (nonatomic, strong) NSDictionary *settings;
 @property (nonatomic, strong) NSPointerArray *keyButtons;
 @property (nonatomic,strong) NSArray *lines;
 
 @property (nonatomic, weak) id<EKeyboardDelegate> delegate;
+
+@property (nonatomic, strong) CandidateView *candidateView;
 
 @end
 

@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12A4F621A70EE92005D07B9 /* FreeInputMethodEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = A12A4F611A70EE92005D07B9 /* FreeInputMethodEngine.m */; };
+		A12A4F651A70F156005D07B9 /* CandidateView.m in Sources */ = {isa = PBXBuildFile; fileRef = A12A4F641A70F156005D07B9 /* CandidateView.m */; };
+		A183F0341A70A820000588A4 /* Hans.m in Sources */ = {isa = PBXBuildFile; fileRef = A183F0331A70A820000588A4 /* Hans.m */; };
+		A183F03A1A70A821000588A4 /* FreePinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = A183F0391A70A821000588A4 /* FreePinYin.m */; };
+		A183F03D1A70ACC1000588A4 /* FreeWuBi.m in Sources */ = {isa = PBXBuildFile; fileRef = A183F03C1A70ACC1000588A4 /* FreeWuBi.m */; };
 		A1C49E1D1A6F63BA008F697B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C49E1C1A6F63BA008F697B /* main.m */; };
 		A1C49E261A6F6AE2008F697B /* FreeImeDB.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = A1C49E251A6F6AE2008F697B /* FreeImeDB.xcdatamodel */; };
-		A1C49E291A6F6B14008F697B /* Key_Value_W.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C49E281A6F6B14008F697B /* Key_Value_W.m */; };
-		A1C49E2C1A6F6B15008F697B /* Value_Key_W.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C49E2B1A6F6B15008F697B /* Value_Key_W.m */; };
 		A1C49E2F1A6F6B78008F697B /* FreeImeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C49E2E1A6F6B78008F697B /* FreeImeContext.m */; };
 		A1EEBFC41A6E0B1100C869C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFC31A6E0B1100C869C4 /* main.m */; };
 		A1EEBFC71A6E0B1100C869C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFC61A6E0B1100C869C4 /* AppDelegate.m */; };
@@ -25,6 +28,13 @@
 		A1EEBFFB1A6E0F4600C869C4 /* easy_keyboard_main.json in Resources */ = {isa = PBXBuildFile; fileRef = A1EEBFF91A6E0F4600C869C4 /* easy_keyboard_main.json */; };
 		A1EEBFFE1A6E4C5600C869C4 /* KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFFD1A6E4C5600C869C4 /* KeyboardView.m */; };
 		A1EEBFFF1A6E4C5600C869C4 /* KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EEBFFD1A6E4C5600C869C4 /* KeyboardView.m */; };
+		A1F328111A70D53700E49232 /* FreeWuBi.m in Sources */ = {isa = PBXBuildFile; fileRef = A183F03C1A70ACC1000588A4 /* FreeWuBi.m */; };
+		A1F328131A70D53700E49232 /* FreePinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = A183F0391A70A821000588A4 /* FreePinYin.m */; };
+		A1F328141A70D53700E49232 /* Hans.m in Sources */ = {isa = PBXBuildFile; fileRef = A183F0331A70A820000588A4 /* Hans.m */; };
+		A1F328151A70D57000E49232 /* FreeImeDB.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = A1C49E251A6F6AE2008F697B /* FreeImeDB.xcdatamodel */; };
+		A1F3281C1A70E39800E49232 /* FreeImeDB.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3281B1A70E39800E49232 /* FreeImeDB.m */; };
+		A1F3281E1A70E3C100E49232 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3281D1A70E3C100E49232 /* CoreData.framework */; };
+		A1F328221A70E50E00E49232 /* FreeImeDB.db in Resources */ = {isa = PBXBuildFile; fileRef = A1F328211A70E50E00E49232 /* FreeImeDB.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,14 +78,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A12A4F601A70EE92005D07B9 /* FreeInputMethodEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeInputMethodEngine.h; sourceTree = "<group>"; };
+		A12A4F611A70EE92005D07B9 /* FreeInputMethodEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeInputMethodEngine.m; sourceTree = "<group>"; };
+		A12A4F631A70F156005D07B9 /* CandidateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateView.h; sourceTree = "<group>"; };
+		A12A4F641A70F156005D07B9 /* CandidateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateView.m; sourceTree = "<group>"; };
+		A183F0321A70A820000588A4 /* Hans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hans.h; sourceTree = "<group>"; };
+		A183F0331A70A820000588A4 /* Hans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hans.m; sourceTree = "<group>"; };
+		A183F0381A70A821000588A4 /* FreePinYin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreePinYin.h; sourceTree = "<group>"; };
+		A183F0391A70A821000588A4 /* FreePinYin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreePinYin.m; sourceTree = "<group>"; };
+		A183F03B1A70ACC1000588A4 /* FreeWuBi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeWuBi.h; sourceTree = "<group>"; };
+		A183F03C1A70ACC1000588A4 /* FreeWuBi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeWuBi.m; sourceTree = "<group>"; };
 		A1C49E151A6F44EA008F697B /* EKeyboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKeyboardDelegate.h; sourceTree = "<group>"; };
 		A1C49E1A1A6F63BA008F697B /* freeime-table */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "freeime-table"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C49E1C1A6F63BA008F697B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A1C49E251A6F6AE2008F697B /* FreeImeDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FreeImeDB.xcdatamodel; sourceTree = "<group>"; };
-		A1C49E271A6F6B14008F697B /* Key_Value_W.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key_Value_W.h; sourceTree = "<group>"; };
-		A1C49E281A6F6B14008F697B /* Key_Value_W.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Key_Value_W.m; sourceTree = "<group>"; };
-		A1C49E2A1A6F6B15008F697B /* Value_Key_W.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Value_Key_W.h; sourceTree = "<group>"; };
-		A1C49E2B1A6F6B15008F697B /* Value_Key_W.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Value_Key_W.m; sourceTree = "<group>"; };
 		A1C49E2D1A6F6B78008F697B /* FreeImeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeImeContext.h; sourceTree = "<group>"; };
 		A1C49E2E1A6F6B78008F697B /* FreeImeContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeImeContext.m; sourceTree = "<group>"; };
 		A1EEBFBE1A6E0B1100C869C4 /* EasyKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +114,10 @@
 		A1EEBFF91A6E0F4600C869C4 /* easy_keyboard_main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = easy_keyboard_main.json; sourceTree = "<group>"; };
 		A1EEBFFC1A6E4C5600C869C4 /* KeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardView.h; sourceTree = "<group>"; };
 		A1EEBFFD1A6E4C5600C869C4 /* KeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardView.m; sourceTree = "<group>"; };
+		A1F328161A70D5A300E49232 /* FreeImeDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeImeDB.h; sourceTree = "<group>"; };
+		A1F3281B1A70E39800E49232 /* FreeImeDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeImeDB.m; sourceTree = "<group>"; };
+		A1F3281D1A70E3C100E49232 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A1F328211A70E50E00E49232 /* FreeImeDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FreeImeDB.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F3281E1A70E3C100E49232 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,12 +156,14 @@
 		A1C49E1B1A6F63BA008F697B /* freeime-table */ = {
 			isa = PBXGroup;
 			children = (
+				A183F03B1A70ACC1000588A4 /* FreeWuBi.h */,
+				A183F03C1A70ACC1000588A4 /* FreeWuBi.m */,
 				A1C49E1C1A6F63BA008F697B /* main.m */,
 				A1C49E251A6F6AE2008F697B /* FreeImeDB.xcdatamodel */,
-				A1C49E2A1A6F6B15008F697B /* Value_Key_W.h */,
-				A1C49E2B1A6F6B15008F697B /* Value_Key_W.m */,
-				A1C49E271A6F6B14008F697B /* Key_Value_W.h */,
-				A1C49E281A6F6B14008F697B /* Key_Value_W.m */,
+				A183F0381A70A821000588A4 /* FreePinYin.h */,
+				A183F0391A70A821000588A4 /* FreePinYin.m */,
+				A183F0321A70A820000588A4 /* Hans.h */,
+				A183F0331A70A820000588A4 /* Hans.m */,
 				A1C49E2D1A6F6B78008F697B /* FreeImeContext.h */,
 				A1C49E2E1A6F6B78008F697B /* FreeImeContext.m */,
 			);
@@ -216,10 +239,17 @@
 			children = (
 				A1EEBFEF1A6E0B2C00C869C4 /* KeyboardViewController.h */,
 				A1EEBFF01A6E0B2C00C869C4 /* KeyboardViewController.m */,
+				A12A4F601A70EE92005D07B9 /* FreeInputMethodEngine.h */,
+				A12A4F611A70EE92005D07B9 /* FreeInputMethodEngine.m */,
 				A1C49E151A6F44EA008F697B /* EKeyboardDelegate.h */,
 				A1EEBFFC1A6E4C5600C869C4 /* KeyboardView.h */,
 				A1EEBFFD1A6E4C5600C869C4 /* KeyboardView.m */,
+				A1F328161A70D5A300E49232 /* FreeImeDB.h */,
+				A1F3281B1A70E39800E49232 /* FreeImeDB.m */,
+				A1F328211A70E50E00E49232 /* FreeImeDB.db */,
 				A1EEBFED1A6E0B2C00C869C4 /* Supporting Files */,
+				A12A4F631A70F156005D07B9 /* CandidateView.h */,
+				A12A4F641A70F156005D07B9 /* CandidateView.m */,
 			);
 			path = EWubi;
 			sourceTree = "<group>";
@@ -227,6 +257,7 @@
 		A1EEBFED1A6E0B2C00C869C4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A1F3281D1A70E3C100E49232 /* CoreData.framework */,
 				A1EEBFEE1A6E0B2C00C869C4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -375,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EEBFFB1A6E0F4600C869C4 /* easy_keyboard_main.json in Resources */,
+				A1F328221A70E50E00E49232 /* FreeImeDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,10 +418,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C49E261A6F6AE2008F697B /* FreeImeDB.xcdatamodel in Sources */,
-				A1C49E291A6F6B14008F697B /* Key_Value_W.m in Sources */,
 				A1C49E2F1A6F6B78008F697B /* FreeImeContext.m in Sources */,
+				A183F03D1A70ACC1000588A4 /* FreeWuBi.m in Sources */,
+				A183F03A1A70A821000588A4 /* FreePinYin.m in Sources */,
 				A1C49E1D1A6F63BA008F697B /* main.m in Sources */,
-				A1C49E2C1A6F6B15008F697B /* Value_Key_W.m in Sources */,
+				A183F0341A70A820000588A4 /* Hans.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,8 +449,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F328151A70D57000E49232 /* FreeImeDB.xcdatamodel in Sources */,
+				A1F328111A70D53700E49232 /* FreeWuBi.m in Sources */,
+				A1F328131A70D53700E49232 /* FreePinYin.m in Sources */,
+				A12A4F621A70EE92005D07B9 /* FreeInputMethodEngine.m in Sources */,
+				A1F328141A70D53700E49232 /* Hans.m in Sources */,
 				A1EEBFF11A6E0B2C00C869C4 /* KeyboardViewController.m in Sources */,
+				A12A4F651A70F156005D07B9 /* CandidateView.m in Sources */,
 				A1EEBFFF1A6E4C5600C869C4 /* KeyboardView.m in Sources */,
+				A1F3281C1A70E39800E49232 /* FreeImeDB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +662,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -632,6 +673,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

@@ -7,13 +7,15 @@
 //
 
 #import "FreeImeContext.h"
-#import "Key_Value_W.h"
-#import "Value_Key_W.h"
+#import "FreeWuBi.h"
+#import "FreePinYin.h"
+#import "Hans.h"
 
 @interface FreeImeContext ()
 
-@property (nonatomic, strong) NSEntityDescription *key_value_w;
-@property (nonatomic, strong) NSEntityDescription *value_key_w;
+@property (nonatomic, strong) NSEntityDescription *freeWuBi;
+@property (nonatomic, strong) NSEntityDescription *freePinYin;
+@property (nonatomic, strong) NSEntityDescription *hans;
 
 @end
 
@@ -31,39 +33,7 @@
     return context;
 }
 
-- (Key_Value_W *)wKey:(NSString *)key
-{
-    if (key.length == 0) {
-        return nil;
-    }
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:self.key_value_w.name];
-    request.predicate = [NSPredicate predicateWithFormat:@"key == %@" argumentArray:@[key]];
-    NSError *error;
-    Key_Value_W *kv = [[self executeFetchRequest:request error:&error] firstObject];
-    if (!kv) {
-        kv = [[Key_Value_W alloc] initWithEntity:self.key_value_w insertIntoManagedObjectContext:self];
-        kv.key = key;
-    }
-    return kv;
-}
 
-- (Value_Key_W *)wValue:(NSString *)value key:(NSString *)key
-{
-    if (value.length == 0 || key.length == 0) {
-        return nil;
-    }
-    value = [value hasPrefix:@"~"] ? [value substringFromIndex:1] : value;
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:self.value_key_w.name];
-    request.predicate = [NSPredicate predicateWithFormat:@"value == %@" argumentArray:@[value]];
-    NSError *error;
-    Value_Key_W *vk = [[self executeFetchRequest:request error:&error] firstObject];
-    if (!vk) {
-        vk = [[Value_Key_W alloc] initWithEntity:self.value_key_w insertIntoManagedObjectContext:self];
-        vk.value = value;
-        if (vk.f_key.length == 0 || key.length < vk.f_key.length) vk.f_key = key;
-    }
-    return vk;
-}
 
 - (NSPersistentStoreCoordinator *)kPersistentStoreCoordinator:(NSURL *)momdURL
 {
@@ -71,13 +41,15 @@
 //    NSURL *momdURL = [[NSBundle mainBundle] URLForResource:self.name withExtension:@"momd"];
     NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:momdURL];
     NSDictionary *entities = [model entitiesByName];
-    self.key_value_w = entities[NSStringFromClass(Key_Value_W.class)];
-    self.value_key_w = entities[NSStringFromClass(Value_Key_W.class)];
+    self.freeWuBi = entities[@"FreeWuBi"];
+    self.hans = entities[@"Hans"];
+    self.freePinYin = entities[@"FreePinYin"];
     if (!model) return nil;
     //建立 NSPersistentStoreCoordinator 实例
     NSPersistentStoreCoordinator *storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
     //设置持久化对像(sqlite)
-    NSURL *storeURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"ESCCoreData.persistentStore"];
+//    NSURL *storeURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"ESCCoreData.persistentStore"];
+    NSURL *storeURL = [NSURL fileURLWithPath:@"/Volumes/Littocat-GR/DB"];
     if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:[storeURL path] withIntermediateDirectories:YES attributes:nil error:nil];
     }

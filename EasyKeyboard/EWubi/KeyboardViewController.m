@@ -12,8 +12,24 @@
 
 #import "KeyboardView.h"
 
+#import "FreeImeDB.h"
+#import "FreePinYin.h"
+#import "FreeWuBi.h"
+#import "Hans.h"
 
-@interface KeyboardViewController ()<EKeyboardDelegate>
+
+@interface KeyboardViewController ()<EKeyboardDelegate,CandidateDelegate>
+
+/**
+ *  修选词列表
+ */
+@property (nonatomic, strong) NSArray *hanList;
+/**
+ *  输入缓冲
+ */
+@property (nonatomic, strong) NSMutableString *iBuffer;
+
+@property (nonatomic, strong) EKeyboardView *view;
 
 @end
 
@@ -23,8 +39,16 @@
 
 - (void)loadView
 {
-    self.view = [[EKeyboardView alloc] init];
+    self.view = [[EKeyboardView alloc] initWithFrame:CGRectZero inputViewStyle:UIInputViewStyleKeyboard];
+    self.view.clipsToBounds = NO;
     ((EKeyboardView *)self.view).delegate = self;
+}
+
+- (void)viewDidLoad
+{
+    CandidateView *candidateView = [[CandidateView alloc] init];
+    candidateView.delegate = self;
+    ((EKeyboardView *)self.view).candidateView = candidateView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +67,11 @@
 #pragma mark- keyboard core
 - (void)insertText:(NSString *)cs
 {
-    [self.textDocumentProxy insertText:cs];
+    char c = [[cs lowercaseString] characterAtIndex:0];
+    if (c < 'a' || c > 'z' ) {
+        [self.textDocumentProxy insertText:cs];
+    }
+    [self.view.candidateView reloadData:[[FreeImeDB db] hansForKey:cs type:FreeImeDBKeyTypeWubi]];
 }
 
 - (void)deleteBackward
@@ -54,5 +82,15 @@
 - (void)moveCursor:(BOOL)next
 {
     [self.textDocumentProxy adjustTextPositionByCharacterOffset:next ? 1 : -1];
+}
+
+#pragma mark- CandidateDelegate
+- (void)candidateView:(CandidateView *)view didSelectHan:(Hans *)han
+{
+    NSLog(@"%@\n\n",han.value);
+    [self.textDocumentProxy insertText:han.value];
+    han.frequency = @([han.frequency integerValue] + 1);
+    [han.managedObjectContext save:nil];
+    [self.view.candidateView reloadData:nil];
 }
 @end

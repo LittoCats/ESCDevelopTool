@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Key_Value_P" syncable="YES"/>
-    <entity name="Key_Value_W" representedClassName="Key_Value_W" syncable="YES">
-        <attribute name="key" attributeType="String" minValueString="1" maxValueString="4" indexed="YES" syncable="YES"/>
-        <relationship name="value" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Value_Key_W" inverseName="key" inverseEntity="Value_Key_W" syncable="YES"/>
+    <entity name="FreePinYin" representedClassName="FreePinYin" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String" minValueString="1" maxValueString="10" indexed="YES" syncable="YES"/>
+        <relationship name="value" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Hans" inverseName="key_py" inverseEntity="Hans" syncable="YES"/>
     </entity>
-    <entity name="Value_Key_W" representedClassName="Value_Key_W" syncable="YES">
-        <attribute name="f_key" optional="YES" attributeType="String" minValueString="0" maxValueString="4" syncable="YES"/>
-        <attribute name="frequency" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    <entity name="FreeWuBi" representedClassName="FreeWuBi" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String" minValueString="1" maxValueString="4" indexed="YES" syncable="YES"/>
+        <relationship name="value" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hans" inverseName="key_wb" inverseEntity="Hans" syncable="YES"/>
+    </entity>
+    <entity name="Hans" representedClassName="Hans" syncable="YES">
+        <attribute name="frequency" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
-        <relationship name="key" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Key_Value_W" inverseName="value" inverseEntity="Key_Value_W" syncable="YES"/>
+        <relationship name="key_py" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FreePinYin" inverseName="value" inverseEntity="FreePinYin" syncable="YES"/>
+        <relationship name="key_wb" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FreeWuBi" inverseName="value" inverseEntity="FreeWuBi" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Key_Value_P" positionX="-18" positionY="27" width="128" height="45"/>
-        <element name="Key_Value_W" positionX="-54" positionY="-9" width="128" height="75"/>
-        <element name="Value_Key_W" positionX="-36" positionY="9" width="128" height="105"/>
+        <element name="FreePinYin" positionX="-45" positionY="45" width="128" height="73"/>
+        <element name="FreeWuBi" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Hans" positionX="-63" positionY="-9" width="128" height="118"/>
     </elements>
 </model>
