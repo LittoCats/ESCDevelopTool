@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1D4FEFA1A2770BE001EF98C"
-               BuildableName = "IOS.app"
-               BlueprintName = "IOS"
-               ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1D4FF121A2770BE001EF98C"
-               BuildableName = "IOSTests.xctest"
-               BlueprintName = "IOSTests"
-               ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
+               BlueprintIdentifier = "A1C49E191A6F63BA008F697B"
+               BuildableName = "freeime-table"
+               BlueprintName = "freeime-table"
+               ReferencedContainer = "container:EasyKeyboard.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1D4FF121A2770BE001EF98C"
-               BuildableName = "IOSTests.xctest"
-               BlueprintName = "IOSTests"
-               ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1D4FEFA1A2770BE001EF98C"
-            BuildableName = "IOS.app"
-            BlueprintName = "IOS"
-            ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
+            BlueprintIdentifier = "A1C49E191A6F63BA008F697B"
+            BuildableName = "freeime-table"
+            BlueprintName = "freeime-table"
+            ReferencedContainer = "container:EasyKeyboard.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1D4FEFA1A2770BE001EF98C"
-            BuildableName = "IOS.app"
-            BlueprintName = "IOS"
-            ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
+            BlueprintIdentifier = "A1C49E191A6F63BA008F697B"
+            BuildableName = "freeime-table"
+            BlueprintName = "freeime-table"
+            ReferencedContainer = "container:EasyKeyboard.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1D4FEFA1A2770BE001EF98C"
-            BuildableName = "IOS.app"
-            BlueprintName = "IOS"
-            ReferencedContainer = "container:ESCDevelopTool.xcodeproj">
+            BlueprintIdentifier = "A1C49E191A6F63BA008F697B"
+            BuildableName = "freeime-table"
+            BlueprintName = "freeime-table"
+            ReferencedContainer = "container:EasyKeyboard.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

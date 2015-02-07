@@ -188,8 +188,6 @@
 - (void)clickKeyButton:(EKeyboardButton *)sender
 {
     NSString *value = fnOn ? sender.fnLabel.text : sender.keyValue;
-    NSLog(@"%@",value);
-    
     value && value.length ? [self.delegate insertText:value] : nil;
 }
 

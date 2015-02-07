@@ -107,7 +107,7 @@ static NSInvocation *kCreateInvocation(id target, SEL selector){
 
 - (id)runScript:(NSString *)script
 {
-    return [self.context evaluateScript:CoffeeScript.compile(script)];
+    return [self.context evaluateScript:CoffeeScript.compile(script, NO)];
 }
 
 @end

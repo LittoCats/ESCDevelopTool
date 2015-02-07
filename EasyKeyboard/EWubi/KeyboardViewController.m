@@ -21,7 +21,7 @@
 @interface KeyboardViewController ()<EKeyboardDelegate,CandidateDelegate>
 
 /**
- *  修选词列表
+ *  候选词列表
  */
 @property (nonatomic, strong) NSArray *hanList;
 /**
@@ -49,6 +49,8 @@
     CandidateView *candidateView = [[CandidateView alloc] init];
     candidateView.delegate = self;
     ((EKeyboardView *)self.view).candidateView = candidateView;
+    
+    self.iBuffer = [NSMutableString new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,14 +66,39 @@
     // The app has just changed the document's contents, the document context has been updated.
 }
 
+- (void)pushBuffer:(NSString *)cs
+{
+    [self.iBuffer appendString:cs];
+    self.hanList = [[FreeImeDB db] hansForKey:_iBuffer type:FreeImeDBKeyTypeWubi];
+    if (self.hanList.count == 1 || _iBuffer.length == 4) {
+        Hans *han = [(id<FreeIMETableProtocol>)[self.hanList firstObject] value];
+        [self flushBuffer:han];
+    }
+    [self.view.candidateView reloadData:_hanList];
+}
+
+- (void)flushBuffer:(Hans *)han
+{
+    [self.iBuffer deleteCharactersInRange:NSMakeRange(0, _iBuffer.length)];
+    self.hanList = nil;
+    [self.view.candidateView reloadData:_hanList];
+    if (han) {
+        [self.textDocumentProxy insertText:han.value];
+        han.frequency = @([han.frequency integerValue] + 1);
+        [han.managedObjectContext save:nil];
+    }
+}
+
 #pragma mark- keyboard core
 - (void)insertText:(NSString *)cs
 {
     char c = [[cs lowercaseString] characterAtIndex:0];
-    if (c < 'a' || c > 'z' ) {
+    if (c > 'a' || c < 'z' ) {
+        [self pushBuffer:cs];
+    }else{
+        [self flushBuffer:nil];
         [self.textDocumentProxy insertText:cs];
     }
-    [self.view.candidateView reloadData:[[FreeImeDB db] hansForKey:cs type:FreeImeDBKeyTypeWubi]];
 }
 
 - (void)deleteBackward
@@ -87,10 +114,6 @@
 #pragma mark- CandidateDelegate
 - (void)candidateView:(CandidateView *)view didSelectHan:(Hans *)han
 {
-    NSLog(@"%@\n\n",han.value);
-    [self.textDocumentProxy insertText:han.value];
-    han.frequency = @([han.frequency integerValue] + 1);
-    [han.managedObjectContext save:nil];
-    [self.view.candidateView reloadData:nil];
+    [self flushBuffer:han];
 }
 @end

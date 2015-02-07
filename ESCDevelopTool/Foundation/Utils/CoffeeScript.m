@@ -9,45 +9,7 @@
 #import "CoffeeScript.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
-#if TARGET_OS_IPHONE
-#import <UIKit/UIKit.h>
-#endif
-
-NS_CLASS_AVAILABLE(10_7, 7_0)
-@interface _CoffeeScript : NSObject <CoffeeScriptProtocol>{
-    JSGlobalContextRef jsContext;
-    JSObjectRef CoffeeScriptJS;
-    JSObjectRef compiler;
-    JSObjectRef evaler;
-}
-
-@property (nonatomic, strong) NSString *(^compile)(NSString *coffee);
-
-@property (nonatomic, strong) NSString *(^eval)(NSString *coffee);
-
-@end
-
-id<CoffeeScriptProtocol> CoffeeScript;
-
 static const char *libCoffeeScript;
-
-static NSString *kExcuteCoffeeCoffeeCommand(JSObjectRef command, NSString *coffeescript, JSGlobalContextRef context){
-    if (!command || !context || !coffeescript || ![coffeescript isKindOfClass:NSString.class] || coffeescript.length == 0) return nil;
-    
-    JSStringRef coffeeStr = JSStringCreateWithUTF8CString([coffeescript UTF8String]);
-    JSValueRef coffeeVal = JSValueMakeString(context, coffeeStr);
-    JSStringRelease(coffeeStr);
-    
-    JSValueRef javascriptStr = JSObjectCallAsFunction(context, command, JSContextGetGlobalObject(context), 1, &coffeeVal, NULL);
-    
-    if (!javascriptStr) return nil;
-    
-    JSStringRef retStr = JSValueToStringCopy(context, javascriptStr, NULL);
-    NSString *ret = CFBridgingRelease(JSStringCopyCFString(NULL, retStr));
-    JSStringRelease(retStr);
-    
-    return ret;
-};
 
 static JSObjectRef kJSObjectGetProperty(const char *name, JSObjectRef object, JSGlobalContextRef context){
     if (!object || !context) return NULL;
@@ -58,64 +20,60 @@ static JSObjectRef kJSObjectGetProperty(const char *name, JSObjectRef object, JS
     return property;
 }
 
-@implementation _CoffeeScript
+static struct {
+    JSGlobalContextRef context;
+    JSObjectRef compiler;
+    JSObjectRef evaler;
+    JSValueRef enableBare;
+    JSValueRef disableBare;
+} _CoffeeScriptContext;
 
-- (id)init
-{
-    if (self = [super init]) {
-        
-        // 如果系统版本低于 osx 10.7 ios 7.0 则不可用
-    
-#if TARGET_OS_IPHONE
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) return self;
-#else
-#if TARGET_OS_MAC
-        NSString *versionStr = [[NSProcessInfo processInfo] operatingSystemVersionString];
-        NSRange range = [versionStr rangeOfString:@"[0-9]+\\.[0-9]+" options:NSRegularExpressionSearch];
-        if (range.location == NSNotFound) {
-            NSLog(@"CoffeeScript , get system version faild .");
-            return self;
-        }
-        versionStr = [versionStr substringWithRange:range];
-        if ([versionStr floatValue] < 10.7) return self;
-#endif
-#endif
-        jsContext = JSGlobalContextCreate(NULL);
-        
+static typeof(_CoffeeScriptContext) CoffeeScriptCreate(){
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _CoffeeScriptContext.context = JSGlobalContextCreate(NULL);
         JSStringRef coffeeScript = JSStringCreateWithUTF8CString(libCoffeeScript);
-        JSEvaluateScript(jsContext, coffeeScript, JSContextGetGlobalObject(jsContext), NULL, 0, NULL);
+        JSEvaluateScript(_CoffeeScriptContext.context, coffeeScript, JSContextGetGlobalObject(_CoffeeScriptContext.context), NULL, 0, NULL);
         JSStringRelease(coffeeScript);
         
-        JSStringRef objName = JSStringCreateWithUTF8CString("CoffeeScript");
-        if (jsContext) CoffeeScriptJS = JSValueToObject(jsContext, JSObjectGetProperty(jsContext, JSContextGetGlobalObject(jsContext), objName, NULL), NULL);
-        JSStringRelease(objName);
-        compiler = kJSObjectGetProperty("compile", CoffeeScriptJS, jsContext);
-        evaler = kJSObjectGetProperty("eval", CoffeeScriptJS, jsContext);
+        JSObjectRef CoffeeScriptJS = kJSObjectGetProperty("CoffeeScript", JSContextGetGlobalObject(_CoffeeScriptContext.context), _CoffeeScriptContext.context);
+        _CoffeeScriptContext.compiler = kJSObjectGetProperty("compile", CoffeeScriptJS, _CoffeeScriptContext.context);
+        _CoffeeScriptContext.evaler = kJSObjectGetProperty("eval", CoffeeScriptJS, _CoffeeScriptContext.context);
+
+        JSStringRef eBareStr = JSStringCreateWithUTF8CString("{bare: true}");
+        _CoffeeScriptContext.enableBare = JSEvaluateScript(_CoffeeScriptContext.context, eBareStr, JSContextGetGlobalObject(_CoffeeScriptContext.context), NULL, 0, NULL);
+        JSStringRelease(eBareStr);
         
-        
-        // init comple
-        __weak typeof(self) wself = self;
-        self.compile = ^NSString *(NSString *coffee){
-            __strong typeof(wself) sself = wself; if (!sself) return nil;
-            return kExcuteCoffeeCoffeeCommand(sself->compiler, coffee, sself->jsContext);
-        };
-        
-        self.eval = ^NSString *(NSString *coffee){
-            __strong typeof(wself) sself = wself; if (!sself) return nil;
-            return kExcuteCoffeeCoffeeCommand(sself->evaler, coffee, sself->jsContext);
-        };
-    }
-    return self;
+        JSStringRef dBareStr = JSStringCreateWithUTF8CString("{bare: false}");
+        _CoffeeScriptContext.enableBare = JSEvaluateScript(_CoffeeScriptContext.context, dBareStr, JSContextGetGlobalObject(_CoffeeScriptContext.context), NULL, 0, NULL);
+        JSStringRelease(dBareStr);
+    });
+    return _CoffeeScriptContext;
 }
 
-- (void)dealloc
-{
-    JSGlobalContextRelease(jsContext);
+static NSString* _compile(NSString *source, BOOL bare){
+    
+    JSStringRef cfStr = JSStringCreateWithCFString((__bridge CFStringRef)(source));
+    JSValueRef cfvalue = JSValueMakeString(_CoffeeScriptContext.context, cfStr);
+    JSStringRelease(cfStr);
+    JSValueRef arguments[] = {cfvalue, bare ? _CoffeeScriptContext.enableBare : _CoffeeScriptContext.disableBare};
+    JSValueRef retValue = JSObjectCallAsFunction(_CoffeeScriptContext.context, _CoffeeScriptContext.compiler, JSContextGetGlobalObject(_CoffeeScriptContext.context), 2, arguments, NULL);
+    JSStringRef retStr = JSValueToStringCopy(_CoffeeScriptContext.context, retValue, NULL);
+    
+    NSString *ret = CFBridgingRelease(JSStringCopyCFString(NULL, retStr));
+    JSStringRelease(retStr);
+    
+    return ret;
 }
+const typeof(CoffeeScript) CoffeeScript = (typeof(CoffeeScript)){
+    _compile
+};
+
+@implementation NSObject (__CoffeeScript__)
 
 + (void)load
 {
-    CoffeeScript = [[self alloc] init];
+    CoffeeScriptCreate();
 }
 
 @end

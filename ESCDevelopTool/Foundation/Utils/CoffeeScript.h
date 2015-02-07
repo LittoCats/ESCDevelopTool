@@ -8,13 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-
-@protocol CoffeeScriptProtocol <NSObject> 
-
-@property (nonatomic, readonly) NSString *(^compile)(NSString *coffee);
-
-@property (nonatomic, readonly) NSString *(^eval)(NSString *coffee);
-
-@end
-
-FOUNDATION_EXTERN id<CoffeeScriptProtocol> CoffeeScript;
+FOUNDATION_EXTERN const struct {
+    NSString* (*compile)(NSString *cource, BOOL bare);
+//    id<NSObject> (*eval)(NSString *cource, NSArray *arguments);
+} CoffeeScript;

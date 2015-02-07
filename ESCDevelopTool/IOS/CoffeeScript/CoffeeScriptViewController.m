@@ -40,7 +40,7 @@
     switch (serializedID) {
         case 101:{
             NSString *coffee = self.view.coffee;
-            NSString *js = CoffeeScript.compile(coffee);
+            NSString *js = CoffeeScript.compile(coffee, NO);
             [self.view output:js];
         }break;
         case 102:{
