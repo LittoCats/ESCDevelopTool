@@ -13,7 +13,7 @@
 
 #import "ESCColorPicker.h"
 
-@interface ColorPickerViewController ()
+@interface ColorPickerViewController ()<ESCColorPickerDelegate>
 
 @property (nonatomic, strong) ESCPopover *popover;
 
@@ -54,7 +54,8 @@
         }break;
         case 101:{
             ESCColorPicker *picker = [ESCColorPicker plate];
-            picker.frame = CGRectMake(0, 0, 256, 256);
+            picker.delegate = self;
+            picker.frame = CGRectMake(0, 0, self.view.frame.size.width-33, self.view.frame.size.width/3);
             [self popview:picker];
         }break;
             
@@ -75,4 +76,9 @@
     self.view.backgroundColor = color;
 }
 
+// ESCColorPickerDelegate
+- (void)colorPicker:(ESCColorPicker *)picker didPickColor:(UIColor *)color
+{
+    self.view.backgroundColor = color;
+}
 @end
