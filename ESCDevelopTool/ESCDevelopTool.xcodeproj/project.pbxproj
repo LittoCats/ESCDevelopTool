@@ -46,6 +46,9 @@
 		A16BCBD71A5F99C100E13234 /* MPCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16BCBD51A5F99C100E13234 /* MPCViewController.m */; };
 		A16BCBD81A5F99C100E13234 /* MPCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16BCBD61A5F99C100E13234 /* MPCViewController.xib */; };
 		A17595C01A88371300F53159 /* AutoCompleteFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17595BF1A88371300F53159 /* AutoCompleteFieldViewController.m */; };
+		A17595C41A884B8800F53159 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17595C31A884B8800F53159 /* ColorPickerViewController.m */; };
+		A17595C71A884C4600F53159 /* ColorPickerViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A17595C61A884C4600F53159 /* ColorPickerViewController.json */; };
+		A17595CA1A88533600F53159 /* ESCColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A17595C91A88533600F53159 /* ESCColorPicker.m */; };
 		A17AC0C81A5B6F5900C02DF3 /* ImageGalleryViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A17AC0C61A5B6F5900C02DF3 /* ImageGalleryViewController.json */; };
 		A17AC0C91A5B6F5900C02DF3 /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AC0C71A5B6F5900C02DF3 /* ImageGalleryViewController.m */; };
 		A17AC0CD1A5B715B00C02DF3 /* GIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AC0CC1A5B715B00C02DF3 /* GIFViewController.m */; };
@@ -294,6 +297,11 @@
 		A16BCBD61A5F99C100E13234 /* MPCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCViewController.xib; sourceTree = "<group>"; };
 		A17595BE1A88371300F53159 /* AutoCompleteFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCompleteFieldViewController.h; sourceTree = "<group>"; };
 		A17595BF1A88371300F53159 /* AutoCompleteFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCompleteFieldViewController.m; sourceTree = "<group>"; };
+		A17595C21A884B8800F53159 /* ColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerViewController.h; sourceTree = "<group>"; };
+		A17595C31A884B8800F53159 /* ColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerViewController.m; sourceTree = "<group>"; };
+		A17595C61A884C4600F53159 /* ColorPickerViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ColorPickerViewController.json; sourceTree = "<group>"; };
+		A17595C81A88533600F53159 /* ESCColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCColorPicker.h; sourceTree = "<group>"; };
+		A17595C91A88533600F53159 /* ESCColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCColorPicker.m; sourceTree = "<group>"; };
 		A17AC0C51A5B6F5900C02DF3 /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
 		A17AC0C61A5B6F5900C02DF3 /* ImageGalleryViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImageGalleryViewController.json; sourceTree = "<group>"; };
 		A17AC0C71A5B6F5900C02DF3 /* ImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryViewController.m; sourceTree = "<group>"; };
@@ -745,8 +753,20 @@
 		A17595C11A884B2800F53159 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				A17595C21A884B8800F53159 /* ColorPickerViewController.h */,
+				A17595C31A884B8800F53159 /* ColorPickerViewController.m */,
+				A17595C61A884C4600F53159 /* ColorPickerViewController.json */,
 			);
 			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		A17595C51A884BC000F53159 /* ESCColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				A17595C81A88533600F53159 /* ESCColorPicker.h */,
+				A17595C91A88533600F53159 /* ESCColorPicker.m */,
+			);
+			path = ESCColorPicker;
 			sourceTree = "<group>";
 		};
 		A17AC0C31A5B6F5900C02DF3 /* ImageTool */ = {
@@ -1201,6 +1221,7 @@
 		A1D4FF781A2771DF001EF98C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A17595C51A884BC000F53159 /* ESCColorPicker */,
 				A1B94CFF1A510BD7004CFBD2 /* ESCPainter */,
 				A1450C7D1A485114003B8988 /* ESCWebView */,
 				A1D4FF791A2771DF001EF98C /* ESCPopover.h */,
@@ -1537,6 +1558,7 @@
 				A14398BF1A52CC69001B4255 /* PopoverViewController.xib in Resources */,
 				A16A036B1A5A33C000D2ACF1 /* PDFGalleryViewController.xib in Resources */,
 				A16A036D1A5A364500D2ACF1 /* PDFGalleryViewController.json in Resources */,
+				A17595C71A884C4600F53159 /* ColorPickerViewController.json in Resources */,
 				A187EA1A1A5293C100B4564E /* webview.html in Resources */,
 				A1E75C7F1A5E7DED008802CE /* MPCViewController.json in Resources */,
 				A187EA151A528D8300B4564E /* __esc_webview_bridge.js in Resources */,
@@ -1644,8 +1666,10 @@
 				A18716331A354FF900514C57 /* mztools.c in Sources */,
 				A10E64E81A66144900071671 /* CSSParser.m in Sources */,
 				A16AA6B51A47A25E00AC00DB /* ESCAnimation.m in Sources */,
+				A17595C41A884B8800F53159 /* ColorPickerViewController.m in Sources */,
 				A1F1D1CB1A3434C2007FD09E /* Entity.m in Sources */,
 				A1D4FF941A27FE59001EF98C /* __ESCIndicatorView.m in Sources */,
+				A17595CA1A88533600F53159 /* ESCColorPicker.m in Sources */,
 				A187E9E61A51980B00B4564E /* ESCPaintedFigure.m in Sources */,
 				A10E65031A664EF400071671 /* ESCLinearLayout.m in Sources */,
 				A1B3A3CC1A397663009F8E9E /* ESCCodeSymbol+Generator.mm in Sources */,

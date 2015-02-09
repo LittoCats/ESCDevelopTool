@@ -4,6 +4,10 @@
       "title": "EasyScriptControl",
       "description": "",
       "action": "ESCM://EasyScriptControl"
+    },{
+      "title": "ColorPickerViewController",
+      "description": "",
+      "action": "ESCM://ColorPickerViewController"
     },
     {
       "title": "ESCWebView",

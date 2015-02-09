@@ -1,0 +1,30 @@
+{
+  "navItem": {
+    "right": [
+      {
+        "title": "HEX",
+        "serializedID": 100
+      },
+      {
+        "title": "Type1",
+        "serializedID": 101
+      },
+      {
+        "title": "Type2",
+        "serializedID": 102
+      },
+      {
+        "title": "Type3",
+        "serializedID": 103
+      },
+      {
+        "title": "Type4",
+        "serializedID": 104
+      },
+      {
+        "title": "Type5",
+        "serializedID": 105
+      }
+    ]
+  }
+}
