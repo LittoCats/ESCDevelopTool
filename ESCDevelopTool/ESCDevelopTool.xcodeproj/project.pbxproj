@@ -45,6 +45,7 @@
 		A16BCBD21A5ED74300E13234 /* MPCPeer.m in Sources */ = {isa = PBXBuildFile; fileRef = A16BCBD11A5ED74300E13234 /* MPCPeer.m */; };
 		A16BCBD71A5F99C100E13234 /* MPCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16BCBD51A5F99C100E13234 /* MPCViewController.m */; };
 		A16BCBD81A5F99C100E13234 /* MPCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16BCBD61A5F99C100E13234 /* MPCViewController.xib */; };
+		A17595C01A88371300F53159 /* AutoCompleteFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17595BF1A88371300F53159 /* AutoCompleteFieldViewController.m */; };
 		A17AC0C81A5B6F5900C02DF3 /* ImageGalleryViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A17AC0C61A5B6F5900C02DF3 /* ImageGalleryViewController.json */; };
 		A17AC0C91A5B6F5900C02DF3 /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AC0C71A5B6F5900C02DF3 /* ImageGalleryViewController.m */; };
 		A17AC0CD1A5B715B00C02DF3 /* GIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AC0CC1A5B715B00C02DF3 /* GIFViewController.m */; };
@@ -291,6 +292,8 @@
 		A16BCBD41A5F99C100E13234 /* MPCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCViewController.h; sourceTree = "<group>"; };
 		A16BCBD51A5F99C100E13234 /* MPCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCViewController.m; sourceTree = "<group>"; };
 		A16BCBD61A5F99C100E13234 /* MPCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCViewController.xib; sourceTree = "<group>"; };
+		A17595BE1A88371300F53159 /* AutoCompleteFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCompleteFieldViewController.h; sourceTree = "<group>"; };
+		A17595BF1A88371300F53159 /* AutoCompleteFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCompleteFieldViewController.m; sourceTree = "<group>"; };
 		A17AC0C51A5B6F5900C02DF3 /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
 		A17AC0C61A5B6F5900C02DF3 /* ImageGalleryViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImageGalleryViewController.json; sourceTree = "<group>"; };
 		A17AC0C71A5B6F5900C02DF3 /* ImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryViewController.m; sourceTree = "<group>"; };
@@ -730,6 +733,22 @@
 			path = MultiPeerConnection;
 			sourceTree = "<group>";
 		};
+		A17595BD1A8836F200F53159 /* AutoCompleteField */ = {
+			isa = PBXGroup;
+			children = (
+				A17595BE1A88371300F53159 /* AutoCompleteFieldViewController.h */,
+				A17595BF1A88371300F53159 /* AutoCompleteFieldViewController.m */,
+			);
+			path = AutoCompleteField;
+			sourceTree = "<group>";
+		};
+		A17595C11A884B2800F53159 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
 		A17AC0C31A5B6F5900C02DF3 /* ImageTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -1047,6 +1066,8 @@
 				A1D4FF041A2770BE001EF98C /* ViewController.h */,
 				A1D4FF051A2770BE001EF98C /* ViewController.m */,
 				A187EA0A1A52892900B4564E /* ViewController.json */,
+				A17595C11A884B2800F53159 /* ColorPicker */,
+				A17595BD1A8836F200F53159 /* AutoCompleteField */,
 				A10E65091A665AE100071671 /* EasyScriptControl */,
 				A1E75C771A5E7D48008802CE /* MultiPeerConnection */,
 				A1E75C6E1A5E2A90008802CE /* CoffeeScript */,
@@ -1572,6 +1593,7 @@
 				A1D4FF5B1A2771C6001EF98C /* NSData+ESC.m in Sources */,
 				A1D637001A55740C006B8205 /* ESCInternationalManager.m in Sources */,
 				A10E65001A664EDB00071671 /* ESCHorizontalLayout.m in Sources */,
+				A17595C01A88371300F53159 /* AutoCompleteFieldViewController.m in Sources */,
 				A1B3A5101A3ADA79009F8E9E /* ESCImageGallery+Private.m in Sources */,
 				A1D4FF5D1A2771C6001EF98C /* NSDictionary+ESC.m in Sources */,
 				A187EA181A528DED00B4564E /* WebViewController.m in Sources */,

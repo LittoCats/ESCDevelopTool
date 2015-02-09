@@ -49,6 +49,11 @@
       "title": "ImageStepLoadViewController",
       "description": "大图片渐进式加载演示.为了看到渐进式加载的效果，示例中图片显示做了延迟。",
       "action": "ESCM://ImageStepLoadViewController"
+    },
+    {
+      "title": "AutoCompleteFieldViewController",
+      "description": "根据已有输入，弹出备选框的示例, 候先数据为已调用过 alloc 方法的类的 className。由于实际使用过程中，考虑的因素比较多，比如键盘、view图层位置等，因此要做一个完全通用的控件，没有太大必要，这里只是提供一种思路。",
+      "action": "ESCM://AutoCompleteFieldViewController"
     }
   ]
 }
