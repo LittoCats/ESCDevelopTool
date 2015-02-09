@@ -201,6 +201,7 @@
 		A1E75C7F1A5E7DED008802CE /* MPCViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = A1E75C7E1A5E7DED008802CE /* MPCViewController.json */; };
 		A1EDAEED1A4D1E36000E2CE3 /* NSTextView+ESC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EDAEEC1A4D1E36000E2CE3 /* NSTextView+ESC.m */; };
 		A1EDAEFA1A4D2FA8000E2CE3 /* IOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6945C1A262702008D027D /* IOSTests.m */; };
+		A1EF8CE11A87891C0055E328 /* ImageStepLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EF8CE01A87891C0055E328 /* ImageStepLoadViewController.m */; };
 		A1F1D1B91A31F560007FD09E /* ESCJSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F1D1B81A31F560007FD09E /* ESCJSContext.m */; };
 		A1F1D1BA1A31F560007FD09E /* ESCJSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F1D1B81A31F560007FD09E /* ESCJSContext.m */; };
 		A1F1D1C81A34347E007FD09E /* IOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1F1D1C61A34347E007FD09E /* IOS.xcdatamodeld */; };
@@ -499,6 +500,8 @@
 		A1E75C7E1A5E7DED008802CE /* MPCViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MPCViewController.json; sourceTree = "<group>"; };
 		A1EDAEEB1A4D1E36000E2CE3 /* NSTextView+ESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+ESC.h"; sourceTree = "<group>"; };
 		A1EDAEEC1A4D1E36000E2CE3 /* NSTextView+ESC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+ESC.m"; sourceTree = "<group>"; };
+		A1EF8CDF1A87891C0055E328 /* ImageStepLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageStepLoadViewController.h; sourceTree = "<group>"; };
+		A1EF8CE01A87891C0055E328 /* ImageStepLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageStepLoadViewController.m; sourceTree = "<group>"; };
 		A1F1D1B71A31F560007FD09E /* ESCJSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCJSContext.h; sourceTree = "<group>"; };
 		A1F1D1B81A31F560007FD09E /* ESCJSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCJSContext.m; sourceTree = "<group>"; };
 		A1F1D1C51A32DCA4007FD09E /* ESCJSContext_Prevate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCJSContext_Prevate.h; sourceTree = "<group>"; };
@@ -730,6 +733,7 @@
 		A17AC0C31A5B6F5900C02DF3 /* ImageTool */ = {
 			isa = PBXGroup;
 			children = (
+				A1EF8CDE1A8788DF0055E328 /* ImageStepLoad */,
 				A17AC0CA1A5B714E00C02DF3 /* GIF */,
 				A17AC0C41A5B6F5900C02DF3 /* ImageGallery */,
 			);
@@ -1358,6 +1362,16 @@
 			path = MultiPeerConnection;
 			sourceTree = "<group>";
 		};
+		A1EF8CDE1A8788DF0055E328 /* ImageStepLoad */ = {
+			isa = PBXGroup;
+			children = (
+				A1EF8CDF1A87891C0055E328 /* ImageStepLoadViewController.h */,
+				A1EF8CE01A87891C0055E328 /* ImageStepLoadViewController.m */,
+			);
+			name = ImageStepLoad;
+			path = ../ImageStepLoad;
+			sourceTree = "<group>";
+		};
 		A1F1D1B21A31F4E6007FD09E /* ESCJSContext */ = {
 			isa = PBXGroup;
 			children = (
@@ -1654,6 +1668,7 @@
 				A1B3A50D1A3ADA5C009F8E9E /* ESCImageGallery.m in Sources */,
 				A1E75C651A5E21C0008802CE /* ESCPDFDocument+Private.m in Sources */,
 				A17AC0CD1A5B715B00C02DF3 /* GIFViewController.m in Sources */,
+				A1EF8CE11A87891C0055E328 /* ImageStepLoadViewController.m in Sources */,
 				A187160C1A352E7D00514C57 /* UIImage+ESC.m in Sources */,
 				A14398BE1A52CC69001B4255 /* PopoverViewController.m in Sources */,
 				A1B3A43B1A3981FB009F8E9E /* ESCCodeSymbol+Scanner.m in Sources */,
