@@ -219,7 +219,6 @@
     if (!dh) return;
     frame.size.height += dh;
     
-    BOOL interfaceEnable = self.view.userInteractionEnabled;
     [UIView animateWithDuration:interval
                      animations:^{
                          self.view.frame = frame;

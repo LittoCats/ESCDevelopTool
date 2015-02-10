@@ -486,6 +486,7 @@
 		A1D6947A1A26272A008D027D /* OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D6947F1A26272A008D027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1D694801A26272A008D027D /* OSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSXTests.m; sourceTree = "<group>"; };
+		A1DFC3401A898E4B00C9452A /* ESCColorPicker+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESCColorPicker+Private.h"; sourceTree = "<group>"; };
 		A1E75C481A5E125D008802CE /* CoffeeScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeScript.m; sourceTree = "<group>"; };
 		A1E75C4B1A5E1F6E008802CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A1E75C4F1A5E2088008802CE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -764,6 +765,7 @@
 			isa = PBXGroup;
 			children = (
 				A17595C81A88533600F53159 /* ESCColorPicker.h */,
+				A1DFC3401A898E4B00C9452A /* ESCColorPicker+Private.h */,
 				A17595C91A88533600F53159 /* ESCColorPicker.m */,
 			);
 			path = ESCColorPicker;

@@ -55,9 +55,15 @@
         case 101:{
             ESCColorPicker *picker = [ESCColorPicker plate];
             picker.delegate = self;
-            picker.frame = CGRectMake(0, 0, self.view.frame.size.width-33, self.view.frame.size.width/3);
+            picker.frame = CGRectMake(0, 0, self.view.frame.size.width-33, self.view.frame.size.width-33);
             [self popview:picker];
         }break;
+        case 102:{
+            ESCColorPicker *picker = [ESCColorPicker belt];
+            picker.delegate = self;
+            picker.frame = CGRectMake(0, 0, self.view.frame.size.width-33, self.view.frame.size.width-33);
+            [self popview:picker];
+        }
             
         default:
             break;
